@@ -1,7 +1,8 @@
 # Advanced Git Commands
 
 ## New ones
-## Using `git push --force-with-lease`
+
+- `git push --force-with-lease` - [Link](https://medium.com/@sahilsahilbhatia/git-push-force-with-lease-vs-force-ecae72601e80)
 
 Git --force-with-lease Usage
 The --force-with-lease option in Git is a safer alternative to the --force option. It helps prevent accidental overwriting of other developers’ changes when pushing to a shared repository.
