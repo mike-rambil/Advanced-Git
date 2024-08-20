@@ -1,5 +1,64 @@
 # Advanced Git Commands
 
+## New ones
+
+Let's walk through an example scenario where using git push --force-with-lease is appropriate.
+
+Scenario:
+You're working on a branch called feature-branch in a shared repository. You need to rewrite the history of your branch (maybe to clean up commits using git rebase or git commit --amend). After rewriting the history, the commit IDs of your branch will change, and you need to push these changes to the remote repository.
+
+Steps:
+Rebase or Amend:
+Let's say you did an interactive rebase to clean up your commit history:
+
+bash
+Copy code
+git rebase -i HEAD~3
+Or you amended the last commit:
+
+bash
+Copy code
+git commit --amend
+Push with --force-with-lease:
+Now, you need to push your changes, but you want to make sure you don't overwrite any commits that others might have pushed to feature-branch since you last fetched. You would use:
+
+bash
+Copy code
+git push --force-with-lease origin feature-branch
+What Happens:
+Git will check that the remote feature-branch is in the state you last saw (i.e., when you last fetched).
+If no one else has pushed new commits to feature-branch, your force push will go through.
+If someone else has pushed commits to feature-branch, Git will prevent the push, and you'll get an error message. This allows you to fetch the latest changes, resolve any conflicts, and try pushing again.
+Example Output:
+If everything is fine:
+
+bash
+Copy code
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 324 bytes | 324.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+To github.com:username/repo.git
+ + abcdef0...1234567 feature-branch -> feature-branch (forced update)
+If someone else pushed changes:
+
+bash
+Copy code
+To github.com:username/repo.git
+ ! [rejected]        feature-branch -> feature-branch (stale info)
+error: failed to push some refs to 'github.com:username/repo.git'
+In the second case, you would need to fetch the latest changes with git pull or git fetch, incorporate them into your branch, and then try the push again.
+
+When to Use It:
+After Rewriting History: Use it when you've rewritten commit history (rebasing, squashing, amending) and need to push those changes safely.
+Collaborative Environments: It's particularly useful in a team setting to avoid accidentally overwriting others' work.
+When Not to Use It:
+Public Repos: If you're working on a public repository or branch that many people rely on, you should be extremely cautious with any form of force-pushing.
+Simple Changes: If you didn't rewrite history and just want to push regular changes, there's no need for force pushing.
+This command strikes a good balance between safety and necessity when you need to make sure your changes are pushed without losing others' contributions.
+
 ## Repository Management
 
 - `git init --bare`: Initialize a bare repository, typically used for remote repositories.
