@@ -2,7 +2,7 @@
 
 ## New ones
 
-### `git push --force-with-lease` - [Link](https://medium.com/@sahilsahilbhatia/git-push-force-with-lease-vs-force-ecae72601e80)
+### [`git push --force-with-lease`](https://medium.com/@sahilsahilbhatia/git-push-force-with-lease-vs-force-ecae72601e80)
 
 
 
