@@ -1,6 +1,6 @@
 # Advanced Git Commands
 
-## New ones
+## Links
 
 ### [`git push --force-with-lease`](https://medium.com/@sahilsahilbhatia/git-push-force-with-lease-vs-force-ecae72601e80)
 
