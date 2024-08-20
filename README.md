@@ -2,36 +2,8 @@
 
 ## New ones
 
-- `git push --force-with-lease` - [Link](https://medium.com/@sahilsahilbhatia/git-push-force-with-lease-vs-force-ecae72601e80)
+### `git push --force-with-lease` - [Link](https://medium.com/@sahilsahilbhatia/git-push-force-with-lease-vs-force-ecae72601e80)
 
-Git --force-with-lease Usage
-The --force-with-lease option in Git is a safer alternative to the --force option. It helps prevent accidental overwriting of other developers’ changes when pushing to a shared repository.
-
-When to Use
-Consider a scenario where you and another developer are working on the same branch. Both of you have pulled the latest changes, made some changes locally, and now want to push your changes to the remote repository.
-
-If you push your changes first, the other developer’s push will be rejected because their local branch is behind the remote branch. If they use git push --force, your changes will be overwritten, which is not desirable.
-
-In this case, git push --force-with-lease can be used. This command will only force push the changes if the remote branch is at the state that we expect. In other words, it ensures that the latest commit on the remote branch is the one that we last fetched or pushed, preventing us from overwriting others’ work.
-
-Example
-# Fetch the latest changes from the remote repository
-git fetch origin
-
-# Make some changes to your local repository and commit them
-git commit -am "Made some changes"
-
-# Attempt to push your changes
-git push origin master
-
-# If the push is rejected because the remote repository has been updated,
-# use --force-with-lease to safely force push your changes
-git push --force-with-lease origin master
-
-In the above example, if someone else has pushed changes to the master branch after you last fetched, the --force-with-lease command will prevent you from overwriting their changes and will fail. This gives you a chance to fetch the latest changes, merge or rebase your changes on top of them, and then push again.
-
-Conclusion
-The --force-with-lease option is a safer way to force push in Git. It provides an additional layer of protection against overwriting others’ work in a shared repository. Always prefer using --force-with-lease over --force when you need to force push.
 
 
 ## Repository Management
