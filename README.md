@@ -3,58 +3,36 @@
 ## New ones
 ## Using `git push --force-with-lease`
 
-### Scenario
-You're working on a branch called `feature-branch` in a shared repository. You need to rewrite the history of your branch (maybe to clean up commits using `git rebase` or `git commit --amend`). After rewriting the history, the commit IDs of your branch will change, and you need to push these changes to the remote repository.
+Git --force-with-lease Usage
+The --force-with-lease option in Git is a safer alternative to the --force option. It helps prevent accidental overwriting of other developers’ changes when pushing to a shared repository.
 
-### Steps
+When to Use
+Consider a scenario where you and another developer are working on the same branch. Both of you have pulled the latest changes, made some changes locally, and now want to push your changes to the remote repository.
 
-1. **Rebase or Amend**:
-   Let's say you did an interactive rebase to clean up your commit history:
-   ```bash
-   git rebase -i HEAD~3
-Or you amended the last commit:
+If you push your changes first, the other developer’s push will be rejected because their local branch is behind the remote branch. If they use git push --force, your changes will be overwritten, which is not desirable.
 
-bash
-Copy code
-git commit --amend
-Push with --force-with-lease:
-Now, you need to push your changes, but you want to make sure you don't overwrite any commits that others might have pushed to feature-branch since you last fetched. You would use:
-bash
-Copy code
-git push --force-with-lease origin feature-branch
-What Happens
-Git will check that the remote feature-branch is in the state you last saw (i.e., when you last fetched).
-If no one else has pushed new commits to feature-branch, your force push will go through.
-If someone else has pushed commits to feature-branch, Git will prevent the push, and you'll get an error message. This allows you to fetch the latest changes, resolve any conflicts, and try pushing again.
-Example Output
-If everything is fine:
+In this case, git push --force-with-lease can be used. This command will only force push the changes if the remote branch is at the state that we expect. In other words, it ensures that the latest commit on the remote branch is the one that we last fetched or pushed, preventing us from overwriting others’ work.
 
-bash
-Copy code
-Enumerating objects: 7, done.
-Counting objects: 100% (7/7), done.
-Delta compression using up to 8 threads
-Compressing objects: 100% (3/3), done.
-Writing objects: 100% (3/3), 324 bytes | 324.00 KiB/s, done.
-Total 3 (delta 1), reused 0 (delta 0)
-To github.com:username/repo.git
- + abcdef0...1234567 feature-branch -> feature-branch (forced update)
-If someone else pushed changes:
+Example
+# Fetch the latest changes from the remote repository
+git fetch origin
 
-bash
-Copy code
-To github.com:username/repo.git
- ! [rejected]        feature-branch -> feature-branch (stale info)
-error: failed to push some refs to 'github.com:username/repo.git'
-In the second case, you would need to fetch the latest changes with git pull or git fetch, incorporate them into your branch, and then try the push again.
+# Make some changes to your local repository and commit them
+git commit -am "Made some changes"
 
-When to Use It
-After Rewriting History: Use it when you've rewritten commit history (rebasing, squashing, amending) and need to push those changes safely.
-Collaborative Environments: It's particularly useful in a team setting to avoid accidentally overwriting others' work.
-When Not to Use It
-Public Repos: If you're working on a public repository or branch that many people rely on, you should be extremely cautious with any form of force-pushing.
-Simple Changes: If you didn't rewrite history and just want to push regular changes, there's no need for force pushing.
-This command strikes a good balance between safety and necessity when you need to make sure your changes are pushed without losing others' contributions.
+# Attempt to push your changes
+git push origin master
+
+# If the push is rejected because the remote repository has been updated,
+# use --force-with-lease to safely force push your changes
+git push --force-with-lease origin master
+
+In the above example, if someone else has pushed changes to the master branch after you last fetched, the --force-with-lease command will prevent you from overwriting their changes and will fail. This gives you a chance to fetch the latest changes, merge or rebase your changes on top of them, and then push again.
+
+Conclusion
+The --force-with-lease option is a safer way to force push in Git. It provides an additional layer of protection against overwriting others’ work in a shared repository. Always prefer using --force-with-lease over --force when you need to force push.
+
+
 ## Repository Management
 
 - `git init --bare`: Initialize a bare repository, typically used for remote repositories.
