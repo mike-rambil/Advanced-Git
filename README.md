@@ -44,12 +44,12 @@ What this does:
 -f → Forces deletion of untracked files.
 -d → Deletes untracked directories (like data-loader/).
 
-## Repository Management
+# Repository Management
 
 - `git init --bare`: Initialize a bare repository, typically used for remote repositories.
 - `git clone --mirror <repository>`: Clone a repository in mirror mode, including all refs and branches.
 
-## Branching and Merging
+# Branching and Merging
 
 - `git branch -m <old-branch> <new-branch>`: Rename a branch.
 - `git branch -d <branch>`: Delete a branch that has been merged.
@@ -73,7 +73,7 @@ What this does:
 - `git bisect bad <commit>`: Mark a commit as bad in the bisect process.
 - `git bisect good <commit>`: Mark a commit as good in the bisect process.
 
-## Stashing and Cleaning
+# Stashing and Cleaning
 
 - `git stash save "description"`: Save changes to the stash with a description.
 - `git stash pop`: Apply the last stashed changes and remove them from the stash.
@@ -83,7 +83,7 @@ What this does:
 - `git clean -fd`: Remove untracked files and directories.
 - `git clean -n`: Show what would be removed by `git clean`.
 
-## Submodules
+# Submodules
 
 - `git submodule add <repository> <path>`: Add a submodule.
 - `git submodule init`: Initialize the submodules.
@@ -91,7 +91,7 @@ What this does:
 - `git submodule foreach <command>`: Run a command in each submodule.
 - `git submodule sync`: Synchronize the submodule URLs.
 
-## Advanced Configuration
+# Advanced Configuration
 
 - `git config --global alias.<alias-name> '<git-command>'`: Create a Git command alias.
 - `git config --global core.editor "<editor>"`: Set the default text editor for Git.
@@ -99,7 +99,7 @@ What this does:
 - `git config --global user.email "<email>"`: Set the user email for Git commits.
 - `git config --global --edit`: Edit the global configuration file.
 
-## Rewriting History
+# Rewriting History
 
 - `git commit --amend`: Modify the most recent commit.
 - `git rebase -i <base>`: Start an interactive rebase session.
@@ -108,7 +108,7 @@ What this does:
 - `git reset --hard <commit>`: Move the HEAD to a commit, discarding all changes.
 - `git revert <commit>`: Create a new commit that undoes the changes from a previous commit.
 
-## Collaboration and Review
+# Collaboration and Review
 
 - `git remote add <name> <url>`: Add a new remote repository.
 - `git fetch <remote>`: Download objects and refs from another repository.
@@ -118,7 +118,7 @@ What this does:
 - `git push --tags`: Push all tags to the remote repository.
 - `git request-pull <start> <url> <end>`: Generate a request to pull changes into a repository.
 
-## Miscellaneous
+# Miscellaneous
 
 - `git archive --format=zip --output=<file.zip> <tree-ish>`: Create an archive of files from a named tree.
 - `git shortlog -sn`: Summarize commit activity by author.
