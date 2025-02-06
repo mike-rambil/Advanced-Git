@@ -21,6 +21,76 @@
 - `git push --force-with-lease` - [Cancels git push if someone else did a commit on the same remote branch and safe guards `git push`](https://medium.com/@sahilsahilbhatia/git-push-force-with-lease-vs-force-ecae72601e80)
 - `git maintenance start` - [Runs a cronJob in background for the specified repo for periodic maintanence](https://git-scm.com/docs/git-maintenance)
 
+# Git Worktree Tutorial
+
+## 📌 What is `git worktree`?
+`git worktree` allows you to have multiple working directories linked to a single Git repository. This is useful when you need to work on multiple branches simultaneously without switching branches in the same directory.
+
+---
+
+## 🔹 Check Existing Worktrees
+To see all active worktrees in your repository, use:
+
+```bash
+git worktree list
+```
+This will output a list of worktrees with their paths and branches.
+
+## 🔹 Create a New Worktree
+To create a new worktree for a branch, run:
+
+```bash
+git worktree add <path> <branch>
+```
+Example:
+```bash
+git worktree add ../feature-branch feature
+```
+This creates a new directory ../feature-branch/ and checks out the feature branch inside it.
+
+If the branch does not exist, add -b to create it:
+```bash
+git worktree add -b new-feature ../new-feature-branch
+```
+## 🔹 Remove a Worktree
+To remove a worktree (detach it from the repository), first remove the directory manually, then prune it:
+```bash
+rm -rf <worktree-path>
+git worktree prune
+```
+Example:
+```bash
+rm -rf ../feature-branch
+git worktree prune
+```
+## 🔹 Switch Between Worktrees
+Simply change directories to the worktree you want to work in:
+``` bash
+cd ../feature-branch
+```
+You can now work on this branch independently of the main repository directory.
+
+## 🔹 Detach a Worktree Without Deleting It
+``` bash
+git worktree remove <worktree-path>
+```
+Example:
+``` bash
+git worktree remove ../feature-branch
+```
+
+## 🔹 Use Worktrees for Temporary Fixes
+You can use worktrees to quickly fix bugs on a different branch without switching from your main working directory:
+``` bash
+git worktree add ../hotfix hotfix-branch
+cd ../hotfix
+# Apply fix
+git commit -am "Fixed urgent bug"
+git push origin hotfix-branch
+cd ../main-repo
+git worktree remove ../hotfix
+
+```
 
 # Delete Untracked Files and Folders
 
