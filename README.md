@@ -8,9 +8,27 @@
   - [🔹 Switch Between Worktrees](#-switch-between-worktrees)
   - [🔹 Detach a Worktree Without Deleting It](#-detach-a-worktree-without-deleting-it)
   - [🔹 Use Worktrees for Temporary Fixes](#-use-worktrees-for-temporary-fixes)
+- [How to Use Git Submodules by Setting Up a New Submodule Repository and Pushing to It](#how-to-use-git-submodules-by-setting-up-a-new-submodule-repository-and-pushing-to-it)
+  - [Step 1: Create the Git Submodule Repository](#step-1-create-the-git-submodule-repository)
+    - [1. Initialize the Submodule Repository](#1-initialize-the-submodule-repository)
+    - [2. Host it on GitHub (or any remote)](#2-host-it-on-github-or-any-remote)
+    - [3. Push the Bare Repo to Remote](#3-push-the-bare-repo-to-remote)
+  - [Step 2: Add the Submodule to Another Repo](#step-2-add-the-submodule-to-another-repo)
+    - [1. Initialize and Clone the Main Repository](#1-initialize-and-clone-the-main-repository)
+    - [2. Add the Submodule](#2-add-the-submodule)
+    - [3. Commit and Push](#3-commit-and-push)
+  - [Step 3: Add Files and Push to the Submodule](#step-3-add-files-and-push-to-the-submodule)
+    - [1. Navigate into the Submodule](#1-navigate-into-the-submodule)
+    - [2. Add Files to the Submodule](#2-add-files-to-the-submodule)
+    - [3. Push the Changes to the Submodule Repository](#3-push-the-changes-to-the-submodule-repository)
+  - [Step 4: Commit the Updated Submodule in the Main Repo](#step-4-commit-the-updated-submodule-in-the-main-repo)
+    - [1. Move Back to Main Repo](#1-move-back-to-main-repo)
+    - [2. Stage and Commit the Submodule Update](#2-stage-and-commit-the-submodule-update)
+  - [Step 5: Cloning and Initializing Submodules](#step-5-cloning-and-initializing-submodules)
+    - [Summary](#summary)
 - [Delete Untracked Files and Folders](#delete-untracked-files-and-folders)
-    - [1️⃣ Dry Run (Check What Will Be Deleted)](#1️⃣-dry-run-check-what-will-be-deleted)
-    - [2️⃣ Delete Untracked Files and Folders](#2️⃣-delete-untracked-files-and-folders)
+  - [1️⃣ Dry Run (Check What Will Be Deleted)](#1️⃣-dry-run-check-what-will-be-deleted)
+  - [2️⃣ Delete Untracked Files and Folders](#2️⃣-delete-untracked-files-and-folders)
 - [Repository Management](#repository-management)
 - [Branching and Merging](#branching-and-merging)
 - [History and Inspection](#history-and-inspection)
@@ -20,7 +38,6 @@
 - [Rewriting History](#rewriting-history)
 - [Collaboration and Review](#collaboration-and-review)
 - [Miscellaneous](#miscellaneous)
-
 
 # Advanced Git Commands
 
@@ -32,64 +49,86 @@
 # Git Worktree Tutorial
 
 ## 📌 What is `git worktree`?
+
 `git worktree` allows you to have multiple working directories linked to a single Git repository. This is useful when you need to work on multiple branches simultaneously without switching branches in the same directory.
 
 ---
 
 ## 🔹 Check Existing Worktrees
+
 To see all active worktrees in your repository, use:
 
 ```bash
 git worktree list
 ```
+
 This will output a list of worktrees with their paths and branches.
 
 ## 🔹 Create a New Worktree
+
 To create a new worktree for a branch, run:
 
 ```bash
 git worktree add <path> <branch>
 ```
+
 Example:
+
 ```bash
 git worktree add ../feature-branch feature
 ```
+
 This creates a new directory ../feature-branch/ and checks out the feature branch inside it.
 
 If the branch does not exist, add -b to create it:
+
 ```bash
 git worktree add -b new-feature ../new-feature-branch
 ```
+
 ## 🔹 Remove a Worktree
+
 To remove a worktree (detach it from the repository), first remove the directory manually, then prune it:
+
 ```bash
 rm -rf <worktree-path>
 git worktree prune
 ```
+
 Example:
+
 ```bash
 rm -rf ../feature-branch
 git worktree prune
 ```
+
 ## 🔹 Switch Between Worktrees
+
 Simply change directories to the worktree you want to work in:
-``` bash
+
+```bash
 cd ../feature-branch
 ```
+
 You can now work on this branch independently of the main repository directory.
 
 ## 🔹 Detach a Worktree Without Deleting It
-``` bash
+
+```bash
 git worktree remove <worktree-path>
 ```
+
 Example:
-``` bash
+
+```bash
 git worktree remove ../feature-branch
 ```
 
 ## 🔹 Use Worktrees for Temporary Fixes
+
 You can use worktrees to quickly fix bugs on a different branch without switching from your main working directory:
-``` bash
+
+```bash
 git worktree add ../hotfix hotfix-branch
 cd ../hotfix
 # Apply fix
@@ -121,81 +160,108 @@ mkdir my-submodule
 cd my-submodule
 git init --bare
 ```
+
 This sets up an empty bare repository, meaning it will only store Git data and be used as a remote.
 
 ### 2. Host it on GitHub (or any remote)
+
 - Go to GitHub (or GitLab/Bitbucket).
 - Create a new repository named my-submodule.
-- Copy the remote URL (e.g., git@github.com:your-user/my-submodule.git).
+- Copy the remote URL (e.g., <git@github.com>:your-user/my-submodule.git).
+
 ### 3. Push the Bare Repo to Remote
+
 ```bash
 git remote add origin git@github.com:your-user/my-submodule.git
 git push --set-upstream origin main
 ```
+
 ## Step 2: Add the Submodule to Another Repo
+
 Now, let’s integrate this submodule into a main repository.
 
 ### 1. Initialize and Clone the Main Repository
+
 ```bash
 mkdir main-repo
 cd main-repo
 git init
 ```
+
 ### 2. Add the Submodule
+
 ```bash
 git submodule add git@github.com:your-user/my-submodule.git submodules/my-submodule
 ```
+
 This clones the submodule into the submodules/my-submodule directory inside the main repo.
 
 ### 3. Commit and Push
+
 ```bash
 git add .gitmodules submodules/my-submodule
 git commit -m "Added submodule my-submodule"
 git push origin main
 ```
+
 ## Step 3: Add Files and Push to the Submodule
+
 Now, let’s add files to the submodule from the main repo.
 
 ### 1. Navigate into the Submodule
+
 ```bash
 cd submodules/my-submodule
 ```
 
 ### 2. Add Files to the Submodule
+
 ```bash
 echo "Hello from the submodule!" > file.txt
 git add file.txt
 git commit -m "Added file to submodule"
 ```
+
 ### 3. Push the Changes to the Submodule Repository
+
 ```bash
 git push origin main
 ```
+
 ## Step 4: Commit the Updated Submodule in the Main Repo
+
 Once the submodule has new changes, the main repository needs to recognize it.
 
 ### 1. Move Back to Main Repo
+
 ```bash
 cd ../..
 ```
+
 ### 2. Stage and Commit the Submodule Update
+
 ```bash
 git add submodules/my-submodule
 git commit -m "Updated submodule to latest commit"
 git push origin main
 ```
+
 ## Step 5: Cloning and Initializing Submodules
+
 If you or someone else clones the main repo, you need to initialize the submodules:
 
 ```bash
 git clone --recursive git@github.com:your-user/main-repo.git
 ```
+
 or, if already cloned:
 
 ```bash
 git submodule update --init --recursive
 ```
+
 #### Summary
+
 - ✅ Created a Git submodule repository
 - ✅ Added it as a submodule to another repo
 - ✅ Pushed files from the main repo into the submodule
@@ -210,17 +276,21 @@ To delete untracked files and folders, use the following methods:
 Git provides `git clean` to safely remove **untracked files and directories**.
 
 ### 1️⃣ Dry Run (Check What Will Be Deleted)
+
 First, run this to see what will be deleted:
 
 ```bash
 git clean -n -d
 ```
+
 ### 2️⃣ Delete Untracked Files and Folders
+
 If everything looks correct, run:
 
 ```bash
 git clean -f -d
 ```
+
 What this does:
 -f → Forces deletion of untracked files.
 -d → Deletes untracked directories (like data-loader/).
