@@ -6,6 +6,27 @@
 - `git maintenance start` - [Runs a cronJob in background for the specified repo for periodic maintanence](https://git-scm.com/docs/git-maintenance)
 
 
+# Delete Untracked Files and Folders
+
+To delete untracked files and folders, use the following methods:
+
+Git provides `git clean` to safely remove **untracked files and directories**.
+
+### 1️⃣ Dry Run (Check What Will Be Deleted)
+First, run this to see what will be deleted:
+
+```bash
+git clean -n -d
+```
+### 2️⃣ Delete Untracked Files and Folders
+If everything looks correct, run:
+
+```bash
+git clean -f -d
+```
+What this does:
+-f → Forces deletion of untracked files.
+-d → Deletes untracked directories (like data-loader/).
 
 ## Repository Management
 
