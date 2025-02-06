@@ -1,17 +1,17 @@
 - [Advanced Git Commands](#advanced-git-commands)
   - [Latest](#latest)
 - [Delete Untracked Files and Folders](#delete-untracked-files-and-folders)
-  - [1️⃣ Dry Run (Check What Will Be Deleted)](#1️⃣-dry-run-check-what-will-be-deleted)
-  - [2️⃣ Delete Untracked Files and Folders](#2️⃣-delete-untracked-files-and-folders)
-  - [Repository Management](#repository-management)
-  - [Branching and Merging](#branching-and-merging)
-  - [History and Inspection](#history-and-inspection)
-  - [Stashing and Cleaning](#stashing-and-cleaning)
-  - [Submodules](#submodules)
-  - [Advanced Configuration](#advanced-configuration)
-  - [Rewriting History](#rewriting-history)
-  - [Collaboration and Review](#collaboration-and-review)
-  - [Miscellaneous](#miscellaneous)
+    - [1️⃣ Dry Run (Check What Will Be Deleted)](#1️⃣-dry-run-check-what-will-be-deleted)
+    - [2️⃣ Delete Untracked Files and Folders](#2️⃣-delete-untracked-files-and-folders)
+- [Repository Management](#repository-management)
+- [Branching and Merging](#branching-and-merging)
+- [History and Inspection](#history-and-inspection)
+- [Stashing and Cleaning](#stashing-and-cleaning)
+- [Submodules](#submodules)
+- [Advanced Configuration](#advanced-configuration)
+- [Rewriting History](#rewriting-history)
+- [Collaboration and Review](#collaboration-and-review)
+- [Miscellaneous](#miscellaneous)
 
 
 # Advanced Git Commands
@@ -61,7 +61,7 @@ What this does:
 - `git merge --no-ff <branch>`: Merge with a merge commit even if fast-forward is possible.
 - `git stash branch <branch>`: Create a new branch and apply the stashed changes.
 
-## History and Inspection
+# History and Inspection
 
 - `git log --graph --oneline --decorate --all`: Visualize the commit history in a graphical format.
 - `git log -p`: Show patches (differences) introduced in each commit.
