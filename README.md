@@ -414,7 +414,7 @@ What this does:
 - `git request-pull <start> <url> <end>`: Generate a request to pull changes into a repository.
 
 # 🛠 **View and Clean Up Local Git Branches**
-**🐧 Bash**
+## **🐧 Bash**
 List Local Branches Without a Remote Connection.
 ```git branch -vv | grep -E '^\s*\S+\s+[^\[]+$'```  
 Automatically Delete Local Branches Without Remote Tracking.
@@ -432,7 +432,7 @@ git branch -vv | grep ': gone]' | awk '{print $1}' | xargs git branch -D
 
 ---
 
-**🖥 PowerShell**
+## **🖥 PowerShell**
 List Local Branches Without a Remote Connection.
   ```
   git branch -vv | Select-String -NotMatch "origin/"
