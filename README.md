@@ -419,3 +419,4 @@ What this does:
 - `git bundle create <file> <revision>`: Create a bundle file from specified revisions.
 - `git bundle verify <file>`: Verify the integrity of a bundle file.
 - `git bundle unbundle <file>`: Extract a bundle into a repository.
+- `git rm --cached -r <file/folder>`: Removes Git tracking without deleting files from local machine which prevents Git from tracking future changes if it’s added to .gitignore.(Ex: most useful for deleting .env when you accidentally push it to remote)
