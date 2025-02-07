@@ -414,27 +414,43 @@ What this does:
 - `git request-pull <start> <url> <end>`: Generate a request to pull changes into a repository.
 
 # 🛠 **View and Clean Up Local Git Branches**
-## **🐧 Bash**
-- `git branch -vv | grep -E '^\s*\S+\s+[^\[]+$'`  
-  **→ List Local Branches Without a Remote Connection.**
-- `git branch -vv | grep -E '^\s*\S+\s+[^\[]+$' | awk '{print $1}' | xargs git branch -D`  
-  **→ Automatically Delete Local Branches Without Remote Tracking.**
-- `git branch -vv | grep ': gone]'`  
-  **→ View Local Branches That Had Their Remote Deleted (Ex: PR Merged & Deleted in remote but still exist in local).**
-- `git branch -vv | grep ': gone]' | awk '{print $1}' | xargs git branch -D`  
-  **→ Delete Stale Local Branches That Had Their Remote Deleted.**
+**🐧 Bash**
+List Local Branches Without a Remote Connection.
+```git branch -vv | grep -E '^\s*\S+\s+[^\[]+$'```  
+Automatically Delete Local Branches Without Remote Tracking.
+```
+git branch -vv | grep -E '^\s*\S+\s+[^\[]+$' | awk '{print $1}' | xargs git branch -D
+```
+View Local Branches That Had Their Remote Deleted (Ex: PR Merged & Deleted in remote but still exist in local).**
+```
+git branch -vv | grep ': gone]'
+```  
+Delete Stale Local Branches That Had Their Remote Deleted.
+```
+git branch -vv | grep ': gone]' | awk '{print $1}' | xargs git branch -D
+```
 
 ---
 
-## **🖥 PowerShell**
-- `git branch -vv | Select-String -NotMatch "origin/"`  
-  **→ List Local Branches Without a Remote Connection.**
-- `git branch -vv | Select-String -NotMatch "origin/" | ForEach-Object { ($_ -split "\s+")[0] } | ForEach-Object { git branch -D $_ }`  
-  **→ Automatically Delete Local Branches Without Remote Tracking.**
-- `git branch -vv | Select-String ": gone\]"`  
-  **→ View Local Branches That Had Their Remote Deleted (Ex: PR Merged & Deleted in remote but still exist in local).**
-- `git branch -vv | Select-String ": gone\]" | ForEach-Object { ($_ -split "\s+")[0] } | ForEach-Object { git branch -D $_ }`  
-  **→ Delete Stale Local Branches That Had Their Remote Deleted.**
+**🖥 PowerShell**
+List Local Branches Without a Remote Connection.
+  ```
+  git branch -vv | Select-String -NotMatch "origin/"
+  ```  
+Automatically Delete Local Branches Without Remote Tracking
+ ```
+ git branch -vv | Select-String -NotMatch "origin/" | ForEach-Object { ($_ -split "\s+")[0] } | ForEach-Object { git branch -D $_ }
+  ```
+
+View Local Branches That Had Their Remote Deleted (Ex: PR Merged & Deleted in remote but still exist in local).**
+```
+git branch -vv | Select-String ": gone\]"
+```
+  
+Delete Stale Local Branches That Had Their Remote Deleted.**
+```
+git branch -vv | Select-String ": gone\]" | ForEach-Object { ($_ -split "\s+")[0] } | ForEach-Object { git branch -D $_ }
+```
 
 # Miscellaneous
 
