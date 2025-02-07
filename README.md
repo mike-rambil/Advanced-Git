@@ -267,7 +267,47 @@ git submodule update --init --recursive
 - ✅ Pushed files from the main repo into the submodule
 - ✅ Updated the submodule reference in the main repo
 
-Now, your main repository can manage a separate submodule while keeping both repositories independent. 🚀 Let me know if you need any clarifications!
+```markdown
+🔹 Difference Between `git submodule update --remote --merge` and `git submodule update --init --recursive`
+Both commands update submodules, but they work differently.
+
+✅ 1️⃣ `git submodule update --remote --merge`
+```bash
+git submodule update --remote --merge
+```
+📌 **What It Does:**
+- Pulls the latest commit from the remote branch of the submodule.
+- Merges that commit into your local submodule.
+- Updates the submodule folder to match the latest remote version.
+
+🛠 **When to Use It**
+- When you want to fetch the latest changes from the submodule’s remote repo.
+- Useful if the submodule is actively being updated and you want to sync with the latest version.
+
+🚀 **Example**
+- Your submodule (`whk-script-library`) is behind the remote repository.
+- Running `git submodule update --remote --merge` fetches and merges the latest changes.
+- The submodule now tracks the latest remote commit.
+
+✅ 2️⃣ `git submodule update --init --recursive`
+```bash
+git submodule update --init --recursive
+```
+📌 **What It Does:**
+- Ensures that all submodules are initialized (`--init`).
+- Updates submodules to the exact commit referenced in the main repository.
+- Recursively initializes nested submodules (`--recursive`).
+
+🛠 **When to Use It**
+- When you just cloned the main repository and need to fetch and initialize submodules.
+- Ensures that all submodules match the commit stored in the main repo (even if they are outdated).
+- Best for setting up a project that includes submodules.
+
+🚀 **Example**
+- You cloned `whk-wms`, but the `whk-script-library` submodule is empty.
+- Running `git submodule update --init --recursive` initializes and updates it to the expected commit.
+- The submodule now matches the commit tracked in the main repo, not necessarily the latest commit from the remote.
+```
 
 # Delete Untracked Files and Folders
 
