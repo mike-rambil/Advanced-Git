@@ -267,8 +267,8 @@ git submodule update --init --recursive
 - ✅ Pushed files from the main repo into the submodule
 - ✅ Updated the submodule reference in the main repo
 
-```markdown
-🔹 Difference Between `git submodule update --remote --merge` and `git submodule update --init --recursive`
+
+##🔹 Difference Between `git submodule update --remote --merge` and `git submodule update --init --recursive`
 Both commands update submodules, but they work differently.
 
 ✅ 1️⃣ `git submodule update --remote --merge`
