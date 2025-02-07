@@ -26,6 +26,7 @@
     - [2. Stage and Commit the Submodule Update](#2-stage-and-commit-the-submodule-update)
   - [Step 5: Cloning and Initializing Submodules](#step-5-cloning-and-initializing-submodules)
     - [Summary](#summary)
+  - [Difference Between `git submodule update --remote --merge` and `git submodule update --init --recursive`](#difference-between-git-submodule-update---remote---merge-and-git-submodule-update---init---recursive)
 - [Delete Untracked Files and Folders](#delete-untracked-files-and-folders)
   - [1️⃣ Dry Run (Check What Will Be Deleted)](#1️⃣-dry-run-check-what-will-be-deleted)
   - [2️⃣ Delete Untracked Files and Folders](#2️⃣-delete-untracked-files-and-folders)
@@ -37,6 +38,9 @@
 - [Advanced Configuration](#advanced-configuration)
 - [Rewriting History](#rewriting-history)
 - [Collaboration and Review](#collaboration-and-review)
+- [🛠 **View and Clean Up Local Git Branches**](#-view-and-clean-up-local-git-branches)
+  - [**🐧 Bash**](#-bash)
+  - [**🖥 PowerShell**](#-powershell)
 - [Miscellaneous](#miscellaneous)
 
 # Advanced Git Commands
@@ -408,6 +412,29 @@ What this does:
 - `git push --force-with-lease <remote> <branch>`: Force push with a safety check to ensure you’re not overwriting someone else’s work.
 - `git push --tags`: Push all tags to the remote repository.
 - `git request-pull <start> <url> <end>`: Generate a request to pull changes into a repository.
+
+# 🛠 **View and Clean Up Local Git Branches**
+## **🐧 Bash**
+- `git branch -vv | grep -E '^\s*\S+\s+[^\[]+$'`  
+  **→ List Local Branches Without a Remote Connection.**
+- `git branch -vv | grep -E '^\s*\S+\s+[^\[]+$' | awk '{print $1}' | xargs git branch -D`  
+  **→ Automatically Delete Local Branches Without Remote Tracking.**
+- `git branch -vv | grep ': gone]'`  
+  **→ View Local Branches That Had Their Remote Deleted (Ex: PR Merged & Deleted in remote but still exist in local).**
+- `git branch -vv | grep ': gone]' | awk '{print $1}' | xargs git branch -D`  
+  **→ Delete Stale Local Branches That Had Their Remote Deleted.**
+
+---
+
+## **🖥 PowerShell**
+- `git branch -vv | Select-String -NotMatch "origin/"`  
+  **→ List Local Branches Without a Remote Connection.**
+- `git branch -vv | Select-String -NotMatch "origin/" | ForEach-Object { ($_ -split "\s+")[0] } | ForEach-Object { git branch -D $_ }`  
+  **→ Automatically Delete Local Branches Without Remote Tracking.**
+- `git branch -vv | Select-String ": gone\]"`  
+  **→ View Local Branches That Had Their Remote Deleted (Ex: PR Merged & Deleted in remote but still exist in local).**
+- `git branch -vv | Select-String ": gone\]" | ForEach-Object { ($_ -split "\s+")[0] } | ForEach-Object { git branch -D $_ }`  
+  **→ Delete Stale Local Branches That Had Their Remote Deleted.**
 
 # Miscellaneous
 
