@@ -307,7 +307,7 @@ git submodule update --init --recursive
 - You cloned `whk-wms`, but the `whk-script-library` submodule is empty.
 - Running `git submodule update --init --recursive` initializes and updates it to the expected commit.
 - The submodule now matches the commit tracked in the main repo, not necessarily the latest commit from the remote.
-```
+
 
 # Delete Untracked Files and Folders
 
