@@ -448,29 +448,9 @@ git branch -vv | Select-String ": gone\]"
 ```
   
 Delete Stale Local Branches That Had Their Remote Deleted.**
-```
-git branch -vv | Select-String ": gone\]" | ForEach-Object { ($_ -split "\s+")[0] } | ForEach-Object { git branch -D $_ }
-```
-```
-$goneBranches = git branch -vv | Select-String ": gone\]" | ForEach-Object {
-    ($_ -replace "^\s+", "") -split "\s+" | Select-Object -First 1
-} | Where-Object { $_ -ne "" }
 
-if ($goneBranches.Count -gt 0) {
-    Write-Host "Branches to be deleted:" -ForegroundColor Yellow
-    $goneBranches | ForEach-Object { Write-Host $_ -ForegroundColor Red }
-    $confirm = Read-Host "Are you sure you want to delete these branches? (y/n)"
-
-    if ($confirm -eq "y") {
-        $goneBranches | ForEach-Object { git branch -D $_ }
-        Write-Host "Branches deleted successfully." -ForegroundColor Green
-    } else {
-        Write-Host "Operation canceled." -ForegroundColor Cyan
-    }
-} else {
-    Write-Host "No branches found to delete." -ForegroundColor Green
-}
-
+```
+git fetch -p && git branch -vv | Select-String ': gone]' | ForEach-Object { $_.ToString().Trim().Split()[0] } | ForEach-Object { git branch -D $_ }
 ```
 # Miscellaneous
 
