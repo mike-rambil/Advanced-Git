@@ -439,7 +439,10 @@ List Local Branches Without a Remote Connection.
   ```  
 Automatically Delete Local Branches Without Remote Tracking
  ```
- git branch -vv | Select-String -NotMatch "origin/" | ForEach-Object { ($_ -split "\s+")[0] } | ForEach-Object { git branch -D $_ }
+git branch -vv | Select-String -NotMatch "origin/" | ForEach-Object { 
+    $branch = ($_ -split "\s+")[1]
+    git branch -D $branch
+}
   ```
 
 View Local Branches That Had Their Remote Deleted (Ex: PR Merged & Deleted in remote but still exist in local).**
