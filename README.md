@@ -1,4 +1,7 @@
-# TRYING MY BEST TO DOCUMENT ALL MY GIT COMMANDS
+> [!IMPORTANT]
+> If you find a useful GIT command - be sure to sent a PR here as well :)
+
+# ADVANCED GIT COMMANDS
 
 - [Advanced Git Commands](#advanced-git-commands)
   - [Latest](#latest)
