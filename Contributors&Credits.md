@@ -6,7 +6,7 @@
 
 [@mike-rambil](https://github.com/mike-rambil)
 
-## Credits & Authors
+## 📚 Credits & Authors
 [Sagil Bhatia](https://medium.com/@sahilsahilbhatia)
 
 ## 🔗 Blogs & Articles
