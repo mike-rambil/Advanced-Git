@@ -6,9 +6,9 @@
 - [Advanced Git Commands](#advanced-git-commands)
   - [Latest](#latest)
 - [📌 Git Push --Force-With-Lease](#📌-git-push---force-with-lease)  
-  - [Problem](#problem)  
-  - [Solution](#solution)  
-  - [Tutorial](#tutorial)
+  - [🔹 Problem](#problem)  
+  - [🔹 Solution](#solution)  
+  - [🔹 Tutorial](#tutorial)
 - [Git Worktree Tutorial](#git-worktree-tutorial)
   - [📌 What is `git worktree`?](#-what-is-git-worktree)
   - [🔹 Check Existing Worktrees](#-check-existing-worktrees)
@@ -63,13 +63,13 @@
 ## 📌 `git push --force-with-lease`
 `git push --force-with-lease` ensures you don’t accidentally overwrite someone else’s work when force-pushing. It checks if the remote branch still matches what you last pulled. If someone else has pushed changes in the meantime, your push is rejected, preventing unintended data loss.
 
-### Problem:
+###🔹 Problem:
 When users are within the same branch and they want to push to remote but not sure if there is a commit pushed from the other dev that might block you
 
-### Solution:
+###🔹 Solution:
 use the ---force with lease flag while pushing to check it there is a push. If there is a push from the other person - your push to the same branch is cancelled.
 
-### Tutorial:
+###🔹 Tutorial:
 > Go to detailed tutorial
 
 
