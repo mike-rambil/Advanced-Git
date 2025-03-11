@@ -5,6 +5,7 @@
     </td>
     <td style="width: 75%; text-align: right;">
       <h1>Advanced Git Commands</h1>
+      <em>For Dummies & Try hards</em>
     </td>
   </tr>
 </table>
