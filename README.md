@@ -53,7 +53,7 @@
   - [**🐧 Bash**](#-bash)
   - [**🖥 PowerShell**](#-powershell)
 - [Miscellaneous](#miscellaneous)
-- [References & Resources](#references-&-resources)
+- [References & Resources](#-references-&-resources)
 
 
 # Advanced Git Commands
@@ -496,4 +496,4 @@ git fetch -p && git branch -vv | Select-String ': gone]' | ForEach-Object { $_.T
 
 #### [References & Resources](./References&Resources.md)
 A collection of blogs, and resources I have used to get to know more of git.
-> [References&Resources](./References&Resources.md)
+> [View References & Resources](./References&Resources.md)
