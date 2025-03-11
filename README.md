@@ -382,7 +382,7 @@ What this does:
 -f → Forces deletion of untracked files.
 -d → Deletes untracked directories (like data-loader/).
 
-## 📌 git log --oneline -- filename.txt
+## 📌 `git log --oneline -- filename.txt`
 
 `git log --oneline -- filename.txt` shows all past commits that changed a specific file (filename.txt) in a short and easy-to-read format.
 
