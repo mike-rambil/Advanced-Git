@@ -1,18 +1,16 @@
 > [!IMPORTANT]
 > If you find a useful GIT command - be sure to sent a PR here as well :)
 
-
 # Table of Contents
 
 - [Table of Contents](#table-of-contents)
 - [Advanced Git Commands](#advanced-git-commands)
   - [Latest](#latest)
-- [📌 `git push --force-with-lease`](#-git-push---force-with-lease)
-    - [🔹 Problem:](#-problem)
-    - [🔹 Solution:](#-solution)
-    - [🔹 Tutorial](#Tutorial)
-- [Git Worktree Tutorial](#git-worktree-tutorial)
-  - [📌 What is `git worktree`?](#-what-is-git-worktree)
+  - [📌 `git push --force-with-lease`](#-git-push---force-with-lease)
+    - [🔹 Problem](#-problem)
+    - [🔹 Solution](#-solution)
+    - [Tutorial](#tutorial)
+  - [📌 Git Worktree Tutorial](#-git-worktree-tutorial)
   - [🔹 Check Existing Worktrees](#-check-existing-worktrees)
   - [🔹 Create a New Worktree](#-create-a-new-worktree)
   - [🔹 Remove a Worktree](#-remove-a-worktree)
@@ -53,37 +51,37 @@
   - [**🐧 Bash**](#-bash)
   - [**🖥 PowerShell**](#-powershell)
 - [Miscellaneous](#miscellaneous)
-- [References & Resources](#-references-&-resources)
-
+  - [References \& Resources](#references--resources)
+  - [Contributors \& Credits](#contributors--credits)
 
 # Advanced Git Commands
-
 
 ## Latest
 
 - `git push --force-with-lease` - [Cancels git push if someone else did a commit on the same remote branch and safe guards `git push`](https://medium.com/@sahilsahilbhatia/git-push-force-with-lease-vs-force-ecae72601e80)
 - `git maintenance start` - [Runs a cronJob in background for the specified repo for periodic maintanence](https://git-scm.com/docs/git-maintenance)
 
-
-
-
 ## 📌 `git push --force-with-lease`
 
 `git push --force-with-lease` ensures you don’t accidentally overwrite someone else’s work when force-pushing. It checks if the remote branch still matches what you last pulled. If someone else has pushed changes in the meantime, your push is rejected, preventing unintended data loss.
 
-### 🔹 Problem:
+### 🔹 Problem
+
 When users are within the same branch and they want to push to remote but not sure if there is a commit pushed from the other dev that might block you
 
-### 🔹 Solution:
+### 🔹 Solution
+
 use the ---force with lease flag while pushing to check it there is a push. If there is a push from the other person - your push to the same branch is cancelled.
 
 ### [Tutorial](./--force-with-lease.md)
+
 > [Checkout Tutorial Here](./--force-with-lease.md)
 
 ## 📌 Git Worktree Tutorial
----
-`git worktree` allows you to have multiple working directories linked to a single Git repository. This is useful when you need to work on multiple branches simultaneously without switching branches in the same directory.
 
+---
+
+`git worktree` allows you to have multiple working directories linked to a single Git repository. This is useful when you need to work on multiple branches simultaneously without switching branches in the same directory.
 
 ## 🔹 Check Existing Worktrees
 
@@ -298,47 +296,56 @@ git submodule update --init --recursive
 - ✅ Pushed files from the main repo into the submodule
 - ✅ Updated the submodule reference in the main repo
 
-
 ## Difference Between `git submodule update --remote --merge` and `git submodule update --init --recursive`
+
 Both commands update submodules, but they work differently.
 
 ✅ 1️⃣ `git submodule update --remote --merge`
+
 ```bash
 git submodule update --remote --merge
 ```
+
 📌 **What It Does:**
+
 - Pulls the latest commit from the remote branch of the submodule.
 - Merges that commit into your local submodule.
 - Updates the submodule folder to match the latest remote version.
 
 🛠 **When to Use It**
+
 - When you want to fetch the latest changes from the submodule’s remote repo.
 - Useful if the submodule is actively being updated and you want to sync with the latest version.
 
 🚀 **Example**
+
 - Your submodule (`whk-script-library`) is behind the remote repository.
 - Running `git submodule update --remote --merge` fetches and merges the latest changes.
 - The submodule now tracks the latest remote commit.
 
 ✅ 2️⃣ `git submodule update --init --recursive`
+
 ```bash
 git submodule update --init --recursive
 ```
+
 📌 **What It Does:**
+
 - Ensures that all submodules are initialized (`--init`).
 - Updates submodules to the exact commit referenced in the main repository.
 - Recursively initializes nested submodules (`--recursive`).
 
 🛠 **When to Use It**
+
 - When you just cloned the main repository and need to fetch and initialize submodules.
 - Ensures that all submodules match the commit stored in the main repo (even if they are outdated).
 - Best for setting up a project that includes submodules.
 
 🚀 **Example**
+
 - You cloned `whk-wms`, but the `whk-script-library` submodule is empty.
 - Running `git submodule update --init --recursive` initializes and updates it to the expected commit.
 - The submodule now matches the commit tracked in the main repo, not necessarily the latest commit from the remote.
-
 
 # Delete Untracked Files and Folders
 
@@ -441,18 +448,25 @@ What this does:
 - `git request-pull <start> <url> <end>`: Generate a request to pull changes into a repository.
 
 # 🛠 **View and Clean Up Local Git Branches**
+
 ## **🐧 Bash**
+
 List Local Branches Without a Remote Connection.
-```git branch -vv | grep -E '^\s*\S+\s+[^\[]+$'```  
+`git branch -vv | grep -E '^\s*\S+\s+[^\[]+$'`  
 Automatically Delete Local Branches Without Remote Tracking.
+
 ```
 git branch -vv | grep -E '^\s*\S+\s+[^\[]+$' | awk '{print $1}' | xargs git branch -D
 ```
-View Local Branches That Had Their Remote Deleted (Ex: PR Merged & Deleted in remote but still exist in local).**
+
+View Local Branches That Had Their Remote Deleted (Ex: PR Merged & Deleted in remote but still exist in local).\*\*
+
 ```
 git branch -vv | grep ': gone]'
-```  
+```
+
 Delete Stale Local Branches That Had Their Remote Deleted.
+
 ```
 git branch -vv | grep ': gone]' | awk '{print $1}' | xargs git branch -D
 ```
@@ -460,28 +474,34 @@ git branch -vv | grep ': gone]' | awk '{print $1}' | xargs git branch -D
 ---
 
 ## **🖥 PowerShell**
-List Local Branches Without a Remote Connection.
-  ```
-  git branch -vv | Select-String -NotMatch "origin/"
-  ```  
-Automatically Delete Local Branches Without Remote Tracking
- ```
-git branch -vv | Select-String -NotMatch "origin/" | ForEach-Object { 
-    $branch = ($_ -split "\s+")[1]
-    git branch -D $branch
-}
-  ```
 
-View Local Branches That Had Their Remote Deleted (Ex: PR Merged & Deleted in remote but still exist in local).**
+List Local Branches Without a Remote Connection.
+
+```
+git branch -vv | Select-String -NotMatch "origin/"
+```
+
+Automatically Delete Local Branches Without Remote Tracking
+
+```
+git branch -vv | Select-String -NotMatch "origin/" | ForEach-Object {
+   $branch = ($_ -split "\s+")[1]
+   git branch -D $branch
+}
+```
+
+View Local Branches That Had Their Remote Deleted (Ex: PR Merged & Deleted in remote but still exist in local).\*\*
+
 ```
 git branch -vv | Select-String ": gone\]"
 ```
-  
-Delete Stale Local Branches That Had Their Remote Deleted.**
+
+Delete Stale Local Branches That Had Their Remote Deleted.\*\*
 
 ```
 git fetch -p && git branch -vv | Select-String ': gone]' | ForEach-Object { $_.ToString().Trim().Split()[0] } | ForEach-Object { git branch -D $_ }
 ```
+
 # Miscellaneous
 
 - `git archive --format=zip --output=<file.zip> <tree-ish>`: Create an archive of files from a named tree.
@@ -496,10 +516,20 @@ git fetch -p && git branch -vv | Select-String ': gone]' | ForEach-Object { $_.T
 
 ---
 
-## [References & Resources](./References&Resources.md)
-> [!NOTE]
-> Add your links here if you have some or is an *_author_*
+## References & Resources
 
-A link to a collection of blogs and resources I have used to learn more about Git.  
-> 📖 [View References & Resources](./References&Resources.md)  
- 
+> [!NOTE]
+> Add your links here if you have some or is an **author**
+
+A link to a collection of blogs and resources I have used to learn more about Git.
+
+> 📖 [View References & Resources](./References&Resources.md)
+
+## Contributors & Credits
+
+> [!NOTE]
+> Add yourself here if your links were used or is an **contributor**
+
+A link to a collection of blogs and resources I have used to learn more about Git.
+
+> 📖 [View References & Resources](./Authors&Contributors.md)
