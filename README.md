@@ -51,8 +51,7 @@
   - [**🐧 Bash**](#-bash)
   - [**🖥 PowerShell**](#-powershell)
 - [Miscellaneous](#miscellaneous)
-  - [References \& Resources](#references--resources)
-  - [Contributors \& Credits](#contributors--credits)
+- [Contributors \& Credits](#contributors--credits)
 
 # Advanced Git Commands
 
@@ -516,20 +515,11 @@ git fetch -p && git branch -vv | Select-String ': gone]' | ForEach-Object { $_.T
 
 ---
 
-## References & Resources
-
-> [!NOTE]
-> Add your links here if you have some or is an **author**
-
-A link to a collection of blogs and resources I have used to learn more about Git.
-
-> 📖 [View References & Resources](./References&Resources.md)
-
 ## Contributors & Credits
 
 > [!NOTE]
-> Add yourself here if your links were used or is an **contributor**
+> Add yourself, your links you have used, or even your blogs if you have some or is an **author**
 
-A link to a collection of blogs and resources I have used to learn more about Git.
-
-> 📖 [View References & Resources](./Authors&Contributors.md)
+> 👨‍👩‍👧‍👦 [View Contributors](./References&Resources.md)
+> 🧑‍💻 [View Credits & Authors](./References&Resources.md)
+> 📖 [View References & Resources](./References&Resources.md)
