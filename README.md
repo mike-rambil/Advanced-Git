@@ -10,7 +10,8 @@
 - [📌 `git push --force-with-lease`](#-git-push---force-with-lease)
     - [🔹 Problem:](#-problem)
     - [🔹 Solution:](#-solution)
-      - [Tutorial](#Tutorial)
+    - [Tutorial](#Tutorial)
+    - [References](#References)
 - [Git Worktree Tutorial](#git-worktree-tutorial)
   - [📌 What is `git worktree`?](#-what-is-git-worktree)
   - [🔹 Check Existing Worktrees](#-check-existing-worktrees)
@@ -76,7 +77,10 @@ When users are within the same branch and they want to push to remote but not su
 use the ---force with lease flag while pushing to check it there is a push. If there is a push from the other person - your push to the same branch is cancelled.
 
 #### [Tutorial](./--force-with-lease.md)
+> [Git push — force-with-lease vs. — force - Sahil-Bhatia](https://medium.com/@sahilsahilbhatia/git-push-force-with-lease-vs-force-ecae72601e80)
 
+#### References
+> [Checkout Tutorial Here](./--force-with-lease.md)
 
 ## 📌 Git Worktree Tutorial
 ---
