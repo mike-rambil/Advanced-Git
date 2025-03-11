@@ -61,14 +61,19 @@
 explain what this is in breif
 
 
-```
+
 ### Problem:
 When users are within the same branch and they want to push to remote but not sure if there is a commit pushed from the other dev that might block you
 
 ### Solution:
 use the ---force with lease flag while pushing to check it there is a push. If there is a push from the other person - your push to the same branch is cancelled.
 
-```
+### Tutorial:
+Go to detailed tutorial
+
+#### Summary
+- Summary points
+
 
 # Git Worktree Tutorial
 
