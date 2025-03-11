@@ -1,7 +1,7 @@
 # Advanced Git Commands
 
 <h1 align="center">
-    <img src="https://raw.githubusercontent.com/mike-rambil/Advanced-Git/refs/heads/logo/brand/advanced-git-mike-rambil.png" height="100" width="375"  alt="banner" /><br>
+    <img src="https://raw.githubusercontent.com/mike-rambil/Advanced-Git/refs/heads/logo/brand/advanced-git-mike-rambil.png" height="200" width="375"  alt="banner" /><br>
 </h1>
 
 > [!IMPORTANT]
