@@ -1,4 +1,13 @@
-# Advanced Git Commands
+<table style="width:100%; border: 0;">
+  <tr>
+    <td style="width: 25%; text-align: center;">
+      <img src="https://raw.githubusercontent.com/mike-rambil/Advanced-Git/refs/heads/logo/brand/advanced-git-mike-rambil.png" height="200" width="375" alt="banner" />
+    </td>
+    <td style="width: 75%; text-align: right;">
+      <h1>Advanced Git Commands</h1>
+    </td>
+  </tr>
+</table>
 
 <h1 align="center">
     <img src="https://raw.githubusercontent.com/mike-rambil/Advanced-Git/refs/heads/logo/brand/advanced-git-mike-rambil.png" height="200" width="375"  alt="banner" /><br>
