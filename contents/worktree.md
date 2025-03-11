@@ -1,8 +1,8 @@
-## How to Use 'git worktree' Safely
+## How to Use `git worktree` Safely
 
 ### 📑 Table of Contents
 
-- [How to Use 'git worktree' Safely](#how-to-use-git-worktree-safely)
+- [How to Use `git worktree` Safely](#how-to-use-git-worktree-safely)
   - [Step 1: Check Existing Worktrees](#step-1-check-existing-worktrees)
   - [Step 2: Create a New Worktree](#step-2-create-a-new-worktree)
   - [Step 3: Remove a Worktree](#step-3-remove-a-worktree)
