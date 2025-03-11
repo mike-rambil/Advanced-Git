@@ -494,6 +494,10 @@ git fetch -p && git branch -vv | Select-String ': gone]' | ForEach-Object { $_.T
 - `git bundle unbundle <file>`: Extract a bundle into a repository.
 - `git rm --cached -r <file/folder>`: Removes Git tracking without deleting files from local machine which prevents Git from tracking future changes if it’s added to .gitignore.(Ex: most useful for deleting .env when you accidentally push it to remote)
 
-#### [References & Resources](./References&Resources.md)
-A collection of blogs, and resources I have used to get to know more of git.
-> [View References & Resources](./References&Resources.md)
+---
+
+#### Links
+> [!NOTE] [References & Resources](./References&Resources.md) 
+A link to a collection of blogs and resources I have used to learn more about Git.  
+> 📖 [View References & Resources](./References&Resources.md)  
+ 
