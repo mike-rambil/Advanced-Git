@@ -53,7 +53,8 @@
   - [**🐧 Bash**](#-bash)
   - [**🖥 PowerShell**](#-powershell)
 - [Miscellaneous](#miscellaneous)
-- [References & Resources](#References & Resources)
+- [References & Resources](#references-&-resources)
+- 
 # Advanced Git Commands
 
 
