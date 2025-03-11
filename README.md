@@ -537,10 +537,10 @@ Acknowledgment of the original authors.
 
 > 🧑‍💻 [View Credits & Authors](./Contributors&Credits.md#credits-authors)  
 
-#### [📖 References & Resources](./References&Resources.md#references-resources)  
+#### [📖 References & Resources](./Contributors&Credits.md#references-resources)  
 A collection of blogs, articles, and materials used to learn more about Git.  
 
-> 📖 [View References & Resources](./References&Resources.md#references-resources)  
+> 📖 [View References & Resources](./Contributors&Credits.md#references-resources)  
 
 ---
 
