@@ -10,6 +10,6 @@ A collection of blogs, articles, and materials used to learn more about Git.
 
 
 ## 🔗 Blogs & Articles
-- [git-push-force-with-lease-vs-force]([https://git-scm.com/doc](https://medium.com/@sahilsahilbhatia/git-push-force-with-lease-vs-force-ecae72601e80))
+- [git-push-force-with-lease-vs-force](https://medium.com/@sahilsahilbhatia/git-push-force-with-lease-vs-force-ecae72601e80)
 
 
