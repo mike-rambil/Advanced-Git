@@ -5,6 +5,7 @@
 
 - [Advanced Git Commands](#advanced-git-commands)
   - [Latest](#latest)
+- [force with lease](#force-with-lease)
 - [Git Worktree Tutorial](#git-worktree-tutorial)
   - [📌 What is `git worktree`?](#-what-is-git-worktree)
   - [🔹 Check Existing Worktrees](#-check-existing-worktrees)
@@ -54,6 +55,20 @@
 
 - `git push --force-with-lease` - [Cancels git push if someone else did a commit on the same remote branch and safe guards `git push`](https://medium.com/@sahilsahilbhatia/git-push-force-with-lease-vs-force-ecae72601e80)
 - `git maintenance start` - [Runs a cronJob in background for the specified repo for periodic maintanence](https://git-scm.com/docs/git-maintenance)
+
+
+## force with lease
+explain what this is in breif
+
+
+```
+### Problem:
+When users are within the same branch and they want to push to remote but not sure if there is a commit pushed from the other dev that might block you
+
+### Solution:
+use the ---force with lease flag while pushing to check it there is a push. If there is a push from the other person - your push to the same branch is cancelled.
+
+```
 
 # Git Worktree Tutorial
 
