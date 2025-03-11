@@ -521,5 +521,7 @@ git fetch -p && git branch -vv | Select-String ': gone]' | ForEach-Object { $_.T
 > Add yourself, your links you have used, or even your blogs if you have some or is an **author**
 
 > 👨‍👩‍👧‍👦 [View Contributors](./References&Resources.md)
+
 > 🧑‍💻 [View Credits & Authors](./References&Resources.md)
+
 > 📖 [View References & Resources](./References&Resources.md)
