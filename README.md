@@ -7,7 +7,7 @@
 - [Table of Contents](#table-of-contents)
 - [Advanced Git Commands](#advanced-git-commands)
   - [Latest](#latest)
-  - [📌 `git push --force-with-lease`](#-git-push---force-with-lease)
+- [📌 `git push --force-with-lease`](#-git-push---force-with-lease)
     - [🔹 Problem:](#-problem)
     - [🔹 Solution:](#-solution)
     - [🔹 Tutorial:](#-tutorial)
