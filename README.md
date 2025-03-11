@@ -1,3 +1,5 @@
+# Advanced Git Commands
+
 > [!IMPORTANT]
 > If you find a useful GIT command - be sure to sent a PR here as well :)
 
@@ -57,7 +59,7 @@
     - [📖 References \& Resources](#-references--resources)
 
 
-# Advanced Git Commands
+
 
 ## Latest
 
