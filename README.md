@@ -497,7 +497,10 @@ git fetch -p && git branch -vv | Select-String ': gone]' | ForEach-Object { $_.T
 ---
 
 #### Links
-> [!NOTE] [References & Resources](./References&Resources.md) 
+> [!NOTE]
+> Add your links here if you have some or is an author
+
+##### [References & Resources](./References&Resources.md)
 A link to a collection of blogs and resources I have used to learn more about Git.  
 > 📖 [View References & Resources](./References&Resources.md)  
  
