@@ -4,7 +4,7 @@
 
 ## 👨‍👩‍👧‍👦Contributors 
 
-A collection of blogs, articles, and materials used to learn more about Git.
+@mike-rambil
 
 ## Credits & Authors
 [Sagil Bhatia](https://medium.com/@sahilsahilbhatia)
