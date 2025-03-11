@@ -13,12 +13,9 @@
   - [🔹 Solution](#-solution)
   - [Tutorial](#tutorial)
 - [📌 Git Worktree Tutorial](#-git-worktree-tutorial)
-  - [🔹 Check Existing Worktrees](#-check-existing-worktrees)
-  - [🔹 Create a New Worktree](#-create-a-new-worktree)
-  - [🔹 Remove a Worktree](#-remove-a-worktree)
-  - [🔹 Switch Between Worktrees](#-switch-between-worktrees)
-  - [🔹 Detach a Worktree Without Deleting It](#-detach-a-worktree-without-deleting-it)
-  - [🔹 Use Worktrees for Temporary Fixes](#-use-worktrees-for-temporary-fixes)
+  - [🔹 Problem](#-problem)
+  - [🔹 Solution](#-solution)
+  - [Tutorial](#tutorial)
 - [How to Use Git Submodules by Setting Up a New Submodule Repository and Pushing to It](#how-to-use-git-submodules-by-setting-up-a-new-submodule-repository-and-pushing-to-it)
   - [Step 1: Create the Git Submodule Repository](#step-1-create-the-git-submodule-repository)
     - [1. Initialize the Submodule Repository](#1-initialize-the-submodule-repository)
@@ -54,12 +51,9 @@
   - [**🖥 PowerShell**](#-powershell)
 - [Miscellaneous](#miscellaneous)
 - [Contributors \& Credits](#contributors--credits)
-    - [👨‍👩‍👧‍👦 Contributors](#-contributors)
-    - [🧑‍💻 Credits \& Authors](#-credits--authors)
-    - [📖 References \& Resources](#-references--resources)
-
-
-
+  - [👨‍👩‍👧‍👦 Contributors](#-contributors)
+  - [🧑‍💻 Credits \& Authors](#-credits--authors)
+  - [📖 References \& Resources](#-references--resources)
 
 ## Latest
 
@@ -84,96 +78,18 @@ use the ---force with lease flag while pushing to check it there is a push. If t
 
 ## 📌 Git Worktree Tutorial
 
----
+### 🔹 Problem
 
-`git worktree` allows you to have multiple working directories linked to a single Git repository. This is useful when you need to work on multiple branches simultaneously without switching branches in the same directory.
+Switching branches is Time consuming ,your IDE will run mad trying to adapt the project settings and constant reconfiguration.
 
-### 🔹 Check Existing Worktrees
+### 🔹 Solution
 
-To see all active worktrees in your repository, use:
+With worktree, you can avoid that constant reconfiguration
 
-```bash
-git worktree list
-```
-
-This will output a list of worktrees with their paths and branches.
-
-### 🔹 Create a New Worktree
-
-To create a new worktree for a branch, run:
-
-```bash
-git worktree add <path> <branch>
-```
-
-Example:
-
-```bash
-git worktree add ../feature-branch feature
-```
-
-This creates a new directory ../feature-branch/ and checks out the feature branch inside it.
-
-If the branch does not exist, add -b to create it:
-
-```bash
-git worktree add -b new-feature ../new-feature-branch
-```
-
-### 🔹 Remove a Worktree
-
-To remove a worktree (detach it from the repository), first remove the directory manually, then prune it:
-
-```bash
-rm -rf <worktree-path>
-git worktree prune
-```
-
-Example:
-
-```bash
-rm -rf ../feature-branch
-git worktree prune
-```
-
-### 🔹 Switch Between Worktrees
-
-Simply change directories to the worktree you want to work in:
-
-```bash
-cd ../feature-branch
-```
-
-You can now work on this branch independently of the main repository directory.
-
-###🔹 Detach a Worktree Without Deleting It
-
-```bash
-git worktree remove <worktree-path>
-```
-
-Example:
-
-```bash
-git worktree remove ../feature-branch
-```
-
-### 🔹 Use Worktrees for Temporary Fixes
-
-You can use worktrees to quickly fix bugs on a different branch without switching from your main working directory:
-
-```bash
-git worktree add ../hotfix hotfix-branch
-cd ../hotfix
-# Apply fix
-git commit -am "Fixed urgent bug"
-git push origin hotfix-branch
-cd ../main-repo
-git worktree remove ../hotfix
-
-```
+### [Tutorial](./contents/worktree.md)
 
 ## Git Submodules
+
 How to Use Git Submodules by Setting Up a New Submodule Repository and Pushing to It
 This guide walks you through:
 
@@ -525,23 +441,23 @@ git fetch -p && git branch -vv | Select-String ': gone]' | ForEach-Object { $_.T
 
 > [!NOTE]
 > Add yourself, your links you have used, or even your blogs if you have some or is an **author**
-  
 
-#### [👨‍👩‍👧‍👦 Contributors](./Contributors&Credits.md)  
-A list of individuals who have contributed to this project.  
+#### [👨‍👩‍👧‍👦 Contributors](./Contributors&Credits.md)
 
-> 👨‍👩‍👧‍👦 [View Contributors](./Contributors&Credits.md#contributors)  
+A list of individuals who have contributed to this project.
 
-#### [🧑‍💻 Credits & Authors](./Contributors&Credits.md#credits-authors)  
-Acknowledgment of the original authors.  
+> 👨‍👩‍👧‍👦 [View Contributors](./Contributors&Credits.md#contributors)
 
-> 🧑‍💻 [View Credits & Authors](./Contributors&Credits.md#credits-authors)  
+#### [🧑‍💻 Credits & Authors](./Contributors&Credits.md#credits-authors)
 
-#### [📖 References & Resources](./Contributors&Credits.md#references-resources)  
-A collection of blogs, articles, and materials used to learn more about Git.  
+Acknowledgment of the original authors.
 
-> 📖 [View References & Resources](./Contributors&Credits.md#references-resources)  
+> 🧑‍💻 [View Credits & Authors](./Contributors&Credits.md#credits-authors)
+
+#### [📖 References & Resources](./Contributors&Credits.md#references-resources)
+
+A collection of blogs, articles, and materials used to learn more about Git.
+
+> 📖 [View References & Resources](./Contributors&Credits.md#references-resources)
 
 ---
-
-
