@@ -88,7 +88,7 @@ use the ---force with lease flag while pushing to check it there is a push. If t
 
 `git worktree` allows you to have multiple working directories linked to a single Git repository. This is useful when you need to work on multiple branches simultaneously without switching branches in the same directory.
 
-## 🔹 Check Existing Worktrees
+### 🔹 Check Existing Worktrees
 
 To see all active worktrees in your repository, use:
 
@@ -98,7 +98,7 @@ git worktree list
 
 This will output a list of worktrees with their paths and branches.
 
-## 🔹 Create a New Worktree
+### 🔹 Create a New Worktree
 
 To create a new worktree for a branch, run:
 
@@ -120,7 +120,7 @@ If the branch does not exist, add -b to create it:
 git worktree add -b new-feature ../new-feature-branch
 ```
 
-## 🔹 Remove a Worktree
+### 🔹 Remove a Worktree
 
 To remove a worktree (detach it from the repository), first remove the directory manually, then prune it:
 
@@ -136,7 +136,7 @@ rm -rf ../feature-branch
 git worktree prune
 ```
 
-## 🔹 Switch Between Worktrees
+### 🔹 Switch Between Worktrees
 
 Simply change directories to the worktree you want to work in:
 
@@ -146,7 +146,7 @@ cd ../feature-branch
 
 You can now work on this branch independently of the main repository directory.
 
-## 🔹 Detach a Worktree Without Deleting It
+###🔹 Detach a Worktree Without Deleting It
 
 ```bash
 git worktree remove <worktree-path>
@@ -158,7 +158,7 @@ Example:
 git worktree remove ../feature-branch
 ```
 
-## 🔹 Use Worktrees for Temporary Fixes
+### 🔹 Use Worktrees for Temporary Fixes
 
 You can use worktrees to quickly fix bugs on a different branch without switching from your main working directory:
 
@@ -173,8 +173,8 @@ git worktree remove ../hotfix
 
 ```
 
-# How to Use Git Submodules by Setting Up a New Submodule Repository and Pushing to It
-
+## Git Submodules
+How to Use Git Submodules by Setting Up a New Submodule Repository and Pushing to It
 This guide walks you through:
 
 - Creating a new Git submodule repository
@@ -183,11 +183,11 @@ This guide walks you through:
 
 ---
 
-## Step 1: Create the Git Submodule Repository
+### Step 1: Create the Git Submodule Repository
 
 We need to create a new repository that will act as the submodule.
 
-### 1. Initialize the Submodule Repository
+#### 1. Initialize the Submodule Repository
 
 ```bash
 mkdir my-submodule
@@ -197,24 +197,24 @@ git init --bare
 
 This sets up an empty bare repository, meaning it will only store Git data and be used as a remote.
 
-### 2. Host it on GitHub (or any remote)
+#### 2. Host it on GitHub (or any remote)
 
 - Go to GitHub (or GitLab/Bitbucket).
 - Create a new repository named my-submodule.
 - Copy the remote URL (e.g., <git@github.com>:your-user/my-submodule.git).
 
-### 3. Push the Bare Repo to Remote
+#### 3. Push the Bare Repo to Remote
 
 ```bash
 git remote add origin git@github.com:your-user/my-submodule.git
 git push --set-upstream origin main
 ```
 
-## Step 2: Add the Submodule to Another Repo
+### Step 2: Add the Submodule to Another Repo
 
 Now, let’s integrate this submodule into a main repository.
 
-### 1. Initialize and Clone the Main Repository
+#### 1. Initialize and Clone the Main Repository
 
 ```bash
 mkdir main-repo
@@ -222,7 +222,7 @@ cd main-repo
 git init
 ```
 
-### 2. Add the Submodule
+#### 2. Add the Submodule
 
 ```bash
 git submodule add git@github.com:your-user/my-submodule.git submodules/my-submodule
@@ -230,7 +230,7 @@ git submodule add git@github.com:your-user/my-submodule.git submodules/my-submod
 
 This clones the submodule into the submodules/my-submodule directory inside the main repo.
 
-### 3. Commit and Push
+#### 3. Commit and Push
 
 ```bash
 git add .gitmodules submodules/my-submodule
@@ -238,17 +238,17 @@ git commit -m "Added submodule my-submodule"
 git push origin main
 ```
 
-## Step 3: Add Files and Push to the Submodule
+### Step 3: Add Files and Push to the Submodule
 
 Now, let’s add files to the submodule from the main repo.
 
-### 1. Navigate into the Submodule
+#### 1. Navigate into the Submodule
 
 ```bash
 cd submodules/my-submodule
 ```
 
-### 2. Add Files to the Submodule
+#### 2. Add Files to the Submodule
 
 ```bash
 echo "Hello from the submodule!" > file.txt
@@ -256,23 +256,23 @@ git add file.txt
 git commit -m "Added file to submodule"
 ```
 
-### 3. Push the Changes to the Submodule Repository
+#### 3. Push the Changes to the Submodule Repository
 
 ```bash
 git push origin main
 ```
 
-## Step 4: Commit the Updated Submodule in the Main Repo
+### Step 4: Commit the Updated Submodule in the Main Repo
 
 Once the submodule has new changes, the main repository needs to recognize it.
 
-### 1. Move Back to Main Repo
+#### 1. Move Back to Main Repo
 
 ```bash
 cd ../..
 ```
 
-### 2. Stage and Commit the Submodule Update
+#### 2. Stage and Commit the Submodule Update
 
 ```bash
 git add submodules/my-submodule
@@ -280,7 +280,7 @@ git commit -m "Updated submodule to latest commit"
 git push origin main
 ```
 
-## Step 5: Cloning and Initializing Submodules
+### Step 5: Cloning and Initializing Submodules
 
 If you or someone else clones the main repo, you need to initialize the submodules:
 
