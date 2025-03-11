@@ -9,9 +9,7 @@
   </tr>
 </table>
 
-<h1 align="center">
-    <img src="https://raw.githubusercontent.com/mike-rambil/Advanced-Git/refs/heads/logo/brand/advanced-git-mike-rambil.png" height="200" width="375"  alt="banner" /><br>
-</h1>
+
 
 > [!IMPORTANT]
 > If you find a useful GIT command - be sure to sent a PR here as well :)
