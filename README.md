@@ -57,10 +57,8 @@
 - `git maintenance start` - [Runs a cronJob in background for the specified repo for periodic maintanence](https://git-scm.com/docs/git-maintenance)
 
 
-## force with lease
-explain what this is in breif
-
-
+## `git push --force-with-lease`
+`git push --force-with-lease` ensures you don’t accidentally overwrite someone else’s work when force-pushing. It checks if the remote branch still matches what you last pulled. If someone else has pushed changes in the meantime, your push is rejected, preventing unintended data loss.
 
 ### Problem:
 When users are within the same branch and they want to push to remote but not sure if there is a commit pushed from the other dev that might block you
