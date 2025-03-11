@@ -6,7 +6,7 @@
   - [Step 2: Use `git push --force-with-lease`](#step-2-use-git-push---force-with-lease)  
   - [Step 3: Handle Rejected Pushes](#step-3-handle-rejected-pushes)  
   - [Step 4: Best Practices](#step-4-best-practices)
-  - 
+
 ### Step 1: Understand the Problem  
 1. You and another developer are working on the same branch.  
 2. You want to push your changes but are unsure if someone else has already pushed new commits.  
