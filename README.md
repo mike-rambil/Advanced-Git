@@ -493,3 +493,5 @@ git fetch -p && git branch -vv | Select-String ': gone]' | ForEach-Object { $_.T
 - `git rm --cached -r <file/folder>`: Removes Git tracking without deleting files from local machine which prevents Git from tracking future changes if it’s added to .gitignore.(Ex: most useful for deleting .env when you accidentally push it to remote)
 
 #### [References](./References.md)
+A collection of blogs, and resources I have used to get to know more of git.
+> [References](./References.md)
