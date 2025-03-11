@@ -530,17 +530,17 @@ git fetch -p && git branch -vv | Select-String ': gone]' | ForEach-Object { $_.T
 #### [👨‍👩‍👧‍👦 Contributors](./Contributors&Credits.md)  
 A list of individuals who have contributed to this project.  
 
-> 👨‍👩‍👧‍👦 [View Contributors](./Contributors&Credits.md)  
+> 👨‍👩‍👧‍👦 [View Contributors](./Contributors&Credits.md#contributors)  
 
-#### [🧑‍💻 Credits & Authors](./Contributors&Credits.md)  
+#### [🧑‍💻 Credits & Authors](./Contributors&Credits.md#credits-authors)  
 Acknowledgment of the original authors.  
 
-> 🧑‍💻 [View Credits & Authors](./Contributors&Credits.md)  
+> 🧑‍💻 [View Credits & Authors](./Contributors&Credits.md#credits-authors)  
 
-#### [📖 References & Resources](./References&Resources.md)  
+#### [📖 References & Resources](./References&Resources.md#references-resources)  
 A collection of blogs, articles, and materials used to learn more about Git.  
 
-> 📖 [View References & Resources](./References&Resources.md)  
+> 📖 [View References & Resources](./References&Resources.md#references-resources)  
 
 ---
 
