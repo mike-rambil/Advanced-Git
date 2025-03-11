@@ -52,6 +52,10 @@
   - [**🖥 PowerShell**](#-powershell)
 - [Miscellaneous](#miscellaneous)
 - [Contributors \& Credits](#contributors--credits)
+    - [👨‍👩‍👧‍👦 Contributors](#-contributors)
+    - [🧑‍💻 Credits \& Authors](#-credits--authors)
+    - [📖 References \& Resources](#-references--resources)
+
 
 # Advanced Git Commands
 
@@ -519,9 +523,23 @@ git fetch -p && git branch -vv | Select-String ': gone]' | ForEach-Object { $_.T
 
 > [!NOTE]
 > Add yourself, your links you have used, or even your blogs if you have some or is an **author**
+  
 
-> 👨‍👩‍👧‍👦 [View Contributors](./Contributors&Credits.md)
+#### [👨‍👩‍👧‍👦 Contributors](./Contributors&Credits.md)  
+A list of individuals who have contributed to this project.  
 
-> 🧑‍💻 [View Credits & Authors](./Contributors&Credits.md)
+> 👨‍👩‍👧‍👦 [View Contributors](./Contributors&Credits.md)  
 
-> 📖 [View References & Resources](./Contributors&Credits.md)
+#### [🧑‍💻 Credits & Authors](./Contributors&Credits.md)  
+Acknowledgment of the original authors.  
+
+> 🧑‍💻 [View Credits & Authors](./Contributors&Credits.md)  
+
+#### [📖 References & Resources](./References&Resources.md)  
+A collection of blogs, articles, and materials used to learn more about Git.  
+
+> 📖 [View References & Resources](./References&Resources.md)  
+
+---
+
+
