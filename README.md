@@ -496,7 +496,7 @@ git fetch -p && git branch -vv | Select-String ': gone]' | ForEach-Object { $_.T
 
 ---
 
-#### [References & Resources](./References&Resources.md)
+## [References & Resources](./References&Resources.md)
 > [!NOTE]
 > Add your links here if you have some or is an *_author_*
 
