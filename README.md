@@ -5,10 +5,10 @@
 
 - [Advanced Git Commands](#advanced-git-commands)
   - [Latest](#latest)
-- [📌 Git Push --Force-With-Lease](#📌-git-push---force-with-lease)  
-  - [🔹 Problem](#problem)  
-  - [🔹 Solution](#solution)  
-  - [🔹 Tutorial](#tutorial)
+- [📌 git push --force-with-lease](#📌-git-push---force-with-lease)  
+  - [🔹 Problem](#🔹-problem)  
+  - [🔹 Solution](#🔹-solution)  
+  - [🔹 Tutorial](#🔹-tutorial)
 - [Git Worktree Tutorial](#git-worktree-tutorial)
   - [📌 What is `git worktree`?](#-what-is-git-worktree)
   - [🔹 Check Existing Worktrees](#-check-existing-worktrees)
@@ -61,6 +61,7 @@
 
 
 ## 📌 `git push --force-with-lease`
+---
 `git push --force-with-lease` ensures you don’t accidentally overwrite someone else’s work when force-pushing. It checks if the remote branch still matches what you last pulled. If someone else has pushed changes in the meantime, your push is rejected, preventing unintended data loss.
 
 ###🔹 Problem:
@@ -73,13 +74,10 @@ use the ---force with lease flag while pushing to check it there is a push. If t
 > Go to detailed tutorial
 
 
-# 📌 Git Worktree Tutorial
-
-##  What is `git worktree`?
-
+## 📌 Git Worktree Tutorial
+---
 `git worktree` allows you to have multiple working directories linked to a single Git repository. This is useful when you need to work on multiple branches simultaneously without switching branches in the same directory.
 
----
 
 ## 🔹 Check Existing Worktrees
 
