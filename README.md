@@ -3,8 +3,7 @@
 
 # ADVANCED GIT COMMANDS
 
-- [Advanced Git Commands](#advanced-git-commands)
-  - [Latest](#latest)
+- [Latest](#latest)
 - [📌 git push --force-with-lease](#📌-git-push---force-with-lease)  
   - [🔹 Problem](#🔹-problem)  
   - [🔹 Solution](#🔹-solution)  
