@@ -71,9 +71,6 @@ use the ---force with lease flag while pushing to check it there is a push. If t
 ### Tutorial:
 > Go to detailed tutorial
 
-#### Summary
-- Summary points
-
 
 # Git Worktree Tutorial
 
