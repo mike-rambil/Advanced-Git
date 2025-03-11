@@ -5,8 +5,8 @@
 
 # Table of Contents
 
-- [Table of Contents](#table-of-contents)
 - [Advanced Git Commands](#advanced-git-commands)
+- [Table of Contents](#table-of-contents)
   - [Latest](#latest)
   - [📌 `git push --force-with-lease`](#-git-push---force-with-lease)
     - [🔹 Problem](#-problem)
