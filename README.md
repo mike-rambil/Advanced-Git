@@ -1,7 +1,7 @@
 > [!IMPORTANT]
 > If you find a useful GIT command - be sure to sent a PR here as well :)
 
-# ADVANCED GIT COMMANDS
+# Table of Contents
 
 - [Latest](#latest)
 - [📌 git push --force-with-lease](#📌-git-push---force-with-lease)  
@@ -52,6 +52,7 @@
 - [Miscellaneous](#miscellaneous)
 
 # Advanced Git Commands
+---
 
 ## Latest
 
