@@ -87,6 +87,8 @@ Switching branches is Time consuming ,your IDE will run mad trying to adapt the 
 With worktree, you can avoid that constant reconfiguration
 
 ### [Tutorial](./contents/worktree.md)
+> [Checkout Tutorial Here](./contents/worktree.md)
+
 
 ## Git Submodules
 
