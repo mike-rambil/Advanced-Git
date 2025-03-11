@@ -68,6 +68,15 @@
   - [🧑‍💻 Credits \& Authors](#-credits--authors)
   - [📖 References \& Resources](#-references--resources)
 
+
+<div style="text-align: center;">
+
+## Advanced Git Commands
+
+</div>
+
+---
+
 ## Latest
 
 - `git push --force-with-lease` - [Cancels git push if someone else did a commit on the same remote branch and safe guards `git push`](https://medium.com/@sahilsahilbhatia/git-push-force-with-lease-vs-force-ecae72601e80)
