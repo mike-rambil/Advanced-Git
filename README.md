@@ -5,7 +5,7 @@
 
 - [Advanced Git Commands](#advanced-git-commands)
   - [Latest](#latest)
-- [📌 Git Push --Force-With-Lease](#📌`git-push---force-with-lease`)  
+- [📌 Git Push --Force-With-Lease](#📌-git-push---force-with-lease)  
   - [Problem](#problem)  
   - [Solution](#solution)  
   - [Tutorial](#tutorial)
