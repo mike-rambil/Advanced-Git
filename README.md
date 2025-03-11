@@ -1,13 +1,16 @@
 > [!IMPORTANT]
 > If you find a useful GIT command - be sure to sent a PR here as well :)
 
+
 # Table of Contents
 
-- [Latest](#latest)
-- [📌 git push --force-with-lease](#📌-git-push---force-with-lease)  
-  - [🔹 Problem](#🔹-problem)  
-  - [🔹 Solution](#🔹-solution)  
-  - [🔹 Tutorial](#🔹-tutorial)
+- [Table of Contents](#table-of-contents)
+- [Advanced Git Commands](#advanced-git-commands)
+  - [Latest](#latest)
+  - [📌 `git push --force-with-lease`](#-git-push---force-with-lease)
+    - [🔹 Problem:](#-problem)
+    - [🔹 Solution:](#-solution)
+    - [🔹 Tutorial:](#-tutorial)
 - [Git Worktree Tutorial](#git-worktree-tutorial)
   - [📌 What is `git worktree`?](#-what-is-git-worktree)
   - [🔹 Check Existing Worktrees](#-check-existing-worktrees)
