@@ -5,7 +5,10 @@
 
 - [Advanced Git Commands](#advanced-git-commands)
   - [Latest](#latest)
-- [`git push --force-with-lease`](#git push --force-with-lease)
+- [Git Push --Force-With-Lease](#git-push---force-with-lease)  
+  - [Problem](#problem)  
+  - [Solution](#solution)  
+  - [Tutorial](#tutorial)
 - [Git Worktree Tutorial](#git-worktree-tutorial)
   - [📌 What is `git worktree`?](#-what-is-git-worktree)
   - [🔹 Check Existing Worktrees](#-check-existing-worktrees)
