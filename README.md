@@ -397,7 +397,7 @@ use the `git log --oneline -- filename.txt` to review the past commits and view 
 
 
 <h3 id="git-log-oneline-filename-txt-TUTORIAL">Tutorial</h3>
-> [Checkout Tutorial Here](<./contents/-- filename.txt.md>)
+> [Checkout Tutorial Here](./contents/--%20filename.txt.md)
 
 
 # Repository Management
