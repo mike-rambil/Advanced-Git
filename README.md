@@ -10,7 +10,7 @@
 - [📌 `git push --force-with-lease`](#-git-push---force-with-lease)
     - [🔹 Problem:](#-problem)
     - [🔹 Solution:](#-solution)
-    - [Tutorial](#Tutorial)
+    - [🔹 Tutorial](#Tutorial)
     - [References](#References)
 - [Git Worktree Tutorial](#git-worktree-tutorial)
   - [📌 What is `git worktree`?](#-what-is-git-worktree)
