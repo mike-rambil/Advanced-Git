@@ -382,17 +382,16 @@ What this does:
 -f → Forces deletion of untracked files.
 -d → Deletes untracked directories (like data-loader/).
 
-<h3 id="git-log-oneline-filename-txt">`git log --oneline -- filename.txt`</h3>
+<h2 id="git-log-oneline-filename-txt"><code>git log --oneline -- filename.txt`</code></h2>
 
 `git log --oneline -- filename.txt` shows all past commits that changed a specific file (filename.txt) in a short and easy-to-read format.
 
 
-
-### 🔹 Problem
+<h3 id="git-log-oneline-filename-txt-PROBLEM">🔹 Problem</h3>
 
 When users want to see past commits of a specific file to either revert back a commit/cherrypick/review etc.
 
-### 🔹 Solution
+<h3 id="git-log-oneline-filename-txt-SOLUTION">🔹 Solution</h3>
 
 use the `git log --oneline -- filename.txt` to review the past commits and view the differences. Users can then subsequently revert, reset, review and do whatever makes sense with that commit of the specific file.
 
