@@ -42,9 +42,9 @@
   - [1️⃣ Dry Run (Check What Will Be Deleted)](#1️⃣-dry-run-check-what-will-be-deleted)
   - [2️⃣ Delete Untracked Files and Folders](#2️⃣-delete-untracked-files-and-folders)
 - [📌 `git log --oneline -- filename.txt`](#git-log-oneline-filename-txt)
-  - [🔹 Problem](#-problem)
-  - [🔹 Solution](#-solution)
-  - [Tutorial](#tutorial)
+  - [🔹 Problem](#git-log-oneline-filename-txt-PROBLEM)
+  - [🔹 Solution](#git-log-oneline-filename-txt-SOLUTION)
+  - [Tutorial](#git-log-oneline-filename-txt-TUTORIAL)
 - [Repository Management](#repository-management)
 - [Branching and Merging](#branching-and-merging)
 - [History and Inspection](#history-and-inspection)
@@ -395,8 +395,8 @@ When users want to see past commits of a specific file to either revert back a c
 
 use the `git log --oneline -- filename.txt` to review the past commits and view the differences. Users can then subsequently revert, reset, review and do whatever makes sense with that commit of the specific file.
 
-### [Tutorial](<./contents/-- filename.txt.md>)
 
+<h3 id="git-log-oneline-filename-txt-TUTORIAL">Tutorial</h3>
 > [Checkout Tutorial Here](<./contents/-- filename.txt.md>)
 
 
