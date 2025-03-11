@@ -78,9 +78,9 @@ When users are within the same branch and they want to push to remote but not su
 
 use the ---force with lease flag while pushing to check it there is a push. If there is a push from the other person - your push to the same branch is cancelled.
 
-### [Tutorial](./--force-with-lease.md)
+### [Tutorial](./contents/--force-with-lease.md)
 
-> [Checkout Tutorial Here](./--force-with-lease.md)
+> [Checkout Tutorial Here](./contents/--force-with-lease.md)
 
 ## 📌 Git Worktree Tutorial
 
