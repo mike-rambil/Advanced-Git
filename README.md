@@ -69,8 +69,9 @@
   - [📖 References \& Resources](#-references--resources)
 
 
-<h1 id="advanced-git-commands" style="text-align: center;">Advanced Git Commands</h1>
-
+<center>
+<h1 id="advanced-git-commands">Advanced Git Commands</h1>
+</center>
 
 ## Latest
 
