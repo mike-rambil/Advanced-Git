@@ -4,7 +4,7 @@
 > If you find a useful GIT command - be sure to sent a PR here as well :)
 
 <h1 align="center">
-    <img src="https://github.com/user-attachments/assets/" height="100" width="375" alt="banner" /><br>
+    <img src="https://github.com/mike-rambil/Advanced-Git/blob/logo/brand/Advanced-git-mike-rambil.jpg?raw=true" height="100" width="375" alt="banner" /><br>
 </h1>
 
 # Table of Contents
