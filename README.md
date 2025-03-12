@@ -12,7 +12,7 @@
   - [🔹 Problem](#-problem)
   - [🔹 Solution](#-solution)
   - [Tutorial](#tutorial)
-- [📌 Git Worktree Tutorial](#-git-worktree-tutorial)
+- [📌 `git worktree`](#-git-worktree-tutorial)
   - [🔹 Problem](#-problem)
   - [🔹 Solution](#-solution)
   - [Tutorial](#tutorial)
@@ -76,7 +76,9 @@ use the ---force with lease flag while pushing to check it there is a push. If t
 
 > [Checkout Tutorial Here](./contents/--force-with-lease.md)
 
-## 📌 Git Worktree Tutorial
+## 📌 `git worktree`
+
+`git worktree` allows you to have multiple working directories linked to a single Git repository. This is useful when you need to work on multiple branches simultaneously without switching branches in the same directory.
 
 ### 🔹 Problem
 
