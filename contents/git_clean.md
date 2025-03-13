@@ -1,7 +1,4 @@
-### 📄 `git-clean.md`  
-
-```markdown
-# Git Clean: Remove Untracked Files and Directories  
+# 📄 Git Clean: Remove Untracked Files and Directories  
 
 ## 📌 Table of Contents  
 
@@ -90,4 +87,4 @@ git clean -f -X
 - Use **interactive mode (`-i`)** for selective deletion.  
 
 Now you're ready to keep your Git workspace clean and efficient! 🚀  
-```  
+
