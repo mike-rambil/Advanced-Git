@@ -18,7 +18,7 @@
 
 `git worktree` allows you to manage multiple working directories linked to a single Git repository. It helps developers work on multiple branches simultaneously without switching branches in the same directory, reducing downtime and improving workflow efficiency.  
 
----
+
 
 ## 🔹 Step 1: Check Existing Worktrees  
 
@@ -171,7 +171,7 @@ cd ../review
 
 Now you can test the PR in isolation.  
 
-<h3 id="summary">📗 Summary</h3>
+<h2 id="summary">📗 Summary</h2>
 Using git worktree, you can manage multiple branches and features simultaneously without disrupting your main workspace. Whether you're fixing a bug, reviewing a pull request, or developing a new feature, worktrees provide an efficient, streamlined workflow that enhances productivity.
 
 
