@@ -83,15 +83,21 @@ use the ---force with lease flag while pushing to check it there is a push. If t
 
 ## 📌 `git worktree`
 
-### 🔹 Problem
+<h2 id="git-worktree-problem">🔹 Problem</h2>
 
-Switching branches in Git can be slow and disruptive, causing frequent IDE reconfigurations and delays.
+Switching branches in Git can be slow and disruptive to make changes to different branches can be tedious and problematic if you need to work at different branches simultaneously.
 
-### 🔹 Solution
+<h2 id="git-worktree-solution">🔹 Solution</h2>
 
 Git Worktree allows you to work on multiple branches simultaneously without the overhead of constant switching and reconfiguration.
 
-### [Tutorial](./contents/worktree.md)
+<h3 id="git-worktree-flags">🔹 Flags</h3>
+
+- Flag 1: Description
+- Flag 2: Description
+- Flag 3: Description
+
+<h2 id="git-worktree-tutorial">🔹 [Tutorial](./contents/worktree.md)</h2>
 > [Checkout Tutorial Here](./contents/worktree.md)
 
 
