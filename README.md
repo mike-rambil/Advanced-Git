@@ -32,6 +32,10 @@
 - [Delete Untracked Files and Folders](#delete-untracked-files-and-folders)
   - [1️⃣ Dry Run (Check What Will Be Deleted)](#1️⃣-dry-run-check-what-will-be-deleted)
   - [2️⃣ Delete Untracked Files and Folders](#2️⃣-delete-untracked-files-and-folders)
+- [📌 `git log --oneline -- filename.txt`](#git-log-oneline-filename-txt)
+  - [🔹 Problem](#git-log-oneline-filename-txt-PROBLEM)
+  - [🔹 Solution](#git-log-oneline-filename-txt-SOLUTION)
+  - [Tutorial](#git-log-oneline-filename-txt-TUTORIAL)
 - [Repository Management](#repository-management)
 - [Branching and Merging](#branching-and-merging)
 - [History and Inspection](#history-and-inspection)
@@ -113,6 +117,25 @@ git clean -f -d
 What this does:
 -f → Forces deletion of untracked files.
 -d → Deletes untracked directories (like data-loader/).
+
+<h2 id="git-log-oneline-filename-txt"><code>git log --oneline -- filename.txt`</code></h2>
+
+`git log --oneline -- filename.txt` shows all past commits that changed a specific file (filename.txt) in a short and easy-to-read format.
+
+
+<h3 id="git-log-oneline-filename-txt-PROBLEM">🔹 Problem</h3>
+
+When users want to see past commits of a specific file to either revert back a commit/cherrypick/review etc.
+
+<h3 id="git-log-oneline-filename-txt-SOLUTION">🔹 Solution</h3>
+
+use the `git log --oneline -- filename.txt` to review the past commits and view the differences. Users can then subsequently revert, reset, review and do whatever makes sense with that commit of the specific file.
+
+
+<h3 id="git-log-oneline-filename-txt-TUTORIAL">Tutorial</h3>
+
+> [Checkout Tutorial Here](./contents/--_filename.txt.md)
+
 
 # Repository Management
 
