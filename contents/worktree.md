@@ -2,7 +2,7 @@
 
 ### 📑 Table of Contents  
 
-  - [📌 What does it do?](#-what-does-it-do-)  
+  - [📌 What does it do?](#-what-does-it-do?)  
   - [🔹 Step 1: Check Existing Worktrees](#-step-1-check-existing-worktrees)  
   - [🔹 Step 2: Create a New Worktree](#-step-2-create-a-new-worktree)  
   - [🔹 Step 3: Remove a Worktree](#-step-3-remove-a-worktree)  
@@ -14,7 +14,7 @@
 
 ---
 
-## 📌 What does it do?  
+##📌 What does it do?  
 
 `git worktree` allows you to manage multiple working directories linked to a single Git repository. It helps developers work on multiple branches simultaneously without switching branches in the same directory, reducing downtime and improving workflow efficiency.  
 
