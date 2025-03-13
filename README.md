@@ -106,7 +106,7 @@ Git Worktree allows you to work on multiple branches simultaneously without the 
 > [Checkout Tutorial Here](./contents/worktree.md)
 
 
-<h2 id="delete-untracked-files-git-clean">📌 `git clean`</code></h2>
+<h2 id="delete-untracked-files-git-clean">📌 </code>git clean</code></h2>
 
 `git clean` removes **untracked files and directories** from your Git repository, helping to keep your workspace clean by deleting unnecessary files not tracked by version control.  
 
