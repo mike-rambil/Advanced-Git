@@ -92,33 +92,38 @@ Git Worktree allows you to work on multiple branches simultaneously without the 
 ### [Tutorial](./contents/worktree.md)
 > [Checkout Tutorial Here](./contents/worktree.md)
 
-# Delete Untracked Files and Folders
 
-To delete untracked files and folders, use the following methods:
+<h2 id="delete-untracked-files-git-clean">📌 `git clean`</code></h2>
 
-Git provides `git clean` to safely remove **untracked files and directories**.
+`git clean` removes **untracked files and directories** from your Git repository, helping to keep your workspace clean by deleting unnecessary files not tracked by version control.  
 
-### 1️⃣ Dry Run (Check What Will Be Deleted)
+### 🔹 Problem  
 
-First, run this to see what will be deleted:
+Over time, untracked files (e.g., logs, build artifacts, temporary files) can clutter your repository, making it harder to manage. Manually deleting them is inefficient and error-prone.  
 
-```bash
-git clean -n -d
-```
+### 🔹 Solution  
 
-### 2️⃣ Delete Untracked Files and Folders
+Use `git clean` to safely remove untracked files and directories.  
 
-If everything looks correct, run:
+### 🔹 Flags  
 
-```bash
-git clean -f -d
-```
+- `-n` → Shows what will be deleted without actually deleting anything.  
+- `-f` → Forces deletion of untracked files.  
+- `-d` → Deletes untracked directories.  
+- `-i` → Interactive mode, allowing selective deletion.  
+- `-x` → Removes ignored and untracked files.  
+- `-X` → Removes only ignored files.  
 
-What this does:
--f → Forces deletion of untracked files.
--d → Deletes untracked directories (like data-loader/).
+### [Tutorial](./contents/git-clean.md)  
 
-<h2 id="git-log-oneline-filename-txt"><code>git log --oneline -- filename.txt`</code></h2>
+> [Checkout Tutorial Here](./contents/git-clean.md)
+
+
+
+
+
+
+<h2 id="git-log-oneline-filename-txt"><code>git log --oneline -- filename.txt</code></h2>
 
 `git log --oneline -- filename.txt` shows all past commits that changed a specific file (filename.txt) in a short and easy-to-read format.
 
