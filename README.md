@@ -102,6 +102,7 @@ Git Worktree allows you to work on multiple branches simultaneously without the 
 - `git worktree move <old-path> <new-path>`: Moves a worktree to a different location.
 
 <h2 id="git-worktree-tutorial" href='./contents/worktree.md'>🔹 Tutorial</h2>
+
 > [Checkout Tutorial Here](./contents/worktree.md)
 
 
