@@ -1,36 +1,93 @@
-## Table of Contents
+### 📄 `git-clean.md`  
 
-1. [Delete Untracked Files and Folders](#delete-untracked-files-and-folders)  
-   1.1 [Dry Run (Check What Will Be Deleted)](#1️⃣-dry-run-check-what-will-be-deleted)  
-   1.2 [Delete Untracked Files and Folders](#2️⃣-delete-untracked-files-and-folders)
-2. [Summary](#summary)
+```markdown
+# Git Clean: Remove Untracked Files and Directories  
 
-# Delete Untracked Files and Folders
+## 📌 Table of Contents  
 
-To delete untracked files and folders, use the following methods:
+1. [Overview](#overview)  
+2. [Git Clean Flags](#git-clean-flags)  
+3. [Examples](#examples)  
+4. [Tips & Tricks](#tips--tricks)  
+5. [Summary](#summary)  
 
-Git provides `git clean` to safely remove **untracked files and directories**.
+## 📌 Overview  
 
-### 1️⃣ Dry Run (Check What Will Be Deleted)
+`git clean` is a powerful command that helps remove **untracked files and directories** from your repository. It is particularly useful when you want to reset your working directory without affecting committed files.  
 
-First, run this to see what will be deleted:
+## 📌 Git Clean Flags  
+
+| Flag | Description | Example |
+|------|------------|---------|
+| `-n` | Shows what will be deleted without actually deleting anything. | `git clean -n -d` |
+| `-f` | Forces deletion of untracked files. | `git clean -f` |
+| `-d` | Deletes untracked directories. | `git clean -f -d` |
+| `-i` | Interactive mode to selectively delete files. | `git clean -i` |
+| `-x` | Removes ignored and untracked files. | `git clean -f -x` |
+| `-X` | Removes only ignored files. | `git clean -f -X` |
+
+## 📌 Examples  
+
+### 1️⃣ Check What Will Be Deleted  
+
+Before deleting, always run a **dry run** to see what will be removed:  
 
 ```bash
 git clean -n -d
-```
+```  
 
-### 2️⃣ Delete Untracked Files and Folders
+### 2️⃣ Remove Untracked Files  
 
-If everything looks correct, run:
+To delete all untracked files:  
+
+```bash
+git clean -f
+```  
+
+### 3️⃣ Remove Untracked Files and Directories  
+
+To remove both **untracked files and directories**:  
 
 ```bash
 git clean -f -d
-```
+```  
 
-What this does:
--f → Forces deletion of untracked files.
--d → Deletes untracked directories (like data-loader/).
+### 4️⃣ Interactive Mode (Selective Deletion)  
 
-## Summary  
+To choose which files to delete:  
 
-Git provides the `git clean` command to safely remove untracked files and directories from a repository. Before deleting anything, you can perform a dry run using `git clean -n -d` to preview what will be removed. Once verified, running `git clean -f -d` will forcefully delete untracked files and directories. This helps keep your repository clean by removing unnecessary files that are not part of version control.
+```bash
+git clean -i
+```  
+
+### 5️⃣ Remove Ignored and Untracked Files  
+
+To remove both **ignored and untracked files**:  
+
+```bash
+git clean -f -x
+```  
+
+To remove only **ignored files**:  
+
+```bash
+git clean -f -X
+```  
+
+## 📌 Tips & Tricks  
+
+✔ **Always use `-n` before `-f`** to check what will be deleted.  
+✔ **Use `git status -u`** to view untracked files before cleaning.  
+✔ **Be cautious with `-x` and `-X`** as they remove ignored files, which might include config files.  
+✔ **Avoid running `git clean` in shared repositories** unless you are sure of the changes.  
+✔ **Combine with `git reset --hard`** if you want a full workspace reset (removes untracked & modifies files).  
+
+## 📌 Summary  
+
+- `git clean` helps remove **untracked files and directories** to keep your repo clean.  
+- Use `-n` before `-f` to **preview** deletions.  
+- `-d` removes **directories**, while `-x` removes **ignored files**.  
+- Use **interactive mode (`-i`)** for selective deletion.  
+
+Now you're ready to keep your Git workspace clean and efficient! 🚀  
+```  
