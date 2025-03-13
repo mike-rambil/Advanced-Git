@@ -10,7 +10,7 @@
   - [🔹 Step 5: Use Worktrees for Temporary Fixes](#-step-5-use-worktrees-for-temporary-fixes)  
   - [🔹 Flags and Their Uses](#-flags-and-their-uses)  
   - [🔹 Tips & Tricks](#-tips--tricks)
-  - [📗 Summary](#-summary)  
+  - [📗 Summary](#summary)  
 
 ---
 
@@ -171,12 +171,9 @@ cd ../review
 
 Now you can test the PR in isolation.  
 
-### Summary
+<h3 id="summary">📗 Summary</h3>
 Using git worktree, you can manage multiple branches and features simultaneously without disrupting your main workspace. Whether you're fixing a bug, reviewing a pull request, or developing a new feature, worktrees provide an efficient, streamlined workflow that enhances productivity.
 
 
 ---
 
-### 📖 [Tutorial](./contents/git-worktree.md)  
-
-> [Checkout Tutorial Here](./contents/git-worktree.md)  
