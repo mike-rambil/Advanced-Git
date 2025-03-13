@@ -18,7 +18,7 @@
 
 # Table of Contents
 
-- [Advanced Git Commands](#advanced-git-commands)
+- [🔥Latest Finds](#-latest finds)
 - [Table of Contents](#table-of-contents)
 - [Latest](#latest)
 - [📌 `git push --force-with-lease`](#-git-push---force-with-lease)
@@ -58,7 +58,7 @@
 <h1 id="advanced-git-commands">Advanced Git Commands</h1>
 </center>
 
-## Latest
+## Latest Finds
 
 - `git push --force-with-lease` - [Cancels git push if someone else did a commit on the same remote branch and safe guards `git push`](https://medium.com/@sahilsahilbhatia/git-push-force-with-lease-vs-force-ecae72601e80)
 - `git maintenance start` - [Runs a cronJob in background for the specified repo for periodic maintanence](https://git-scm.com/docs/git-maintenance)
