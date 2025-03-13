@@ -25,13 +25,16 @@
   - [🔹 Problem](#-problem)
   - [🔹 Solution](#-solution)
   - [Tutorial](#tutorial)
-- [📌 Git Worktree Tutorial](#-git-worktree-tutorial)
-  - [🔹 Problem](#-problem)
-  - [🔹 Solution](#-solution)
-  - [Tutorial](#tutorial)
-- [Delete Untracked Files and Folders](#delete-untracked-files-and-folders)
-  - [1️⃣ Dry Run (Check What Will Be Deleted)](#1️⃣-dry-run-check-what-will-be-deleted)
-  - [2️⃣ Delete Untracked Files and Folders](#2️⃣-delete-untracked-files-and-folders)
+- [📌 `git worktree`](#git-worktree)
+  - [🔹 Problem](#git-worktree-problem)
+  - [🔹 Solution](#git-worktree-solution)
+  - [🔹 Flags](#git-worktree-flags)
+  - [🔹 Tutorial](#git-worktree-tutorial)
+- [📌 `git clean`](#delete-untracked-files-git-clean)  
+   - [🔹 Problem](#-problem)  
+   - [🔹 Solution](#-solution)  
+   - [🔹 Flags](#-flags)  
+  - [Tutorial](#tutorial)  
 - [📌 `git log --oneline -- filename.txt`](#git-log-oneline-filename-txt)
   - [🔹 Problem](#git-log-oneline-filename-txt-PROBLEM)
   - [🔹 Solution](#git-log-oneline-filename-txt-SOLUTION)
@@ -79,46 +82,61 @@ use the ---force with lease flag while pushing to check it there is a push. If t
 
 > [Checkout Tutorial Here](./contents/--force-with-lease.md)
 
-## 📌 Git Worktree Tutorial
+## 📌 `git worktree`
 
-### 🔹 Problem
+<h2 id="git-worktree-problem">🔹 Problem</h2>
 
-Switching branches in Git can be slow and disruptive, causing frequent IDE reconfigurations and delays.
+Switching branches in Git can be slow and disruptive to make changes to different branches can be tedious and problematic if you need to work at different branches simultaneously.
 
-### 🔹 Solution
+<h2 id="git-worktree-solution">🔹 Solution</h2>
 
 Git Worktree allows you to work on multiple branches simultaneously without the overhead of constant switching and reconfiguration.
 
-### [Tutorial](./contents/worktree.md)
+<h3 id="git-worktree-flags">🔹 Flags</h3>
+
+- `git worktree add <path> <branch>`: Creates a new worktree for an existing branch.
+- `git worktree add -b <branch> <path>`: Creates a new worktree with a new branch.
+- `git worktree list`: Lists all active worktrees.
+- `git worktree remove <path>`: Detaches a worktree from the repo without deleting files.
+- `git worktree prune`: Cleans up stale worktree references after manual deletion.
+- `git worktree move <old-path> <new-path>`: Moves a worktree to a different location.
+
+<h2 id="git-worktree-tutorial" href='./contents/worktree.md'>🔹 Tutorial</h2>
+
 > [Checkout Tutorial Here](./contents/worktree.md)
 
-# Delete Untracked Files and Folders
 
-To delete untracked files and folders, use the following methods:
+<h2 id="delete-untracked-files-git-clean">📌 <code>git clean</code></h2>
 
-Git provides `git clean` to safely remove **untracked files and directories**.
+`git clean` removes **untracked files and directories** from your Git repository, helping to keep your workspace clean by deleting unnecessary files not tracked by version control.  
 
-### 1️⃣ Dry Run (Check What Will Be Deleted)
+### 🔹 Problem  
 
-First, run this to see what will be deleted:
+Over time, untracked files (e.g., logs, build artifacts, temporary files) can clutter your repository, making it harder to manage. Manually deleting them is inefficient and error-prone.  
 
-```bash
-git clean -n -d
-```
+### 🔹 Solution  
 
-### 2️⃣ Delete Untracked Files and Folders
+Use `git clean` to safely remove untracked files and directories.  
 
-If everything looks correct, run:
+### 🔹 Flags  
 
-```bash
-git clean -f -d
-```
+- `-n` → Shows what will be deleted without actually deleting anything.  
+- `-f` → Forces deletion of untracked files.  
+- `-d` → Deletes untracked directories.  
+- `-i` → Interactive mode, allowing selective deletion.  
+- `-x` → Removes ignored and untracked files.  
+- `-X` → Removes only ignored files.  
 
-What this does:
--f → Forces deletion of untracked files.
--d → Deletes untracked directories (like data-loader/).
+### [Tutorial](./contents/git-clean.md)  
 
-<h2 id="git-log-oneline-filename-txt"><code>git log --oneline -- filename.txt`</code></h2>
+> [Checkout Tutorial Here](./contents/git_clean.md)
+
+
+
+
+
+
+<h2 id="git-log-oneline-filename-txt"><code>git log --oneline -- filename.txt</code></h2>
 
 `git log --oneline -- filename.txt` shows all past commits that changed a specific file (filename.txt) in a short and easy-to-read format.
 
