@@ -1,5 +1,5 @@
 <table style="width:100%; border: 0; margin: 0 auto;">
-  <tr>
+  <tr style="width:100%;">
     <td style="width: 25%; text-align: center;">
       <img src="https://raw.githubusercontent.com/mike-rambil/Advanced-Git/refs/heads/main/brand/advanced-git-mike-rambil.png" height="200" width="375" alt="banner" />
     </td>
