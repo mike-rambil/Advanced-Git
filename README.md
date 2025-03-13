@@ -25,7 +25,7 @@
   - [🔹 Problem](#-problem)
   - [🔹 Solution](#-solution)
   - [Tutorial](#tutorial)
-- [📌 Git Worktree Tutorial](#-git-worktree-tutorial)
+- [📌 `git worktree`](#-git-worktree)
   - [🔹 Problem](#-problem)
   - [🔹 Solution](#-solution)
   - [Tutorial](#tutorial)
@@ -81,7 +81,7 @@ use the ---force with lease flag while pushing to check it there is a push. If t
 
 > [Checkout Tutorial Here](./contents/--force-with-lease.md)
 
-## 📌 Git Worktree Tutorial
+## 📌 `git worktree`
 
 ### 🔹 Problem
 
