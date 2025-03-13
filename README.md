@@ -25,10 +25,11 @@
   - [🔹 Problem](#-problem)
   - [🔹 Solution](#-solution)
   - [Tutorial](#tutorial)
-- [📌 `git worktree`](#-git-worktree)
-  - [🔹 Problem](#-problem)
-  - [🔹 Solution](#-solution)
-  - [Tutorial](#tutorial)
+- [📌 `git worktree`](#git-worktree)
+  - [🔹 Problem](#git-worktree-problem)
+  - [🔹 Solution](#git-worktree-solution)
+  - [🔹 Flags](#git-worktree-flags)
+  - [🔹 Tutorial](#git-worktree-tutorial)
 - [📌 `git clean`](#delete-untracked-files-git-clean)  
    - [🔹 Problem](#-problem)  
    - [🔹 Solution](#-solution)  
@@ -93,9 +94,12 @@ Git Worktree allows you to work on multiple branches simultaneously without the 
 
 <h3 id="git-worktree-flags">🔹 Flags</h3>
 
-- Flag 1: Description
-- Flag 2: Description
-- Flag 3: Description
+- `git worktree add <path> <branch>`: Creates a new worktree for an existing branch.
+- `git worktree add -b <branch> <path>`: Creates a new worktree with a new branch.
+- `git worktree list`: Lists all active worktrees.
+- `git worktree remove <path>`: Detaches a worktree from the repo without deleting files.
+- `git worktree prune`: Cleans up stale worktree references after manual deletion.
+- `git worktree move <old-path> <new-path>`: Moves a worktree to a different location.
 
 <h2 id="git-worktree-tutorial">🔹 [Tutorial](./contents/worktree.md)</h2>
 > [Checkout Tutorial Here](./contents/worktree.md)
