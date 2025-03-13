@@ -29,9 +29,11 @@
   - [🔹 Problem](#-problem)
   - [🔹 Solution](#-solution)
   - [Tutorial](#tutorial)
-- [Delete Untracked Files and Folders](#delete-untracked-files-and-folders)
-  - [1️⃣ Dry Run (Check What Will Be Deleted)](#1️⃣-dry-run-check-what-will-be-deleted)
-  - [2️⃣ Delete Untracked Files and Folders](#2️⃣-delete-untracked-files-and-folders)
+- [📌 `git clean`](#delete-untracked-files-git-clean)  
+   - [🔹 Problem](#-problem)  
+   - [🔹 Solution](#-solution)  
+   - [🔹 Flags](#-flags)  
+  - [Tutorial](#tutorial)  
 - [📌 `git log --oneline -- filename.txt`](#git-log-oneline-filename-txt)
   - [🔹 Problem](#git-log-oneline-filename-txt-PROBLEM)
   - [🔹 Solution](#git-log-oneline-filename-txt-SOLUTION)
@@ -116,7 +118,7 @@ Use `git clean` to safely remove untracked files and directories.
 
 ### [Tutorial](./contents/git-clean.md)  
 
-> [Checkout Tutorial Here](./contents/git-clean.md)
+> [Checkout Tutorial Here](./contents/git_clean.md)
 
 
 
