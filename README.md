@@ -10,52 +10,81 @@
   </tr>
 </table>
 
-
-
 > [!IMPORTANT]
 > If you find a useful GIT command - be sure to sent a PR here as well :)
-
 
 # Table of Contents
 
 - [🔥Latest Finds](#latest-finds)
 - [Table of Contents](#table-of-contents)
 - [Latest](#latest)
-- [📌 `git push --force-with-lease`](#-git-push---force-with-lease)
-  - [🔹 Problem](#-problem)
-  - [🔹 Solution](#-solution)
-  - [Tutorial](#tutorial)
+- [📌 `git push --force-with-lease`](#git-push---force-with-lease)
+  - [🔹 Problem](#git-push---force-with-lease-problem)
+  - [🔹 Solution](#git-push---force-with-lease-solution)
+  - [Tutorial](#git-push---force-with-lease-tutorial)
 - [📌 `git worktree`](#git-worktree)
   - [🔹 Problem](#git-worktree-problem)
   - [🔹 Solution](#git-worktree-solution)
   - [🔹 Flags](#git-worktree-flags)
-  - [🔹 Tutorial](#git-worktree-tutorial)
-- [📌 `git clean`](#delete-untracked-files-git-clean)  
-   - [🔹 Problem](#-problem)  
-   - [🔹 Solution](#-solution)  
-   - [🔹 Flags](#-flags)  
-  - [Tutorial](#tutorial)  
+  - [Tutorial](#git-worktree-tutorial)
+- [📌 `git clean`](#delete-untracked-files-git-clean)
+  - [🔹 Problem](#delete-untracked-files-git-clean-problem)
+  - [🔹 Solution](#delete-untracked-files-git-clean-solution)
+  - [🔹 Flags](#delete-untracked-files-git-clean-flags)
+  - [Tutorial](#delete-untracked-files-git-clean-tutorial)
 - [📌 `git log --oneline -- filename.txt`](#git-log-oneline-filename-txt)
-  - [🔹 Problem](#git-log-oneline-filename-txt-PROBLEM)
-  - [🔹 Solution](#git-log-oneline-filename-txt-SOLUTION)
-  - [Tutorial](#git-log-oneline-filename-txt-TUTORIAL)
+  - [🔹 Problem](#git-log-oneline-filename-txt-problem)
+  - [🔹 Solution](#git-log-oneline-filename-txt-solution)
+  - [Tutorial](#git-log-oneline-filename-txt-tutorial)
 - [Repository Management](#repository-management)
+  - [🔹 Problem](#repository-management-problem)
+  - [🔹 Solution](#repository-management-solution)
+  - [Flags](#repository-management-flags)
+  - [Tutorial](#repository-management-tutorial)
 - [Branching and Merging](#branching-and-merging)
+  - [🔹 Problem](#branching-and-merging-problem)
+  - [🔹 Solution](#branching-and-merging-solution)
+  - [Flags](#branching-and-merging-flags)
+  - [Tutorial](#branching-and-merging-tutorial)
 - [History and Inspection](#history-and-inspection)
+  - [🔹 Problem](#history-and-inspection-problem)
+  - [🔹 Solution](#history-and-inspection-solution)
+  - [Flags](#history-and-inspection-flags)
+  - [Tutorial](#history-and-inspection-tutorial)
 - [Stashing and Cleaning](#stashing-and-cleaning)
+  - [🔹 Problem](#stashing-and-cleaning-problem)
+  - [🔹 Solution](#stashing-and-cleaning-solution)
+  - [Flags](#stashing-and-cleaning-flags)
+  - [Tutorial](#stashing-and-cleaning-tutorial)
 - [Submodules](#submodules)
+  - [🔹 Problem](#submodules-problem)
+  - [🔹 Solution](#submodules-solution)
+  - [Flags](#submodules-flags)
+  - [Tutorial](#submodules-tutorial)
 - [Advanced Configuration](#advanced-configuration)
+  - [🔹 Problem](#advanced-configuration-problem)
+  - [🔹 Solution](#advanced-configuration-solution)
+  - [Flags](#advanced-configuration-flags)
+  - [Tutorial](#advanced-configuration-tutorial)
 - [Rewriting History](#rewriting-history)
+  - [🔹 Problem](#rewriting-history-problem)
+  - [🔹 Solution](#rewriting-history-solution)
+  - [Flags](#rewriting-history-flags)
+  - [Tutorial](#rewriting-history-tutorial)
 - [Collaboration and Review](#collaboration-and-review)
+  - [🔹 Problem](#collaboration-and-review-problem)
+  - [🔹 Solution](#collaboration-and-review-solution)
+  - [Flags](#collaboration-and-review-flags)
+  - [Tutorial](#collaboration-and-review-tutorial)
 - [🛠 **View and Clean Up Local Git Branches**](#-view-and-clean-up-local-git-branches)
   - [**🐧 Bash**](#-bash)
   - [**🖥 PowerShell**](#-powershell)
 - [Miscellaneous](#miscellaneous)
+- [Useful Rare Git Commands You Never Heard Of](#useful-rare-git-commands-you-never-heard-of)
 - [Contributors \& Credits](#contributors--credits)
   - [👨‍👩‍👧‍👦 Contributors](#-contributors)
   - [🧑‍💻 Credits \& Authors](#-credits--authors)
   - [📖 References \& Resources](#-references--resources)
-
 
 <center>
 <h1 id="advanced-git-commands">Advanced Git Commands</h1>
@@ -68,7 +97,7 @@
 
 ## 📌 `git push --force-with-lease`
 
-`git push --force-with-lease` ensures you don’t accidentally overwrite someone else’s work when force-pushing. It checks if the remote branch still matches what you last pulled. If someone else has pushed changes in the meantime, your push is rejected, preventing unintended data loss.
+`git push --force-with-lease` ensures you don't accidentally overwrite someone else's work when force-pushing. It checks if the remote branch still matches what you last pulled. If someone else has pushed changes in the meantime, your push is rejected, preventing unintended data loss.
 
 ### 🔹 Problem
 
@@ -105,79 +134,109 @@ Git Worktree allows you to work on multiple branches simultaneously without the 
 
 > [Checkout Tutorial Here](./contents/worktree.md)
 
-
 <h2 id="delete-untracked-files-git-clean">📌 <code>git clean</code></h2>
 
-`git clean` removes **untracked files and directories** from your Git repository, helping to keep your workspace clean by deleting unnecessary files not tracked by version control.  
+`git clean` removes **untracked files and directories** from your Git repository, helping to keep your workspace clean by deleting unnecessary files not tracked by version control.
 
-### 🔹 Problem  
+### 🔹 Problem
 
-Over time, untracked files (e.g., logs, build artifacts, temporary files) can clutter your repository, making it harder to manage. Manually deleting them is inefficient and error-prone.  
+Over time, untracked files (e.g., logs, build artifacts, temporary files) can clutter your repository, making it harder to manage. Manually deleting them is inefficient and error-prone.
 
-### 🔹 Solution  
+### 🔹 Solution
 
-Use `git clean` to safely remove untracked files and directories.  
+Use `git clean` to safely remove untracked files and directories.
 
-### 🔹 Flags  
+### 🔹 Flags
 
-- `-n` → Shows what will be deleted without actually deleting anything.  
-- `-f` → Forces deletion of untracked files.  
-- `-d` → Deletes untracked directories.  
-- `-i` → Interactive mode, allowing selective deletion.  
-- `-x` → Removes ignored and untracked files.  
-- `-X` → Removes only ignored files.  
+- `-n` → Shows what will be deleted without actually deleting anything.
+- `-f` → Forces deletion of untracked files.
+- `-d` → Deletes untracked directories.
+- `-i` → Interactive mode, allowing selective deletion.
+- `-x` → Removes ignored and untracked files.
+- `-X` → Removes only ignored files.
 
-### [Tutorial](./contents/git-clean.md)  
+### [Tutorial](./contents/git-clean.md)
 
 > [Checkout Tutorial Here](./contents/git_clean.md)
-
-
-
-
-
 
 <h2 id="git-log-oneline-filename-txt"><code>git log --oneline -- filename.txt</code></h2>
 
 `git log --oneline -- filename.txt` shows all past commits that changed a specific file (filename.txt) in a short and easy-to-read format.
 
-
-<h3 id="git-log-oneline-filename-txt-PROBLEM">🔹 Problem</h3>
+<h3 id="git-log-oneline-filename-txt-problem">🔹 Problem</h3>
 
 When users want to see past commits of a specific file to either revert back a commit/cherrypick/review etc.
 
-<h3 id="git-log-oneline-filename-txt-SOLUTION">🔹 Solution</h3>
+<h3 id="git-log-oneline-filename-txt-solution">🔹 Solution</h3>
 
 use the `git log --oneline -- filename.txt` to review the past commits and view the differences. Users can then subsequently revert, reset, review and do whatever makes sense with that commit of the specific file.
 
-
-<h3 id="git-log-oneline-filename-txt-TUTORIAL">Tutorial</h3>
+<h3 id="git-log-oneline-filename-txt-tutorial">Tutorial</h3>
 
 > [Checkout Tutorial Here](./contents/--_filename.txt.md)
 
-
 # Repository Management
 
-- `git init --bare`: Initialize a bare repository, typically used for remote repositories.
-- `git clone --mirror <repository>`: Clone a repository in mirror mode, including all refs and branches.
+## 📌 `git init --bare`
+
+**Short Description:** Initialize a bare repository, typically used for remote repositories.
+
+**Problem:** You need a central repository for collaboration, not a working directory.
+
+**Solution:** Use `git init --bare` to create a repository that only stores Git data, suitable for remotes.
+
+**Example:**
+
+```sh
+git init --bare my-repo.git
+```
+
+---
+
+## 📌 `git clone --mirror <repository>`
+
+**Short Description:** Clone a repository in mirror mode, including all refs and branches.
+
+**Problem:** You want a full backup or migration of a repository, including all refs.
+
+**Solution:** Use `git clone --mirror` for a complete copy.
+
+**Example:**
+
+```sh
+git clone --mirror https://github.com/example/repo.git
+```
+
+---
+
+For more repository management commands, see [contents/command-reference.md](./contents/command-reference.md#repository-management).
 
 # Branching and Merging
 
-- `git branch -m <old-branch> <new-branch>`: Rename a branch.
-- `git branch -d <branch>`: Delete a branch that has been merged.
-- `git branch -D <branch>`: Force delete a branch that hasn’t been merged.
-- `git checkout -b <new-branch>`: Create and switch to a new branch.
-- `git cherry-pick <commit>`: Apply the changes from a specific commit onto the current branch.
-- `git rebase <branch>`: Reapply commits on top of another base tip.
-- `git merge --squash <branch>`: Merge a branch, combining all commits into one.
-- `git merge --no-ff <branch>`: Merge with a merge commit even if fast-forward is possible.
-- `git stash branch <branch>`: Create a new branch and apply the stashed changes.
+## 📌 `git branch -m <old-branch> <new-branch>`
+
+**Short Description:** Rename a branch.
+
+**Problem:** You want to change a branch name for clarity or convention.
+
+**Solution:** Use `git branch -m` to rename.
+
+**Example:**
+
+```sh
+git branch -m old-feature new-feature
+```
+
+---
+
+For more branching and merging commands, see [contents/command-reference.md](./contents/command-reference.md#branching-and-merging).
 
 # History and Inspection
 
 - `git log --graph --oneline --decorate --all`: Visualize the commit history in a graphical format.
 - `git log -p`: Show patches (differences) introduced in each commit.
 - `git show <commit>`: Show various types of objects (e.g., commits, tags, trees).
-- `git reflog`: Show the history of changes to the repository’s refs.
+- `git reflog`: Show the history of changes to the repository's refs.
 - `git diff <commit1> <commit2>`: Show changes between two commits.
 - `git blame <file>`: Show what revision and author last modified each line of a file.
 - `git bisect start`: Begin a binary search to find the commit that introduced a bug.
@@ -225,7 +284,7 @@ use the `git log --oneline -- filename.txt` to review the past commits and view 
 - `git fetch <remote>`: Download objects and refs from another repository.
 - `git pull --rebase <remote> <branch>`: Fetch the branch and rebase onto the current branch.
 - `git push <remote> <branch>`: Push changes to a remote repository.
-- `git push --force-with-lease <remote> <branch>`: Force push with a safety check to ensure you’re not overwriting someone else’s work.
+- `git push --force-with-lease <remote> <branch>`: Force push with a safety check to ensure you're not overwriting someone else's work.
 - `git push --tags`: Push all tags to the remote repository.
 - `git request-pull <start> <url> <end>`: Generate a request to pull changes into a repository.
 
@@ -286,17 +345,33 @@ git fetch -p && git branch -vv | Select-String ': gone]' | ForEach-Object { $_.T
 
 # Miscellaneous
 
-- `git archive --format=zip --output=<file.zip> <tree-ish>`: Create an archive of files from a named tree.
-- `git shortlog -sn`: Summarize commit activity by author.
-- `git gc`: Cleanup unnecessary files and optimize the local repository.
-- `git fsck`: Verify the connectivity and validity of objects in the database.
-- `git worktree add <path> <branch>`: Create a new working tree linked to a branch.
-- `git bundle create <file> <revision>`: Create a bundle file from specified revisions.
-- `git bundle verify <file>`: Verify the integrity of a bundle file.
-- `git bundle unbundle <file>`: Extract a bundle into a repository.
-- `git rm --cached -r <file/folder>`: Removes Git tracking without deleting files from local machine which prevents Git from tracking future changes if it’s added to .gitignore.(Ex: most useful for deleting .env when you accidentally push it to remote)
+## 📌 `git archive --format=zip --output=<file.zip> <tree-ish>`
+
+**Short Description:** Create an archive of files from a named tree.
+
+**Problem:** You want to export a snapshot of your repository as a zip file.
+
+**Solution:** Use `git archive` to create a zip archive.
+
+**Example:**
+
+```sh
+git archive --format=zip --output=repo.zip main
+```
 
 ---
+
+For more miscellaneous commands, see [contents/command-reference.md](./contents/command-reference.md#miscellaneous).
+
+## Useful Rare Git Commands You Never Heard Of
+
+Here are some lesser-known but powerful Git commands:
+
+- `git replace <old-commit> <new-commit>`: Temporarily substitute one commit for another, useful for testing or patching history without rewriting it.
+- `git notes add -m "message" <commit>`: Attach notes to commits without changing commit history.
+- `git rerere`: Enable reuse of recorded conflict resolutions to auto-resolve repeated merge conflicts.
+
+For more rare and advanced commands, check out [contents/rare-git-commands.md](./contents/rare-git-commands.md).
 
 ## Contributors & Credits
 
@@ -320,5 +395,3 @@ Acknowledgment of the original authors.
 A collection of blogs, articles, and materials used to learn more about Git.
 
 > 📖 [View References & Resources](./Contributors&Credits.md#references-resources)
-
----
