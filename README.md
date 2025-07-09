@@ -43,22 +43,16 @@
 ## Contributors & Credits
 
 > [!NOTE]
-> Add yourself, your links you have used, or even your blogs if you have some or is an **author**
+> Want to contribute? Add yourself as a contributor or author by following the [Contribution Format Guide](./dev-docs/FORMAT.md) and submitting a Pull Request.
 
 #### [👨‍👩‍👧‍👦 Contributors](./Contributors&Credits.md)
 
-A list of individuals who have contributed to this project.
-
-> 👨‍👩‍👧‍👦 [View Contributors](./Contributors&Credits.md#contributors)
+A list of individuals who have contributed to this project. Add your name and link in [Contributors&Credits.md](./Contributors&Credits.md#contributors).
 
 #### [🧑‍💻 Credits & Authors](./Contributors&Credits.md#credits-authors)
 
-Acknowledgment of the original authors.
-
-> 🧑‍💻 [View Credits & Authors](./Contributors&Credits.md#credits-authors)
+Acknowledgment of the original authors. Add your name or blog if you authored a command or section.
 
 #### [📖 References & Resources](./Contributors&Credits.md#references-resources)
 
-A collection of blogs, articles, and materials used to learn more about Git.
-
-> 📖 [View References & Resources](./Contributors&Credits.md#references-resources)
+A collection of blogs, articles, and materials used to learn more about Git. Add your favorite resources!
