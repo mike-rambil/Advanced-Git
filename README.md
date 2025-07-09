@@ -45,6 +45,7 @@
   - [Create Patch from Uncommitted Changes](./contents/create-patch-from-uncommitted-changes.md)
   - [Apply Diff File](./contents/apply-diff-file.md)
   - [Patch vs Diff: Quick Reference](./contents/patch-vs-diff-quick-reference.md)
+- [Pull Changes of Specific Files from a Commit](./contents/pull-changes-of-specific-files-from-a-commit.md): Restore or pull changes for specific files from a past commit without reverting the entire commit.
 
 
 ## Contributors & Credits
