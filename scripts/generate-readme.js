@@ -175,7 +175,10 @@ function renderLastUpdated(date) {
 
 function renderCategory(category) {
   if (!category) return '';
-  return renderSection('Category', category);
+  const badge = `![Category: ${category}](https://img.shields.io/badge/Category-${encodeURIComponent(
+    category
+  )}-blue)`;
+  return `\n${badge}\n`;
 }
 
 function renderCommandExamples(examples) {
