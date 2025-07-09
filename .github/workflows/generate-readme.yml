@@ -1,0 +1,34 @@
+name: Generate README
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'toc-source.json'
+      - '.github/workflows/generate-readme.yml'
+      - 'scripts/generate-readme.js'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+      - name: Install dependencies
+        run: |
+          npm install
+        working-directory: ./scripts
+        continue-on-error: true
+      - name: Generate README.md
+        run: |
+          node scripts/generate-readme.js
+      - name: Commit and push changes
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add README.md
+          git commit -m 'chore: auto-generate README.md from toc-source.json' || echo "No changes to commit"
+          git push

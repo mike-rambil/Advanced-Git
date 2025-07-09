@@ -1,0 +1,466 @@
+[
+  {
+    "Name": "Miscellaneous & Orphaned Git Commands",
+    "category": "Miscellaneous",
+    "short_description": "Useful Git commands and scripts not referenced elsewhere.",
+    "long_description": "This file collects useful Git commands and scripts that were previously only in the README and not referenced elsewhere in this repository.",
+    "tags": ["misc", "cleanup", "advanced"],
+    "author": "mike-rambil",
+    "last_updated": "2024-06-10",
+    "subtoc": [
+      {
+        "Name": "git maintenance start",
+        "category": "Maintenance",
+        "short_description": "Runs a cronJob in background for the specified repo for periodic maintenance.",
+        "command": "git maintenance start",
+        "examples": [
+          {
+            "code": "git maintenance start",
+            "description": "Enable background maintenance for your repository."
+          }
+        ],
+        "steps": ["Run `git maintenance start` in your repository."],
+        "links": [
+          {
+            "label": "Official Docs",
+            "url": "https://git-scm.com/docs/git-maintenance"
+          }
+        ],
+        "tags": ["maintenance", "automation"],
+        "author": "mike-rambil",
+        "last_updated": "2024-06-10"
+      },
+      {
+        "Name": "git request-pull",
+        "category": "Collaboration",
+        "short_description": "Generate a request to pull changes into a repository.",
+        "command": "git request-pull <start> <url> <end>",
+        "examples": [
+          {
+            "code": "git request-pull v1.0 https://github.com/example/repo.git v1.1",
+            "description": "Generate a pull request message from v1.0 to v1.1."
+          }
+        ],
+        "steps": [
+          "Run `git request-pull <start> <url> <end>` to generate a pull request message."
+        ],
+        "links": [
+          {
+            "label": "Official Docs",
+            "url": "https://git-scm.com/docs/git-request-pull"
+          }
+        ],
+        "tags": ["collaboration", "pull-request"],
+        "author": "mike-rambil",
+        "last_updated": "2024-06-10"
+      },
+      {
+        "Name": "View and Clean Up Local Git Branches (Bash)",
+        "category": "Branch Management",
+        "short_description": "Scripts to view and clean up local branches using Bash.",
+        "examples": [
+          {
+            "code": "git branch -vv | grep -E '^\\s*\\S+\\s+[^\\[]+$'",
+            "description": "List local branches without a remote connection."
+          },
+          {
+            "code": "git branch -vv | grep -E '^\\s*\\S+\\s+[^\\[]+$' | awk '{print $1}' | xargs git branch -D",
+            "description": "Delete local branches without remote tracking."
+          }
+        ],
+        "steps": [
+          "List local branches.",
+          "Delete local branches without remote.",
+          "View branches with deleted remote.",
+          "Delete stale local branches."
+        ],
+        "warnings": [
+          "Deleting branches is irreversible. Double-check before running destructive commands."
+        ],
+        "tags": ["branches", "cleanup", "bash"],
+        "author": "mike-rambil",
+        "last_updated": "2024-06-10"
+      },
+      {
+        "Name": "View and Clean Up Local Git Branches (PowerShell)",
+        "category": "Branch Management",
+        "short_description": "Scripts to view and clean up local branches using PowerShell.",
+        "examples": [
+          {
+            "code": "git branch -vv | Select-String -NotMatch \"origin/\"",
+            "description": "List local branches without a remote connection."
+          },
+          {
+            "code": "git branch -vv | Select-String -NotMatch \"origin/\" | ForEach-Object { $branch = ($_ -split \"\\s+\")[1]; git branch -D $branch }",
+            "description": "Delete local branches without remote tracking."
+          }
+        ],
+        "steps": [
+          "List local branches.",
+          "Delete local branches without remote.",
+          "View branches with deleted remote.",
+          "Delete stale local branches."
+        ],
+        "warnings": [
+          "Deleting branches is irreversible. Double-check before running destructive commands."
+        ],
+        "tags": ["branches", "cleanup", "powershell"],
+        "author": "mike-rambil",
+        "last_updated": "2024-06-10"
+      }
+    ]
+  },
+  {
+    "Name": "Git Command Reference (Full List)",
+    "category": "Reference",
+    "short_description": "A comprehensive list of Git commands used in this project.",
+    "long_description": "A comprehensive list of Git commands used in this project, formatted according to our standard.",
+    "tags": ["reference", "all-commands"],
+    "author": "mike-rambil",
+    "last_updated": "2024-06-10",
+    "subtoc": [
+      {
+        "Name": "git init --bare",
+        "category": "Repository Management",
+        "short_description": "Initialize a bare repository, typically used for remote repositories.",
+        "command": "git init --bare my-repo.git",
+        "examples": [
+          {
+            "code": "git init --bare my-repo.git",
+            "description": "Create a bare repository for collaboration."
+          }
+        ],
+        "steps": [
+          "Run `git init --bare my-repo.git` to create a bare repository."
+        ],
+        "tags": ["init", "bare", "repository"],
+        "author": "mike-rambil",
+        "last_updated": "2024-06-10"
+      },
+      {
+        "Name": "git clone --mirror <repository>",
+        "category": "Repository Management",
+        "short_description": "Clone a repository in mirror mode, including all refs and branches.",
+        "command": "git clone --mirror https://github.com/example/repo.git",
+        "examples": [
+          {
+            "code": "git clone --mirror https://github.com/example/repo.git",
+            "description": "Create a full backup or migration of a repository."
+          }
+        ],
+        "steps": [
+          "Run `git clone --mirror <repository>` to create a full backup or migration."
+        ],
+        "tags": ["clone", "mirror", "backup"],
+        "author": "mike-rambil",
+        "last_updated": "2024-06-10"
+      }
+      // ...repeat for all other commands in this file, filling in the new fields as above
+    ]
+  },
+  {
+    "Name": "Useful Rare Git Commands You Never Heard Of",
+    "category": "Advanced",
+    "short_description": "A collection of lesser-known but powerful Git commands.",
+    "long_description": "A collection of lesser-known but powerful Git commands. Use these to level up your Git workflow!",
+    "tags": ["rare", "advanced", "tips"],
+    "author": "mike-rambil",
+    "last_updated": "2024-06-10",
+    "subtoc": [
+      {
+        "Name": "git replace <old-commit> <new-commit>",
+        "category": "History",
+        "short_description": "Temporarily substitute one commit for another.",
+        "command": "git replace abc123 def456",
+        "examples": [
+          {
+            "code": "git replace abc123 def456",
+            "description": "Temporarily replace commit abc123 with def456."
+          }
+        ],
+        "steps": [
+          "Run `git replace <old-commit> <new-commit>` to test or patch history."
+        ],
+        "tags": ["replace", "history"],
+        "author": "mike-rambil",
+        "last_updated": "2024-06-10"
+      }
+      // ...repeat for all other rare commands, filling in the new fields as above
+    ]
+  },
+  {
+    "Name": "How to Use git push --force-with-lease Safely",
+    "category": "Collaboration",
+    "short_description": "Safely force-push to a branch without overwriting others' work.",
+    "long_description": "Guide to using `git push --force-with-lease` to avoid overwriting others' work when force-pushing.",
+    "command": "git push --force-with-lease",
+    "examples": [
+      {
+        "code": "git push --force-with-lease",
+        "description": "Safely force-push your changes."
+      }
+    ],
+    "steps": [
+      "Fetch the latest changes: `git fetch origin`",
+      "Push with lease: `git push --force-with-lease`",
+      "If rejected, pull and rebase: `git pull --rebase origin main`",
+      "Resolve conflicts, commit, and retry push"
+    ],
+    "prerequisites": ["You must have permission to push to the branch."],
+    "warnings": [
+      "Never use `--force` unless you are sure. Prefer `--force-with-lease`."
+    ],
+    "links": [
+      {
+        "label": "Medium Article",
+        "url": "https://medium.com/@sahilsahilbhatia/git-push-force-with-lease-vs-force-ecae72601e80"
+      }
+    ],
+    "tags": ["push", "force", "safe"],
+    "author": "mike-rambil",
+    "last_updated": "2024-06-10"
+  },
+  {
+    "Name": "Past commits of a specific file",
+    "category": "History and Inspection",
+    "short_description": "See all commits and changes for a specific file.",
+    "long_description": "You can see all commits related to a specific file using Git commands. Here are a few ways to do it:",
+    "tags": ["history", "inspection", "file"],
+    "author": "mike-rambil",
+    "last_updated": "2024-06-10",
+    "subtoc": [
+      {
+        "Name": "Show Commit History of a Specific File",
+        "category": "History",
+        "command": "git log --oneline -- filename.txt",
+        "examples": [
+          {
+            "code": "git log --oneline -- filename.txt",
+            "description": "List all commits that modified `filename.txt`."
+          }
+        ],
+        "steps": ["Lists all commits that modified `filename.txt`."],
+        "tags": ["log", "file", "history"],
+        "related_commands": [
+          "git log -p -- filename.txt",
+          "git blame filename.txt"
+        ],
+        "author": "mike-rambil",
+        "last_updated": "2024-06-10"
+      },
+      {
+        "Name": "Show Detailed Commit History (With Changes)",
+        "category": "History",
+        "command": "git log -p -- filename.txt",
+        "examples": [
+          {
+            "code": "git log -p -- filename.txt",
+            "description": "Show each commit and the actual changes made to `filename.txt`."
+          }
+        ],
+        "steps": [
+          "Shows each commit and the actual changes made to `filename.txt`."
+        ],
+        "tags": ["log", "diff", "file"],
+        "related_commands": ["git log --oneline -- filename.txt"],
+        "author": "mike-rambil",
+        "last_updated": "2024-06-10"
+      },
+      {
+        "Name": "Show Commit History With Author and Date",
+        "category": "History",
+        "command": "git log --pretty=format:\"%h - %an, %ar : %s\" -- filename.txt",
+        "examples": [
+          {
+            "code": "git log --pretty=format:\"%h - %an, %ar : %s\" -- filename.txt",
+            "description": "Display commit hash, author, relative date, and commit message."
+          }
+        ],
+        "steps": [
+          "Displays commit hash, author, relative date, and commit message."
+        ],
+        "tags": ["log", "author", "date"],
+        "author": "mike-rambil",
+        "last_updated": "2024-06-10"
+      },
+      {
+        "Name": "See Who Last Modified Each Line (Blame)",
+        "category": "History",
+        "command": "git blame filename.txt",
+        "examples": [
+          {
+            "code": "git blame filename.txt",
+            "description": "Show the last commit that changed each line of the file."
+          }
+        ],
+        "steps": ["Shows the last commit that changed each line of the file."],
+        "tags": ["blame", "file", "history"],
+        "warnings": [
+          "Blame can be misleading if the file has been heavily refactored."
+        ],
+        "author": "mike-rambil",
+        "last_updated": "2024-06-10"
+      }
+    ]
+  },
+  {
+    "Name": "Git Clean: Remove Untracked Files and Directories",
+    "category": "Stashing and Cleaning",
+    "short_description": "Remove untracked files and directories from your repository.",
+    "long_description": "`git clean` is a powerful command that helps remove untracked files and directories from your repository. It is particularly useful when you want to reset your working directory without affecting committed files.",
+    "command": "git clean",
+    "flags": {
+      "-n": "Shows what will be deleted without actually deleting anything.",
+      "-f": "Forces deletion of untracked files.",
+      "-d": "Deletes untracked directories.",
+      "-i": "Interactive mode to selectively delete files.",
+      "-x": "Removes ignored and untracked files.",
+      "-X": "Removes only ignored files."
+    },
+    "examples": [
+      {
+        "code": "git clean -n -d",
+        "description": "Preview what will be deleted (dry run)."
+      },
+      {
+        "code": "git clean -f",
+        "description": "Delete all untracked files."
+      },
+      {
+        "code": "git clean -f -d",
+        "description": "Delete all untracked files and directories."
+      },
+      {
+        "code": "git clean -i",
+        "description": "Interactive mode for selective deletion."
+      }
+    ],
+    "steps": [
+      "Preview deletions: `git clean -n -d`",
+      "Delete untracked files: `git clean -f`",
+      "Delete untracked files and directories: `git clean -f -d`",
+      "Interactive deletion: `git clean -i`",
+      "Remove ignored and untracked files: `git clean -f -x`",
+      "Remove only ignored files: `git clean -f -X`"
+    ],
+    "prerequisites": ["Make sure you have committed all important changes."],
+    "warnings": [
+      "This will permanently delete files! Always use `-n` before `-f`.",
+      "Be cautious with `-x` and `-X` as they remove ignored files, which might include config files."
+    ],
+    "links": [
+      { "label": "Official Docs", "url": "https://git-scm.com/docs/git-clean" }
+    ],
+    "tags": ["clean", "untracked", "workspace"],
+    "author": "mike-rambil",
+    "last_updated": "2024-06-10"
+  },
+  {
+    "Name": "How to Use git worktree Safely",
+    "category": "Worktree",
+    "short_description": "Work on multiple branches simultaneously without switching.",
+    "long_description": "`git worktree` allows you to manage multiple working directories linked to a single Git repository. It helps developers work on multiple branches simultaneously without switching branches in the same directory.",
+    "tags": ["worktree", "branches", "advanced"],
+    "author": "mike-rambil",
+    "last_updated": "2024-06-10",
+    "subtoc": [
+      {
+        "Name": "Check Existing Worktrees",
+        "category": "Worktree",
+        "command": "git worktree list",
+        "examples": [
+          {
+            "code": "git worktree list",
+            "description": "List all active worktrees."
+          }
+        ],
+        "steps": ["List all active worktrees."],
+        "tags": ["worktree", "list"],
+        "author": "mike-rambil",
+        "last_updated": "2024-06-10"
+      },
+      {
+        "Name": "Create a New Worktree",
+        "category": "Worktree",
+        "command": "git worktree add <path> <branch>",
+        "examples": [
+          {
+            "code": "git worktree add ../feature-branch feature",
+            "description": "Create a new worktree for the feature branch."
+          }
+        ],
+        "steps": ["Create a worktree linked to a specific branch."],
+        "prerequisites": [
+          "The target path must not already be a git repository."
+        ],
+        "tags": ["worktree", "add"],
+        "author": "mike-rambil",
+        "last_updated": "2024-06-10"
+      },
+      {
+        "Name": "Remove a Worktree",
+        "category": "Worktree",
+        "command": "git worktree remove <worktree-path>",
+        "examples": [
+          {
+            "code": "git worktree remove ../feature-branch",
+            "description": "Detach a worktree without deleting the files."
+          }
+        ],
+        "steps": ["Detach a worktree without deleting the files."],
+        "warnings": [
+          "Make sure you have committed all changes before removing a worktree."
+        ],
+        "tags": ["worktree", "remove"],
+        "author": "mike-rambil",
+        "last_updated": "2024-06-10"
+      },
+      {
+        "Name": "Switch Between Worktrees",
+        "category": "Worktree",
+        "command": "cd <worktree-path>",
+        "examples": [
+          {
+            "code": "cd ../feature-branch",
+            "description": "Switch to the worktree directory."
+          }
+        ],
+        "steps": ["Simply cd into the worktree directory to switch."],
+        "tags": ["worktree", "switch"],
+        "author": "mike-rambil",
+        "last_updated": "2024-06-10"
+      },
+      {
+        "Name": "Use Worktrees for Temporary Fixes",
+        "category": "Worktree",
+        "command": "git worktree add ../hotfix hotfix-branch",
+        "examples": [
+          {
+            "code": "git worktree add ../hotfix hotfix-branch",
+            "description": "Quickly apply a fix on another branch without leaving your main branch."
+          }
+        ],
+        "steps": [
+          "Quickly apply a fix on another branch without leaving your main branch."
+        ],
+        "tags": ["worktree", "hotfix"],
+        "author": "mike-rambil",
+        "last_updated": "2024-06-10"
+      },
+      {
+        "Name": "Flags and Their Uses",
+        "flags": {
+          "add": "Creates a new worktree for an existing branch.",
+          "-b": "Creates a new worktree with a new branch.",
+          "list": "Lists all active worktrees.",
+          "remove": "Detaches a worktree from the repo without deleting files.",
+          "prune": "Cleans up stale worktree references after manual deletion.",
+          "move": "Moves a worktree to a different location."
+        },
+        "tags": ["worktree", "flags"],
+        "author": "mike-rambil",
+        "last_updated": "2024-06-10"
+      }
+    ]
+  }
+]
