@@ -1,3 +1,22 @@
+# Contribution Format Guide
+
+> **Purpose:**
+> This file defines the required format for documenting Git commands in this repository. All contributors should follow this structure when adding or updating entries in `toc-source.json`.
+>
+> **How to Contribute:**
+>
+> - When you want to add a new Git command or script, copy the template below and fill in each field as described.
+> - Place your new entry in `toc-source.json` using this format.
+> - Submit your changes via a Pull Request (PR).
+> - Well-formatted contributions make it easy to generate documentation and keep the project organized.
+>
+> **Where to Find This:**
+>
+> - This file: `dev-docs/FORMAT.md` (always up to date)
+> - Main documentation and contribution guidelines may also reference this file.
+
+---
+
 # Format for Documenting Git Commands (JSON-Compatible)
 
 This project uses a structured format for documenting Git commands, matching the fields in `toc-source.json`. Use the following template for each command:
