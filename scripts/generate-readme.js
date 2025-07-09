@@ -224,8 +224,11 @@ function renderSubtoc(subtoc) {
   return out;
 }
 
-function generateContentFile(obj) {
-  let md = `# ${obj.Name}\n\n`;
+function generateContentFile(obj, idx, tocData) {
+  // Add Back to TOC link for main/top-level files
+  let slug = slugify(obj.Name);
+  let md = `[⬅️ Back to Table of Contents](../README.md#${slug})\n\n`;
+  md += `# ${obj.Name}\n\n`;
   if (obj.category) md += renderCategory(obj.category);
   if (obj.short_description) md += `> ${obj.short_description}\n\n`;
   if (obj.long_description) md += `${obj.long_description}\n\n`;
@@ -269,15 +272,25 @@ function main() {
   fs.writeFileSync(README, readmeContent, 'utf8');
 
   // Write/Update content files only if changed
-  tocData.forEach((obj) => {
+  tocData.forEach((obj, idx) => {
     const filePath = path.join(CONTENTS_DIR, `${slugify(obj.Name)}.md`);
-    const content = generateContentFile(obj);
+    const content = generateContentFile(obj, idx, tocData);
     writeIfChanged(filePath, content);
     // Also create subtoc files if needed
     if (obj.subtoc && obj.subtoc.length) {
-      obj.subtoc.forEach((sub) => {
+      obj.subtoc.forEach((sub, subIdx) => {
         const subPath = path.join(CONTENTS_DIR, `${slugify(sub.Name)}.md`);
-        let subMd = `# ${sub.Name}\n\n`;
+        let subMd = '';
+        // Back to parent
+        subMd += `[⬅️ Back to ${obj.Name}](./${slugify(obj.Name)}.md)\n\n`;
+        // Previous step
+        if (subIdx > 0) {
+          const prev = obj.subtoc[subIdx - 1];
+          subMd += `[⬆️ Previous Step: ${prev.Name}](./${slugify(
+            prev.Name
+          )}.md)\n\n`;
+        }
+        subMd += `# ${sub.Name}\n\n`;
         if (sub.category) subMd += renderCategory(sub.category);
         if (sub.short_description) subMd += `> ${sub.short_description}\n\n`;
         if (sub.command) subMd += renderCommand(sub.command);
@@ -294,6 +307,13 @@ function main() {
           subMd += renderOutputExample(sub.output_example);
         if (sub.author) subMd += renderAuthor(sub.author);
         if (sub.last_updated) subMd += renderLastUpdated(sub.last_updated);
+        // Next step
+        if (subIdx < obj.subtoc.length - 1) {
+          const next = obj.subtoc[subIdx + 1];
+          subMd += `\n[➡️ See the Next Step: ${next.Name}](./${slugify(
+            next.Name
+          )}.md)\n`;
+        }
         writeIfChanged(subPath, subMd);
       });
     }
