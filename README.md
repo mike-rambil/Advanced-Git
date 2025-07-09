@@ -1,11 +1,7 @@
 <table style="width:100%; border: 0; margin: 0 auto;">
   <tr style="width:100%;">
-    <td style="width: 25%; text-align: center;">
+    <td style="width: 100%; text-align: center;">
       <img src="https://raw.githubusercontent.com/mike-rambil/Advanced-Git/refs/heads/main/brand/advanced-git-mike-rambil.png" height="200" width="375" alt="banner" />
-    </td>
-    <td style="width: 75%; text-align: right;">
-      <h1>Advanced Git Commands</h1>
-      <em style="display: block; text-align: center; width:100%;">For Dummies & Try hards</em>
     </td>
   </tr>
 </table>
