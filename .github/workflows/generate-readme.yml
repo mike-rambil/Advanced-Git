@@ -17,11 +17,6 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '18'
-      - name: Install dependencies
-        run: |
-          npm install
-        working-directory: ./scripts
-        continue-on-error: true
       - name: Generate README.md
         run: |
           node scripts/generate-readme.js
