@@ -39,6 +39,12 @@
   - [Switch Between Worktrees](./contents/switch-between-worktrees.md)
   - [Use Worktrees for Temporary Fixes](./contents/use-worktrees-for-temporary-fixes.md)
   - [Flags and Their Uses](./contents/flags-and-their-uses.md)
+- [Sharing Changes as Patch Files](./contents/sharing-changes-as-patch-files.md): Generate and share patch files for committed or uncommitted changes.
+  - [Create Patch from Last Commit(s)](./contents/create-patch-from-last-commit-s.md)
+  - [Apply Patch with Commit Metadata](./contents/apply-patch-with-commit-metadata.md)
+  - [Create Patch from Uncommitted Changes](./contents/create-patch-from-uncommitted-changes.md)
+  - [Apply Diff File](./contents/apply-diff-file.md)
+  - [Patch vs Diff: Quick Reference](./contents/patch-vs-diff-quick-reference.md)
 
 
 ## Contributors & Credits
