@@ -1,10 +1,6 @@
-<table style="width:100%; border: 0; margin: 0 auto;">
-  <tr style="width:100%;">
-    <td style="width: 100%; text-align: center;">
-      <img src="https://raw.githubusercontent.com/mike-rambil/Advanced-Git/refs/heads/main/brand/advanced-git-mike-rambil.png" height="200" width="375" alt="banner" />
-    </td>
-  </tr>
-</table>
+<div style="width:100%; display:flex; justify-content:center; align-items:center; margin: 0 auto;">
+  <img src="https://raw.githubusercontent.com/mike-rambil/Advanced-Git/refs/heads/main/brand/advanced-git-mike-rambil.png" style="max-width:100%; height:auto; display:block; margin:0 auto;" alt="banner" />
+</div>
 
 > [!IMPORTANT]
 > If you find a useful GIT command - be sure to sent a PR here as well :)
