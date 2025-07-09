@@ -49,6 +49,9 @@ const TOC_JSON = path.join(__dirname, '..', 'toc-source.json');
 const CONTENTS_DIR = path.join(__dirname, '..', 'contents');
 const README = path.join(__dirname, '..', 'README.md');
 
+// Ensure the contents directory exists
+fs.mkdirSync(CONTENTS_DIR, { recursive: true });
+
 function tocEntry(obj, idx) {
   let entry = `- [${obj.Name}](./contents/${slugify(obj.Name)}.md)`;
   if (obj.short_description) entry += `: ${obj.short_description}`;
