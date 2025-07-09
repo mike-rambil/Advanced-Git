@@ -1,3 +1,7 @@
+[⬅️ Back to Sharing Changes as Patch Files](./sharing-changes-as-patch-files.md)
+
+[⬆️ Previous Step: Apply Patch with Commit Metadata](./apply-patch-with-commit-metadata.md)
+
 # Create Patch from Uncommitted Changes
 
 
@@ -37,3 +41,5 @@ mike-rambil
 
 #### Last Updated
 2024-06-10
+
+[➡️ See the Next Step: Apply Diff File](./apply-diff-file.md)

@@ -1,3 +1,7 @@
+[⬅️ Back to How to Use git worktree Safely](./how-to-use-git-worktree-safely.md)
+
+[⬆️ Previous Step: Switch Between Worktrees](./switch-between-worktrees.md)
+
 # Use Worktrees for Temporary Fixes
 
 
@@ -29,3 +33,5 @@ mike-rambil
 
 #### Last Updated
 2024-06-10
+
+[➡️ See the Next Step: Flags and Their Uses](./flags-and-their-uses.md)

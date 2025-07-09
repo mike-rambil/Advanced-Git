@@ -1,3 +1,7 @@
+[⬅️ Back to Sharing Changes as Patch Files](./sharing-changes-as-patch-files.md)
+
+[⬆️ Previous Step: Create Patch from Uncommitted Changes](./create-patch-from-uncommitted-changes.md)
+
 # Apply Diff File
 
 
@@ -29,3 +33,5 @@ mike-rambil
 
 #### Last Updated
 2024-06-10
+
+[➡️ See the Next Step: Patch vs Diff: Quick Reference](./patch-vs-diff-quick-reference.md)

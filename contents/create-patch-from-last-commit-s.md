@@ -1,3 +1,5 @@
+[⬅️ Back to Sharing Changes as Patch Files](./sharing-changes-as-patch-files.md)
+
 # Create Patch from Last Commit(s)
 
 
@@ -45,3 +47,5 @@ mike-rambil
 
 #### Last Updated
 2024-06-10
+
+[➡️ See the Next Step: Apply Patch with Commit Metadata](./apply-patch-with-commit-metadata.md)

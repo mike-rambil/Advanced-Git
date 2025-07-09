@@ -1,3 +1,7 @@
+[⬅️ Back to Miscellaneous & Orphaned Git Commands](./miscellaneous-orphaned-git-commands.md)
+
+[⬆️ Previous Step: View and Clean Up Local Git Branches (Bash)](./view-and-clean-up-local-git-branches-bash.md)
+
 # View and Clean Up Local Git Branches (PowerShell)
 
 

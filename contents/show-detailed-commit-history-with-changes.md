@@ -1,3 +1,7 @@
+[⬅️ Back to Past commits of a specific file](./past-commits-of-a-specific-file.md)
+
+[⬆️ Previous Step: Show Commit History of a Specific File](./show-commit-history-of-a-specific-file.md)
+
 # Show Detailed Commit History (With Changes)
 
 
@@ -33,3 +37,5 @@ mike-rambil
 
 #### Last Updated
 2024-06-10
+
+[➡️ See the Next Step: Show Commit History With Author and Date](./show-commit-history-with-author-and-date.md)

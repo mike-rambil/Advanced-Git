@@ -1,3 +1,5 @@
+[⬅️ Back to Miscellaneous & Orphaned Git Commands](./miscellaneous-orphaned-git-commands.md)
+
 # git maintenance start
 
 
@@ -35,3 +37,5 @@ mike-rambil
 
 #### Last Updated
 2024-06-10
+
+[➡️ See the Next Step: git request-pull](./git-request-pull.md)

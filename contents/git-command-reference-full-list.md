@@ -1,3 +1,5 @@
+[⬅️ Back to Table of Contents](../README.md#git-command-reference-full-list)
+
 # Git Command Reference (Full List)
 
 

@@ -1,3 +1,5 @@
+[⬅️ Back to Table of Contents](../README.md#how-to-use-git-worktree-safely)
+
 # How to Use git worktree Safely
 
 

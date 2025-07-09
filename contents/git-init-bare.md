@@ -1,3 +1,5 @@
+[⬅️ Back to Git Command Reference (Full List)](./git-command-reference-full-list.md)
+
 # git init --bare
 
 
@@ -31,3 +33,5 @@ mike-rambil
 
 #### Last Updated
 2024-06-10
+
+[➡️ See the Next Step: git clone --mirror <repository>](./git-clone-mirror-repository.md)

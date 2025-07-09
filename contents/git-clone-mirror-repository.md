@@ -1,3 +1,7 @@
+[⬅️ Back to Git Command Reference (Full List)](./git-command-reference-full-list.md)
+
+[⬆️ Previous Step: git init --bare](./git-init-bare.md)
+
 # git clone --mirror <repository>
 
 

@@ -1,3 +1,7 @@
+[⬅️ Back to Sharing Changes as Patch Files](./sharing-changes-as-patch-files.md)
+
+[⬆️ Previous Step: Create Patch from Last Commit(s)](./create-patch-from-last-commit-s.md)
+
 # Apply Patch with Commit Metadata
 
 
@@ -29,3 +33,5 @@ mike-rambil
 
 #### Last Updated
 2024-06-10
+
+[➡️ See the Next Step: Create Patch from Uncommitted Changes](./create-patch-from-uncommitted-changes.md)

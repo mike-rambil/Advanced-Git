@@ -1,3 +1,5 @@
+[⬅️ Back to Useful Rare Git Commands You Never Heard Of](./useful-rare-git-commands-you-never-heard-of.md)
+
 # git replace <old-commit> <new-commit>
 
 

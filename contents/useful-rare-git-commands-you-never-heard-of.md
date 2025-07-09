@@ -1,3 +1,5 @@
+[⬅️ Back to Table of Contents](../README.md#useful-rare-git-commands-you-never-heard-of)
+
 # Useful Rare Git Commands You Never Heard Of
 
 

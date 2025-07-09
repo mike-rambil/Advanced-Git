@@ -1,3 +1,7 @@
+[⬅️ Back to How to Use git worktree Safely](./how-to-use-git-worktree-safely.md)
+
+[⬆️ Previous Step: Remove a Worktree](./remove-a-worktree.md)
+
 # Switch Between Worktrees
 
 
@@ -27,3 +31,5 @@ mike-rambil
 
 #### Last Updated
 2024-06-10
+
+[➡️ See the Next Step: Use Worktrees for Temporary Fixes](./use-worktrees-for-temporary-fixes.md)

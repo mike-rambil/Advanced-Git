@@ -1,3 +1,7 @@
+[⬅️ Back to Past commits of a specific file](./past-commits-of-a-specific-file.md)
+
+[⬆️ Previous Step: Show Commit History With Author and Date](./show-commit-history-with-author-and-date.md)
+
 # See Who Last Modified Each Line (Blame)
 
 

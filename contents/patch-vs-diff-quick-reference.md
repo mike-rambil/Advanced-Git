@@ -1,3 +1,7 @@
+[⬅️ Back to Sharing Changes as Patch Files](./sharing-changes-as-patch-files.md)
+
+[⬆️ Previous Step: Apply Diff File](./apply-diff-file.md)
+
 # Patch vs Diff: Quick Reference
 
 

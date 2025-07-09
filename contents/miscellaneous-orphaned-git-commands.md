@@ -1,3 +1,5 @@
+[⬅️ Back to Table of Contents](../README.md#miscellaneous-orphaned-git-commands)
+
 # Miscellaneous & Orphaned Git Commands
 
 

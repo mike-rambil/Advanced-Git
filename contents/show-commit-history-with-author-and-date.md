@@ -1,3 +1,7 @@
+[⬅️ Back to Past commits of a specific file](./past-commits-of-a-specific-file.md)
+
+[⬆️ Previous Step: Show Detailed Commit History (With Changes)](./show-detailed-commit-history-with-changes.md)
+
 # Show Commit History With Author and Date
 
 
@@ -29,3 +33,5 @@ mike-rambil
 
 #### Last Updated
 2024-06-10
+
+[➡️ See the Next Step: See Who Last Modified Each Line (Blame)](./see-who-last-modified-each-line-blame.md)

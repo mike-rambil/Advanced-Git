@@ -1,3 +1,5 @@
+[⬅️ Back to Table of Contents](../README.md#how-to-use-git-push-force-with-lease-safely)
+
 # How to Use git push --force-with-lease Safely
 
 

@@ -1,3 +1,7 @@
+[⬅️ Back to Miscellaneous & Orphaned Git Commands](./miscellaneous-orphaned-git-commands.md)
+
+[⬆️ Previous Step: git request-pull](./git-request-pull.md)
+
 # View and Clean Up Local Git Branches (Bash)
 
 
@@ -39,3 +43,5 @@ mike-rambil
 
 #### Last Updated
 2024-06-10
+
+[➡️ See the Next Step: View and Clean Up Local Git Branches (PowerShell)](./view-and-clean-up-local-git-branches-powershell.md)

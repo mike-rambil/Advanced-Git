@@ -1,3 +1,7 @@
+[⬅️ Back to How to Use git worktree Safely](./how-to-use-git-worktree-safely.md)
+
+[⬆️ Previous Step: Create a New Worktree](./create-a-new-worktree.md)
+
 # Remove a Worktree
 
 
@@ -33,3 +37,5 @@ mike-rambil
 
 #### Last Updated
 2024-06-10
+
+[➡️ See the Next Step: Switch Between Worktrees](./switch-between-worktrees.md)

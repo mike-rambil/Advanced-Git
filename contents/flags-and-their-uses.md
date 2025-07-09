@@ -1,3 +1,7 @@
+[⬅️ Back to How to Use git worktree Safely](./how-to-use-git-worktree-safely.md)
+
+[⬆️ Previous Step: Use Worktrees for Temporary Fixes](./use-worktrees-for-temporary-fixes.md)
+
 # Flags and Their Uses
 
 

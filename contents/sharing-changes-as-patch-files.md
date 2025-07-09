@@ -1,3 +1,5 @@
+[⬅️ Back to Table of Contents](../README.md#sharing-changes-as-patch-files)
+
 # Sharing Changes as Patch Files
 
 

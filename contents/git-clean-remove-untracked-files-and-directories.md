@@ -1,3 +1,5 @@
+[⬅️ Back to Table of Contents](../README.md#git-clean-remove-untracked-files-and-directories)
+
 # Git Clean: Remove Untracked Files and Directories
 
 
