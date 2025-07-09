@@ -92,7 +92,16 @@ function renderSteps(steps) {
   if (!steps || !steps.length) return '';
   let out = '';
   steps.forEach((step, i) => {
-    out += `${i + 1}. ${step}\n`;
+    // If the step is just a command, render as a code block
+    if (/^git [^\n]+$/.test(step.trim())) {
+      out += `${i + 1}.\n   \`\`\`sh\n${step.trim()}\n\`\`\`\n`;
+    } else {
+      // Otherwise, wrap inline commands in backticks
+      out += `${i + 1}. ${step.replace(
+        /(`[^`]+`|\bgit [^ ]+[^\n]*\b)/gi,
+        (match) => (match.startsWith('`') ? match : '`' + match + '`')
+      )}\n`;
+    }
   });
   return renderSection('Steps', out);
 }
@@ -135,7 +144,7 @@ function renderWarnings(warnings) {
 
 function renderTags(tags) {
   if (!tags || !tags.length) return '';
-  return renderSection('Tags', tags.map((t) => ` [1m${t} [0m`).join(', '));
+  return renderSection('Tags', tags.map((t) => `\`${t}\``).join(', '));
 }
 
 function renderRelatedCommands(related) {
@@ -176,13 +185,23 @@ function renderCommandExamples(examples) {
   return renderSection('Similar Examples', out);
 }
 
+function renderCommand(command) {
+  if (!command) return '';
+  // Render as a code block if it looks like a command
+  if (/^git /.test(command)) {
+    return '\n#### Command\n```sh\n' + command + '\n```\n';
+  } else {
+    return '\n#### Command\n`' + command + '`\n';
+  }
+}
+
 function renderSubtoc(subtoc) {
   if (!subtoc || !subtoc.length) return '';
   let out = '\n---\n\n### Subcommands\n';
   subtoc.forEach((sub) => {
     out += `#### ${sub.Name}\n`;
     if (sub.short_description) out += `${sub.short_description}\n`;
-    if (sub.command) out += `- \`${sub.command}\`\n`;
+    if (sub.command) out += renderCommand(sub.command);
     if (sub.flags) out += renderFlags(sub.flags);
     if (sub.examples) out += renderExamples(sub.examples);
     if (sub.steps) out += renderSteps(sub.steps);
@@ -205,7 +224,7 @@ function generateContentFile(obj) {
   if (obj.category) md += renderCategory(obj.category);
   if (obj.short_description) md += `> ${obj.short_description}\n\n`;
   if (obj.long_description) md += `${obj.long_description}\n\n`;
-  if (obj.command) md += `**Command:** \`${obj.command}\`\n`;
+  if (obj.command) md += renderCommand(obj.command);
   if (obj.flags) md += renderFlags(obj.flags);
   if (obj.examples) md += renderExamples(obj.examples);
   if (obj['command similiar examples'])
@@ -256,7 +275,7 @@ function main() {
         let subMd = `# ${sub.Name}\n\n`;
         if (sub.category) subMd += renderCategory(sub.category);
         if (sub.short_description) subMd += `> ${sub.short_description}\n\n`;
-        if (sub.command) subMd += `**Command:** \`${sub.command}\`\n`;
+        if (sub.command) subMd += renderCommand(sub.command);
         if (sub.flags) subMd += renderFlags(sub.flags);
         if (sub.examples) subMd += renderExamples(sub.examples);
         if (sub.steps) subMd += renderSteps(sub.steps);
@@ -274,6 +293,7 @@ function main() {
       });
     }
   });
+  console.log('Markdown files updated with improved formatting.');
 }
 
 main();
