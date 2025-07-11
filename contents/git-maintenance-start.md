@@ -29,14 +29,20 @@ git maintenance start --schedule=hourly
 
 #### Steps
 1. Run `git maintenance start` in your repository.
+2. Optionally, use `--schedule=hourly` or `--schedule=daily` to control how often maintenance runs.
+3. `Git will now automatically run tasks like garbage collection, pruning unreachable objects, and optimizing internal data structures in the background`.
+4. You can stop background maintenance with `git maintenance stop` if needed.
 
 
 #### ProTips
 > [!TIP]
-> Set up maintenance on large repos to keep them fast.
+> Set up maintenance on large or long-lived repos to keep them fast and healthy.
 
 > [!TIP]
 > Use with cron or scheduled tasks for automation.
+
+> [!TIP]
+> If you notice Git getting slow, check if maintenance is enabled or run it manually.
 
 
 
