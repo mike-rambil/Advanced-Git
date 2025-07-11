@@ -11,6 +11,9 @@
 
 A collection of lesser-known but powerful Git commands. Use these to level up your Git workflow!
 
+## Key Topics & Subcommands
+- [git replace <old-commit> <new-commit>](./git-replace-old-commit-new-commit.md): Temporarily substitute one commit for another.
+
 
 ---
 

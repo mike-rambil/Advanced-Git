@@ -220,7 +220,7 @@ function conciseMetaLine(author, lastUpdated, tags) {
 
 function generateMiniSubtocTOC(obj) {
   if (!obj.subtoc || !obj.subtoc.length) return '';
-  let out = '## Subcommands\n';
+  let out = '## Key Topics & Subcommands\n';
   obj.subtoc.forEach((sub) => {
     out += `- [${sub.Name}](./${slugify(sub.Name)}.md)`;
     if (sub.short_description) out += `: ${sub.short_description}`;
@@ -235,10 +235,7 @@ function generateContentFile(obj, idx, tocData) {
   md += `# ${obj.Name}\n\n`;
   if (obj.category) md += renderCategory(obj.category);
   if (obj.short_description) md += `> ${obj.short_description}\n\n`;
-  // Always add mini-TOC if subtoc exists
-  if (obj.subtoc && obj.subtoc.length) {
-    md += generateMiniSubtocTOC(obj);
-  }
+
   if (obj.long_description) md += `${obj.long_description}\n\n`;
   if (obj.command) md += renderCommand(obj.command);
   if (obj.flags) md += renderFlags(obj.flags);
@@ -251,6 +248,12 @@ function generateContentFile(obj, idx, tocData) {
   if (obj.links) md += renderLinks(obj.links);
   if (obj.related_commands) md += renderRelatedCommands(obj.related_commands);
   if (obj.output_example) md += renderOutputExample(obj.output_example);
+
+  // Always add mini-TOC if subtoc exists
+  if (obj.subtoc && obj.subtoc.length) {
+    md += generateMiniSubtocTOC(obj);
+  }
+
   md += conciseMetaLine(obj.author, obj.last_updated, obj.tags);
   return md;
 }
