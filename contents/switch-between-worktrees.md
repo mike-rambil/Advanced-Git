@@ -14,11 +14,13 @@
 - **Switch to the worktree directory.** 
 
  ```sh
-cd ../feature-branch```
+cd ../feature-branch 
+ ```
 - **Switch to a hotfix worktree.** 
 
  ```sh
-cd ../hotfix```
+cd ../hotfix 
+ ```
 
 
 #### Steps

@@ -18,11 +18,13 @@ git push --force-with-lease
 - **Safely force-push your changes.** 
 
  ```sh
-git push --force-with-lease```
+git push --force-with-lease 
+ ```
 - **Force-push a specific branch with lease protection.** 
 
  ```sh
-git push --force-with-lease origin feature-branch```
+git push --force-with-lease origin feature-branch 
+ ```
 
 
 #### Steps

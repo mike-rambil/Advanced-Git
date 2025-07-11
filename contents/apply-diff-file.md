@@ -16,11 +16,13 @@ git apply changes.diff
 - **Apply a diff file of uncommitted changes.** 
 
  ```sh
-git apply changes.diff```
+git apply changes.diff 
+ ```
 - **Show what would change if the diff were applied.** 
 
  ```sh
-git apply --stat changes.diff```
+git apply --stat changes.diff 
+ ```
 
 
 #### Steps
