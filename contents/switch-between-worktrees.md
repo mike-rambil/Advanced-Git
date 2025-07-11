@@ -11,13 +11,13 @@
 `cd <worktree-path>`
 
 #### Examples
-- **Switch to the worktree directory.**
+- **Switch to the worktree directory.** 
 
-```sh
+ ```sh
 cd ../feature-branch```
-- **Switch to a hotfix worktree.**
+- **Switch to a hotfix worktree.** 
 
-```sh
+ ```sh
 cd ../hotfix```
 
 

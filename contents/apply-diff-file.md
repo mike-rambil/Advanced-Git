@@ -13,13 +13,13 @@ git apply changes.diff
 ```
 
 #### Examples
-- **Apply a diff file of uncommitted changes.**
+- **Apply a diff file of uncommitted changes.** 
 
-```sh
+ ```sh
 git apply changes.diff```
-- **Show what would change if the diff were applied.**
+- **Show what would change if the diff were applied.** 
 
-```sh
+ ```sh
 git apply --stat changes.diff```
 
 
