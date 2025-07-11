@@ -236,7 +236,6 @@ function generateContentFile(obj, idx, tocData) {
   if (obj.links) md += renderLinks(obj.links);
   if (obj.related_commands) md += renderRelatedCommands(obj.related_commands);
   if (obj.output_example) md += renderOutputExample(obj.output_example);
-  if (obj.subtoc) md += renderSubtoc(obj.subtoc);
   md += conciseMetaLine(obj.author, obj.last_updated, obj.tags);
   return md;
 }
