@@ -21,6 +21,10 @@
           {
             "code": "git maintenance start",
             "description": "Enable background maintenance for your repository."
+          },
+          {
+            "code": "git maintenance start --schedule=hourly",
+            "description": "Run maintenance tasks every hour for more active repos."
           }
         ],
         "steps": ["Run `git maintenance start` in your repository."],
@@ -47,6 +51,10 @@
           {
             "code": "git request-pull v1.0 https://github.com/example/repo.git v1.1",
             "description": "Generate a pull request message from v1.0 to v1.1."
+          },
+          {
+            "code": "git request-pull main https://github.com/example/repo.git feature-branch",
+            "description": "Request a pull for a feature branch based on main."
           }
         ],
         "steps": [
@@ -90,6 +98,10 @@
           {
             "code": "git fetch -p && git branch -vv | grep '\\[origin/.*: gone\\]' | awk '{print $1}' | xargs -r git branch -d",
             "description": "Delete all local branches whose remote is gone."
+          },
+          {
+            "code": "git fetch -p && git branch -vv | grep '\\[origin/feature: gone\\]' | awk '{print $1}' | xargs -r git branch -d",
+            "description": "Delete only feature branches whose remote is gone."
           }
         ],
         "steps": [
@@ -119,6 +131,10 @@
           {
             "code": "git fetch -p\ngit branch -vv | ForEach-Object { if ($_ -match '[.*: gone]') { $parts = $_.Trim() -split '\\s+'; $branch = $parts[0]; if ($branch -ne '') { git branch -d $branch } } }",
             "description": "Delete all local branches whose remote is gone."
+          },
+          {
+            "code": "git fetch -p\ngit branch -vv | ForEach-Object { if ($_ -match '[origin/feature: gone]') { $parts = $_.Trim() -split 's+'; $branch = $parts[0]; if ($branch -ne '') { git branch -d $branch } } }",
+            "description": "Delete only feature branches whose remote is gone."
           }
         ],
         "steps": [
@@ -150,6 +166,10 @@
           {
             "code": "git branch -vv | grep -E '^\\s*\\S+\\s+[^\\[]+$' | awk '{print $1}' | xargs git branch -D",
             "description": "Delete local branches without remote tracking."
+          },
+          {
+            "code": "git branch -vv | grep 'gone'",
+            "description": "List branches whose remote is gone."
           }
         ],
         "steps": [
@@ -181,6 +201,10 @@
           {
             "code": "git branch -vv | Select-String -NotMatch \"origin/\" | ForEach-Object { $branch = ($_ -split \"\\s+\")[1]; git branch -D $branch }",
             "description": "Delete local branches without remote tracking."
+          },
+          {
+            "code": "git branch -vv | Select-String 'gone'",
+            "description": "List branches whose remote is gone."
           }
         ],
         "steps": [
@@ -220,6 +244,10 @@
           {
             "code": "git init --bare my-repo.git",
             "description": "Create a bare repository for collaboration."
+          },
+          {
+            "code": "git init --bare /srv/git/project.git",
+            "description": "Initialize a bare repo in a custom directory for server hosting."
           }
         ],
         "steps": [
@@ -238,6 +266,10 @@
           {
             "code": "git clone --mirror https://github.com/example/repo.git",
             "description": "Create a full backup or migration of a repository."
+          },
+          {
+            "code": "git clone --mirror git@github.com:org/repo.git",
+            "description": "Mirror-clone a private repo using SSH."
           }
         ],
         "steps": [
@@ -267,6 +299,10 @@
           {
             "code": "git replace abc123 def456",
             "description": "Temporarily replace commit abc123 with def456."
+          },
+          {
+            "code": "git replace --graft HEAD~2 HEAD",
+            "description": "Graft a new parent onto a commit for testing history changes."
           }
         ],
         "steps": [
@@ -288,6 +324,10 @@
       {
         "code": "git push --force-with-lease",
         "description": "Safely force-push your changes."
+      },
+      {
+        "code": "git push --force-with-lease origin feature-branch",
+        "description": "Force-push a specific branch with lease protection."
       }
     ],
     "steps": [
@@ -327,6 +367,10 @@
           {
             "code": "git log --oneline -- filename.txt",
             "description": "List all commits that modified `filename.txt`."
+          },
+          {
+            "code": "git log --oneline -- path/to/anotherfile.js",
+            "description": "Show commit history for a different file."
           }
         ],
         "steps": ["Lists all commits that modified `filename.txt`."],
@@ -346,6 +390,10 @@
           {
             "code": "git log -p -- filename.txt",
             "description": "Show each commit and the actual changes made to `filename.txt`."
+          },
+          {
+            "code": "git log -p -2 -- filename.txt",
+            "description": "Show the last two commits and their changes for a file."
           }
         ],
         "steps": [
@@ -364,6 +412,10 @@
           {
             "code": "git log --pretty=format:\"%h - %an, %ar : %s\" -- filename.txt",
             "description": "Display commit hash, author, relative date, and commit message."
+          },
+          {
+            "code": "git log --pretty=format:'%h | %ad | %an | %s' --date=short -- filename.txt",
+            "description": "Show commit hash, short date, author, and message."
           }
         ],
         "steps": [
@@ -381,6 +433,10 @@
           {
             "code": "git blame filename.txt",
             "description": "Show the last commit that changed each line of the file."
+          },
+          {
+            "code": "git blame -L 10,20 filename.txt",
+            "description": "Blame only lines 10 to 20 of a file."
           }
         ],
         "steps": ["Shows the last commit that changed each line of the file."],
@@ -423,6 +479,10 @@
       {
         "code": "git clean -i",
         "description": "Interactive mode for selective deletion."
+      },
+      {
+        "code": "git clean -f -x",
+        "description": "Delete untracked and ignored files."
       }
     ],
     "steps": [
@@ -462,6 +522,10 @@
           {
             "code": "git worktree list",
             "description": "List all active worktrees."
+          },
+          {
+            "code": "git worktree list --porcelain",
+            "description": "List worktrees in a machine-readable format."
           }
         ],
         "steps": ["List all active worktrees."],
@@ -477,6 +541,10 @@
           {
             "code": "git worktree add ../feature-branch feature",
             "description": "Create a new worktree for the feature branch."
+          },
+          {
+            "code": "git worktree add ../hotfix hotfix-branch",
+            "description": "Create a worktree for a hotfix branch."
           }
         ],
         "steps": ["Create a worktree linked to a specific branch."],
@@ -495,6 +563,10 @@
           {
             "code": "git worktree remove ../feature-branch",
             "description": "Detach a worktree without deleting the files."
+          },
+          {
+            "code": "git worktree remove ../hotfix",
+            "description": "Remove a hotfix worktree."
           }
         ],
         "steps": ["Detach a worktree without deleting the files."],
@@ -513,6 +585,10 @@
           {
             "code": "cd ../feature-branch",
             "description": "Switch to the worktree directory."
+          },
+          {
+            "code": "cd ../hotfix",
+            "description": "Switch to a hotfix worktree."
           }
         ],
         "steps": ["Simply cd into the worktree directory to switch."],
@@ -528,6 +604,10 @@
           {
             "code": "git worktree add ../hotfix hotfix-branch",
             "description": "Quickly apply a fix on another branch without leaving your main branch."
+          },
+          {
+            "code": "git worktree add ../bugfix bugfix-branch",
+            "description": "Create a worktree for a bugfix branch."
           }
         ],
         "steps": [
@@ -574,6 +654,14 @@
           {
             "code": "git format-patch origin/main..HEAD --stdout > my-changes.patch",
             "description": "Create a single patch file for all commits on top of main."
+          },
+          {
+            "code": "git format-patch -2",
+            "description": "Create patch files for the last two commits."
+          },
+          {
+            "code": "git format-patch -2 origin/main..HEAD",
+            "description": "Create patch files for all commits since main."
           }
         ],
         "steps": [
@@ -602,6 +690,10 @@
           {
             "code": "git am my-changes.patch",
             "description": "Apply a patch file and preserve commit info."
+          },
+          {
+            "code": "git am --signoff my-changes.patch",
+            "description": "Apply a patch and add a Signed-off-by line."
           }
         ],
         "steps": [
@@ -619,6 +711,10 @@
           {
             "code": "git diff > changes.diff",
             "description": "Create a diff file of uncommitted changes."
+          },
+          {
+            "code": "git diff HEAD~1 > last-commit.diff",
+            "description": "Create a diff file for the last commit."
           }
         ],
         "steps": [
@@ -645,6 +741,10 @@
           {
             "code": "git apply changes.diff",
             "description": "Apply a diff file of uncommitted changes."
+          },
+          {
+            "code": "git apply --stat changes.diff",
+            "description": "Show what would change if the diff were applied."
           }
         ],
         "steps": [
@@ -678,6 +778,10 @@
       {
         "code": "git add path/to/file1.txt path/to/file2.txt\ngit commit -m \"Pulled changes for file1.txt and file2.txt from commit e8ab7f64\"\ngit push origin revert/productionOrder",
         "description": "Stage, commit, and push the restored files to a new branch."
+      },
+      {
+        "code": "git restore --source e8ab7f64fdfcc7bdaaed8d96c0ac26dce035663f path/to/file1.txt path/to/file2.txt",
+        "description": "Restore files using the newer 'git restore' command."
       }
     ],
     "steps": [
