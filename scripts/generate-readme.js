@@ -218,24 +218,58 @@ function conciseMetaLine(author, lastUpdated, tags) {
   return meta.length ? `\n---\n\n_${meta.join(' • ')}_\n` : '';
 }
 
+function generateMiniSubtocTOC(obj) {
+  if (!obj.subtoc || !obj.subtoc.length) return '';
+  let out = '## Subcommands\n';
+  obj.subtoc.forEach((sub) => {
+    out += `- [${sub.Name}](./${slugify(sub.Name)}.md)`;
+    if (sub.short_description) out += `: ${sub.short_description}`;
+    out += '\n';
+  });
+  return out + '\n';
+}
+
+function hasOnlySubtocContent(obj) {
+  // Returns true if the main file has no meaningful content except subtoc
+  return !(
+    obj.long_description ||
+    obj.command ||
+    obj.flags ||
+    obj.examples ||
+    obj['command similiar examples'] ||
+    obj.steps ||
+    obj.prerequisites ||
+    obj.warnings ||
+    obj.links ||
+    obj.related_commands ||
+    obj.output_example
+  );
+}
+
 function generateContentFile(obj, idx, tocData) {
   let slug = slugify(obj.Name);
   let md = `[⬅️ Back to Table of Contents](../README.md#${slug})\n\n`;
   md += `# ${obj.Name}\n\n`;
   if (obj.category) md += renderCategory(obj.category);
   if (obj.short_description) md += `> ${obj.short_description}\n\n`;
-  if (obj.long_description) md += `${obj.long_description}\n\n`;
-  if (obj.command) md += renderCommand(obj.command);
-  if (obj.flags) md += renderFlags(obj.flags);
-  if (obj.examples) md += renderExamples(obj.examples);
-  if (obj['command similiar examples'])
-    md += renderCommandExamples(obj['command similiar examples']);
-  if (obj.steps) md += renderSteps(obj.steps);
-  if (obj.prerequisites) md += renderPrerequisites(obj.prerequisites);
-  if (obj.warnings) md += renderWarnings(obj.warnings);
-  if (obj.links) md += renderLinks(obj.links);
-  if (obj.related_commands) md += renderRelatedCommands(obj.related_commands);
-  if (obj.output_example) md += renderOutputExample(obj.output_example);
+  // If only subtoc, add mini-TOC
+  if (obj.subtoc && obj.subtoc.length && hasOnlySubtocContent(obj)) {
+    md += generateMiniSubtocTOC(obj);
+  } else {
+    if (obj.long_description) md += `${obj.long_description}\n\n`;
+    if (obj.command) md += renderCommand(obj.command);
+    if (obj.flags) md += renderFlags(obj.flags);
+    if (obj.examples) md += renderExamples(obj.examples);
+    if (obj['command similiar examples'])
+      md += renderCommandExamples(obj['command similiar examples']);
+    if (obj.steps) md += renderSteps(obj.steps);
+    if (obj.prerequisites) md += renderPrerequisites(obj.prerequisites);
+    if (obj.warnings) md += renderWarnings(obj.warnings);
+    if (obj.links) md += renderLinks(obj.links);
+    if (obj.related_commands) md += renderRelatedCommands(obj.related_commands);
+    if (obj.output_example) md += renderOutputExample(obj.output_example);
+  }
+  if (obj.subtoc) md += renderSubtoc(obj.subtoc);
   md += conciseMetaLine(obj.author, obj.last_updated, obj.tags);
   return md;
 }
@@ -271,9 +305,8 @@ function main() {
       obj.subtoc.forEach((sub, subIdx) => {
         const subPath = path.join(CONTENTS_DIR, `${slugify(sub.Name)}.md`);
         let subMd = '';
-        // Back to parent
+        // Always add Back to parent
         subMd += `[⬅️ Back to ${obj.Name}](./${slugify(obj.Name)}.md)\n\n`;
-        // Previous step
         if (subIdx > 0) {
           const prev = obj.subtoc[subIdx - 1];
           subMd += `[⬆️ Previous Step: ${prev.Name}](./${slugify(
