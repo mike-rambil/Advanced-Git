@@ -18,11 +18,13 @@ git maintenance start
 - **Enable background maintenance for your repository.** 
 
  ```sh
-git maintenance start```
+git maintenance start
+```
 - **Run maintenance tasks every hour for more active repos.** 
 
  ```sh
-git maintenance start --schedule=hourly```
+git maintenance start --schedule=hourly
+```
 
 
 #### Steps
