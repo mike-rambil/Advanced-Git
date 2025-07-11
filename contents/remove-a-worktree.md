@@ -13,13 +13,13 @@ git worktree remove <worktree-path>
 ```
 
 #### Examples
-- **Detach a worktree without deleting the files.**
+- **Detach a worktree without deleting the files.** 
 
-```sh
+ ```sh
 git worktree remove ../feature-branch```
-- **Remove a hotfix worktree.**
+- **Remove a hotfix worktree.** 
 
-```sh
+ ```sh
 git worktree remove ../hotfix```
 
 

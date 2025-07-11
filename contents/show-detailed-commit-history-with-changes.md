@@ -13,13 +13,13 @@ git log -p -- filename.txt
 ```
 
 #### Examples
-- **Show each commit and the actual changes made to `filename.txt`.**
+- **Show each commit and the actual changes made to `filename.txt`.** 
 
-```sh
+ ```sh
 git log -p -- filename.txt```
-- **Show the last two commits and their changes for a file.**
+- **Show the last two commits and their changes for a file.** 
 
-```sh
+ ```sh
 git log -p -2 -- filename.txt```
 
 

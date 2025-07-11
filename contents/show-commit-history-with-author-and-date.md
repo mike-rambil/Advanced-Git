@@ -13,13 +13,13 @@ git log --pretty=format:"%h - %an, %ar : %s" -- filename.txt
 ```
 
 #### Examples
-- **Display commit hash, author, relative date, and commit message.**
+- **Display commit hash, author, relative date, and commit message.** 
 
-```sh
+ ```sh
 git log --pretty=format:"%h - %an, %ar : %s" -- filename.txt```
-- **Show commit hash, short date, author, and message.**
+- **Show commit hash, short date, author, and message.** 
 
-```sh
+ ```sh
 git log --pretty=format:'%h | %ad | %an | %s' --date=short -- filename.txt```
 
 

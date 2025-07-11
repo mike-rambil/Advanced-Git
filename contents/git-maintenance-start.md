@@ -15,13 +15,13 @@ git maintenance start
 ```
 
 #### Examples
-- **Enable background maintenance for your repository.**
+- **Enable background maintenance for your repository.** 
 
-```sh
+ ```sh
 git maintenance start```
-- **Run maintenance tasks every hour for more active repos.**
+- **Run maintenance tasks every hour for more active repos.** 
 
-```sh
+ ```sh
 git maintenance start --schedule=hourly```
 
 

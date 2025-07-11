@@ -10,17 +10,17 @@
 
 
 #### Examples
-- **List local branches without a remote connection.**
+- **List local branches without a remote connection.** 
 
-```sh
+ ```sh
 git branch -vv | grep -E '^\s*\S+\s+[^\[]+$'```
-- **Delete local branches without remote tracking.**
+- **Delete local branches without remote tracking.** 
 
-```sh
+ ```sh
 git branch -vv | grep -E '^\s*\S+\s+[^\[]+$' | awk '{print $1}' | xargs git branch -D```
-- **List branches whose remote is gone.**
+- **List branches whose remote is gone.** 
 
-```sh
+ ```sh
 git branch -vv | grep 'gone'```
 
 
