@@ -57,8 +57,8 @@
         "command": "git request-pull <start> <url> <end>",
         "examples": [
           {
-            "code": "git request-pull main https://github.com/example/repo.git feature-branch",
-            "description": "Generates a summary like:\n\n```The following changes since commit 1234567... (main):\n\n  Some previous commit message\n\nare available in the Git repository at:\n\n  https://github.com/example/repo.git feature-branch\n\nfor you to fetch changes up to 89abcde... (feature-branch):\n\n  New feature commit message\n  Another commit message\n\n----------------------------------------------------------------\n file1.txt | 10 ++++++++++\n file2.js  |  5 +++++\n 2 files changed, 15 insertions(+)\n```"
+            "code": "\n\n```The following changes since commit 1234567... (main):\n\n  Some previous commit message\n\nare available in the Git repository at:\n\n  https://github.com/example/repo.git feature-branch\n\nfor you to fetch changes up to 89abcde... (feature-branch):\n\n  New feature commit message\n  Another commit message\n\n----------------------------------------------------------------\n file1.txt | 10 ++++++++++\n file2.js  |  5 +++++\n 2 files changed, 15 insertions(+)\n```",
+            "description": "Generates a summary like:"
           },
           {
             "code": "git request-pull v1.0 https://github.com/example/repo.git v1.1",
