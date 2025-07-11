@@ -16,11 +16,13 @@ git worktree remove <worktree-path>
 - **Detach a worktree without deleting the files.** 
 
  ```sh
-git worktree remove ../feature-branch```
+git worktree remove ../feature-branch 
+ ```
 - **Remove a hotfix worktree.** 
 
  ```sh
-git worktree remove ../hotfix```
+git worktree remove ../hotfix 
+ ```
 
 
 #### Steps

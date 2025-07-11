@@ -18,11 +18,13 @@ git fetch -p && git branch -vv | grep '\[origin/.*: gone\]' | awk '{print $1}' |
 - **Delete all local branches whose remote is gone.** 
 
  ```sh
-git fetch -p && git branch -vv | grep '\[origin/.*: gone\]' | awk '{print $1}' | xargs -r git branch -d```
+git fetch -p && git branch -vv | grep '\[origin/.*: gone\]' | awk '{print $1}' | xargs -r git branch -d 
+ ```
 - **Delete only feature branches whose remote is gone.** 
 
  ```sh
-git fetch -p && git branch -vv | grep '\[origin/feature: gone\]' | awk '{print $1}' | xargs -r git branch -d```
+git fetch -p && git branch -vv | grep '\[origin/feature: gone\]' | awk '{print $1}' | xargs -r git branch -d 
+ ```
 
 
 #### Steps
