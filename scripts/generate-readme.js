@@ -312,6 +312,7 @@ function main() {
         subMd += `# ${sub.Name}\n\n`;
         if (sub.category) subMd += renderCategory(sub.category);
         if (sub.short_description) subMd += `> ${sub.short_description}\n\n`;
+        if (sub.long_description) subMd += `${sub.long_description}\n\n`;
         if (sub.command) subMd += renderCommand(sub.command);
         if (sub.flags) subMd += renderFlags(sub.flags);
         if (sub.examples) subMd += renderExamples(sub.examples);
