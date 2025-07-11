@@ -6,10 +6,6 @@
 ![Category: Reference](https://img.shields.io/badge/Category-Reference-blue)
 > A comprehensive list of Git commands used in this project.
 
-## Subcommands
-- [git init --bare](./git-init-bare.md): Initialize a bare repository, typically used for remote repositories.
-- [git clone --mirror <repository>](./git-clone-mirror-repository.md): Clone a repository in mirror mode, including all refs and branches.
-
 A comprehensive list of Git commands used in this project, formatted according to our standard.
 
 ## Key Topics & Subcommands
