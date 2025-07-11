@@ -1,9 +1,9 @@
 [
   {
-    "Name": "Miscellaneous & Orphaned Git Commands",
+    "Name": "Git Essentials & Hidden Gems",
     "category": "Miscellaneous",
-    "short_description": "Useful Git commands and scripts not referenced elsewhere.",
-    "long_description": "This file collects useful Git commands and scripts that were previously only in the README and not referenced elsewhere in this repository.",
+    "short_description": "Start here to discover commands that can improve your workflow and understanding of Git.",
+    "long_description": "A collection of practical, lesser-known, and foundational Git commands that are useful for all users. Start here to discover commands that can improve your workflow and understanding of Git.",
     "tags": ["misc", "cleanup", "advanced"],
     "author": "mike-rambil",
     "last_updated": "2024-06-10",
@@ -51,6 +51,66 @@
           }
         ],
         "tags": ["collaboration", "pull-request"],
+        "author": "mike-rambil",
+        "last_updated": "2024-06-10"
+      }
+    ]
+  },
+  {
+    "Name": "Cleanup Branches Fast ⚡",
+    "category": "Branch Management",
+    "short_description": "Quickly view and clean up local branches using Bash or PowerShell, including removing branches whose remote is gone.",
+    "tags": ["branches", "cleanup", "fast", "bash", "powershell"],
+    "author": "mike-rambil",
+    "last_updated": "2024-06-10",
+    "subtoc": [
+      {
+        "Name": "Delete Local Branches Whose Remote is Gone (Bash)",
+        "category": "Branch Management",
+        "short_description": "Delete all local branches whose remote counterpart has been deleted, using Bash.",
+        "long_description": "This command fetches the latest remote info and deletes all local branches whose remote tracking branch no longer exists (marked as 'gone'). Useful for cleaning up after remote branch deletions.",
+        "command": "git fetch -p && git branch -vv | grep '\\[origin/.*: gone\\]' | awk '{print $1}' | xargs -r git branch -d",
+        "examples": [
+          {
+            "code": "git fetch -p && git branch -vv | grep '\\[origin/.*: gone\\]' | awk '{print $1}' | xargs -r git branch -d",
+            "description": "Delete all local branches whose remote is gone."
+          }
+        ],
+        "steps": [
+          "Fetch latest remote info: git fetch -p",
+          "List local branches whose remote is gone: git branch -vv | grep '[origin/.*: gone]'",
+          "Delete those branches: ... | awk '{print $1}' | xargs -r git branch -d"
+        ],
+        "warnings": [
+          "This will permanently delete local branches. Double-check before running.",
+          "Make sure you have no unmerged work on these branches."
+        ],
+        "tags": ["branches", "cleanup", "gone", "bash"],
+        "author": "mike-rambil",
+        "last_updated": "2024-06-10"
+      },
+      {
+        "Name": "Delete Local Branches Whose Remote is Gone (PowerShell)",
+        "category": "Branch Management",
+        "short_description": "Delete all local branches whose remote counterpart has been deleted, using PowerShell.",
+        "long_description": "This script fetches the latest remote info and deletes all local branches whose remote tracking branch no longer exists (marked as 'gone'). Useful for cleaning up after remote branch deletions.",
+        "command": "git fetch -p\ngit branch -vv | ForEach-Object { if ($_ -match '\\[.*: gone\\]') { $parts = $_.Trim() -split '\\s+'; $branch = $parts[0]; if ($branch -ne '') { git branch -d $branch } } }",
+        "examples": [
+          {
+            "code": "git fetch -p\ngit branch -vv | ForEach-Object { if ($_ -match '[.*: gone]') { $parts = $_.Trim() -split '\\s+'; $branch = $parts[0]; if ($branch -ne '') { git branch -d $branch } } }",
+            "description": "Delete all local branches whose remote is gone."
+          }
+        ],
+        "steps": [
+          "Fetch latest remote info: git fetch -p",
+          "List local branches whose remote is gone: git branch -vv | ForEach-Object { if ($_ -match '[.*: gone]') ... }",
+          "Delete those branches inside the loop."
+        ],
+        "warnings": [
+          "This will permanently delete local branches. Double-check before running.",
+          "Make sure you have no unmerged work on these branches."
+        ],
+        "tags": ["branches", "cleanup", "gone", "powershell"],
         "author": "mike-rambil",
         "last_updated": "2024-06-10"
       },

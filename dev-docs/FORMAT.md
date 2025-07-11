@@ -19,7 +19,7 @@
 
 # Format for Documenting Git Commands (JSON-Compatible)
 
-This project uses a structured format for documenting Git commands, matching the fields in `toc-source.json`. Use the following template for each command:
+This project uses a structured format for documenting Git commands, which is stored in [`../toc-source.json`](../toc-source.json). Use the following template for each command:
 
 ---
 
