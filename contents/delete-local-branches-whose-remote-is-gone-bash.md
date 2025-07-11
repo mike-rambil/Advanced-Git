@@ -6,6 +6,8 @@
 ![Category: Branch Management](https://img.shields.io/badge/Category-Branch%20Management-blue)
 > Delete all local branches whose remote counterpart has been deleted, using Bash.
 
+This command fetches the latest remote info and deletes all local branches whose remote tracking branch no longer exists (marked as 'gone'). Useful for cleaning up after remote branch deletions.
+
 
 #### Command
 ```sh
