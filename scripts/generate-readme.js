@@ -210,8 +210,15 @@ function renderSubtoc(subtoc) {
   return out;
 }
 
+function conciseMetaLine(author, lastUpdated, tags) {
+  let meta = [];
+  if (author) meta.push(`Author: ${author}`);
+  if (lastUpdated) meta.push(`Updated: ${lastUpdated}`);
+  if (tags && tags.length) meta.push(`Tags: ${tags.join(', ')}`);
+  return meta.length ? `\n---\n\n_${meta.join(' • ')}_\n` : '';
+}
+
 function generateContentFile(obj, idx, tocData) {
-  // Add Back to TOC link for main/top-level files
   let slug = slugify(obj.Name);
   let md = `[⬅️ Back to Table of Contents](../README.md#${slug})\n\n`;
   md += `# ${obj.Name}\n\n`;
@@ -227,12 +234,10 @@ function generateContentFile(obj, idx, tocData) {
   if (obj.prerequisites) md += renderPrerequisites(obj.prerequisites);
   if (obj.warnings) md += renderWarnings(obj.warnings);
   if (obj.links) md += renderLinks(obj.links);
-  if (obj.tags) md += renderTags(obj.tags);
   if (obj.related_commands) md += renderRelatedCommands(obj.related_commands);
   if (obj.output_example) md += renderOutputExample(obj.output_example);
-  if (obj.author) md += renderAuthor(obj.author);
-  if (obj.last_updated) md += renderLastUpdated(obj.last_updated);
   if (obj.subtoc) md += renderSubtoc(obj.subtoc);
+  md += conciseMetaLine(obj.author, obj.last_updated, obj.tags);
   return md;
 }
 
@@ -286,20 +291,17 @@ function main() {
         if (sub.prerequisites) subMd += renderPrerequisites(sub.prerequisites);
         if (sub.warnings) subMd += renderWarnings(sub.warnings);
         if (sub.links) subMd += renderLinks(sub.links);
-        if (sub.tags) subMd += renderTags(sub.tags);
         if (sub.related_commands)
           subMd += renderRelatedCommands(sub.related_commands);
         if (sub.output_example)
           subMd += renderOutputExample(sub.output_example);
-        if (sub.author) subMd += renderAuthor(sub.author);
-        if (sub.last_updated) subMd += renderLastUpdated(sub.last_updated);
-        // Next step
         if (subIdx < obj.subtoc.length - 1) {
           const next = obj.subtoc[subIdx + 1];
           subMd += `\n[➡️ See the Next Step: ${next.Name}](./${slugify(
             next.Name
           )}.md)\n`;
         }
+        subMd += conciseMetaLine(sub.author, sub.last_updated, sub.tags);
         writeIfChanged(subPath, subMd);
       });
     }
