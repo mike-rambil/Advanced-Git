@@ -27,6 +27,15 @@ git request-pull v1.0 https://github.com/example/repo.git v1.1
 1. Run `git request-pull <start> <url> <end>` to generate a pull request message.
 
 
+#### ProTips
+> [!TIP]
+> Use request-pull to generate a summary for code reviews.
+
+> [!TIP]
+> Include a clear start and end point for clarity.
+
+
+
 #### Links
 - [Official Docs](https://git-scm.com/docs/git-request-pull)
 

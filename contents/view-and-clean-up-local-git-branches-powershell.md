@@ -35,6 +35,15 @@ git branch -vv | Select-String -NotMatch "origin/" | ForEach-Object { $branch = 
 - ⚠️ Deleting branches is irreversible. Double-check before running destructive commands.
 
 
+#### ProTips
+> [!TIP]
+> Use PowerShell's 'Select-String' for flexible filtering.
+
+> [!TIP]
+> Automate cleanup with a script for regular maintenance.
+
+
+
 ---
 
 _Author: mike-rambil • Updated: 2024-06-10 • Tags: branches, cleanup, powershell_

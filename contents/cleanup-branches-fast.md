@@ -6,6 +6,15 @@
 ![Category: Branch Management](https://img.shields.io/badge/Category-Branch%20Management-blue)
 > Quickly view and clean up local branches using Bash or PowerShell, including removing branches whose remote is gone.
 
+
+#### ProTips
+> [!TIP]
+> Run 'git fetch -p' before cleaning up branches to update remote info.
+
+> [!TIP]
+> Always double-check which branches will be deleted.
+
+
 ## Key Topics & Subcommands
 - [Delete Local Branches Whose Remote is Gone (Bash)](./delete-local-branches-whose-remote-is-gone-bash.md): Delete all local branches whose remote counterpart has been deleted, using Bash.
 - [Delete Local Branches Whose Remote is Gone (PowerShell)](./delete-local-branches-whose-remote-is-gone-powershell.md): Delete all local branches whose remote counterpart has been deleted, using PowerShell.

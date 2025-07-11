@@ -25,6 +25,15 @@ git maintenance start
 1. Run `git maintenance start` in your repository.
 
 
+#### ProTips
+> [!TIP]
+> Set up maintenance on large repos to keep them fast.
+
+> [!TIP]
+> Use with cron or scheduled tasks for automation.
+
+
+
 #### Links
 - [Official Docs](https://git-scm.com/docs/git-maintenance)
 

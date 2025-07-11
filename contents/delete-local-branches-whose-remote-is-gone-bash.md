@@ -32,6 +32,15 @@ git fetch -p && git branch -vv | grep '\[origin/.*: gone\]' | awk '{print $1}' |
 - ⚠️ Make sure you have no unmerged work on these branches.
 
 
+#### ProTips
+> [!TIP]
+> Use this after deleting branches on the remote to keep your local repo tidy.
+
+> [!TIP]
+> Add 'echo' before 'git branch -d' to preview what will be deleted.
+
+
+
 [➡️ See the Next Step: Delete Local Branches Whose Remote is Gone (PowerShell)](./delete-local-branches-whose-remote-is-gone-powershell.md)
 
 ---

@@ -36,6 +36,15 @@ git branch -vv | ForEach-Object { if ($_ -match '[.*: gone]') { $parts = $_.Trim
 - ⚠️ Make sure you have no unmerged work on these branches.
 
 
+#### ProTips
+> [!TIP]
+> Great for Windows users to automate branch cleanup.
+
+> [!TIP]
+> Review the list before confirming deletion.
+
+
+
 [➡️ See the Next Step: View and Clean Up Local Git Branches (Bash)](./view-and-clean-up-local-git-branches-bash.md)
 
 ---
