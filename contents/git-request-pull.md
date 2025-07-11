@@ -30,15 +30,20 @@ git request-pull main https://github.com/example/repo.git feature-branch
 
 
 #### Steps
-1. Run `git request-pull <start> <url> <end>` to generate a pull request message.
+1. Identify the base commit or branch you want to compare from (e.g., main or v1.0).
+2. Run `git request-pull <start> <url> <end>` to generate a pull request message.
+3. Send the generated message to the project maintainer (e.g., via email or chat).
 
 
 #### ProTips
 > [!TIP]
-> Use request-pull to generate a summary for code reviews.
+> Use this command when collaborating via email or outside of web-based platforms.
 
 > [!TIP]
 > Include a clear start and end point for clarity.
+
+> [!TIP]
+> Review the generated message before sending to ensure it accurately describes your changes.
 
 
 

@@ -16,6 +16,7 @@
         "Name": "git maintenance start",
         "category": "Maintenance",
         "short_description": "Runs a cronJob in background for the specified repo for periodic maintenance.",
+        "long_description": "`git maintenance start` enables background maintenance tasks for your Git repository. It sets up scheduled jobs (using your system’s scheduler, like cron on Unix or Task Scheduler on Windows) to automatically run Git maintenance commands at regular intervals. This keeps your repository fast and healthy by running tasks like garbage collection, commit-graph optimization, and cleanup operations in the background, so you don’t have to remember to do it manually.",
         "command": "git maintenance start",
         "examples": [
           {
@@ -27,7 +28,12 @@
             "description": "Run maintenance tasks every hour for more active repos."
           }
         ],
-        "steps": ["Run `git maintenance start` in your repository."],
+        "steps": [
+          "Run `git maintenance start` in your repository.",
+          "Optionally, use `--schedule=hourly` or `--schedule=daily` to control how often maintenance runs.",
+          "Git will now automatically run tasks like garbage collection, pruning unreachable objects, and optimizing internal data structures in the background.",
+          "You can stop background maintenance with `git maintenance stop` if needed."
+        ],
         "links": [
           {
             "label": "Official Docs",
@@ -38,14 +44,16 @@
         "author": "mike-rambil",
         "last_updated": "2024-06-10",
         "protips": [
-          "Set up maintenance on large repos to keep them fast.",
-          "Use with cron or scheduled tasks for automation."
+          "Set up maintenance on large or long-lived repos to keep them fast and healthy.",
+          "Use with cron or scheduled tasks for automation.",
+          "If you notice Git getting slow, check if maintenance is enabled or run it manually."
         ]
       },
       {
         "Name": "git request-pull",
         "category": "Collaboration",
         "short_description": "Generate a request to pull changes into a repository.",
+        "long_description": "`git request-pull` generates a summary message describing the changes between two commits, which you can send to a project maintainer to request that they pull your changes. This is especially useful for email-based workflows or when collaborating outside of platforms like GitHub. The command outputs a message that includes a comparison summary, a list of commits, and their messages, making it easy for maintainers to review and apply your changes.",
         "command": "git request-pull <start> <url> <end>",
         "examples": [
           {
@@ -58,7 +66,9 @@
           }
         ],
         "steps": [
-          "Run `git request-pull <start> <url> <end>` to generate a pull request message."
+          "Identify the base commit or branch you want to compare from (e.g., main or v1.0).",
+          "Run `git request-pull <start> <url> <end>` to generate a pull request message.",
+          "Send the generated message to the project maintainer (e.g., via email or chat)."
         ],
         "links": [
           {
@@ -70,8 +80,9 @@
         "author": "mike-rambil",
         "last_updated": "2024-06-10",
         "protips": [
-          "Use request-pull to generate a summary for code reviews.",
-          "Include a clear start and end point for clarity."
+          "Use this command when collaborating via email or outside of web-based platforms.",
+          "Include a clear start and end point for clarity.",
+          "Review the generated message before sending to ensure it accurately describes your changes."
         ]
       }
     ]
