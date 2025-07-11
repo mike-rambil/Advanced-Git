@@ -17,6 +17,7 @@ git request-pull <start> <url> <end>
 ```
 
 #### Examples
+
 - **Generates a summary like:**
 
 ```sh
@@ -40,6 +41,7 @@ for you to fetch changes up to 89abcde... (feature-branch):
  file2.js  |  5 +++++
  2 files changed, 15 insertions(+)
 ```
+
 - **Generate a pull request message from v1.0 to v1.1.**
 
 ```sh
