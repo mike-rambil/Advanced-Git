@@ -6,6 +6,8 @@
 ![Category: Maintenance](https://img.shields.io/badge/Category-Maintenance-blue)
 > Runs a cronJob in background for the specified repo for periodic maintenance.
 
+`git maintenance start` enables background maintenance tasks for your Git repository. It sets up scheduled jobs (using your system’s scheduler, like cron on Unix or Task Scheduler on Windows) to automatically run Git maintenance commands at regular intervals. This keeps your repository fast and healthy by running tasks like garbage collection, commit-graph optimization, and cleanup operations in the background, so you don’t have to remember to do it manually.
+
 
 #### Command
 ```sh

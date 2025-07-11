@@ -8,6 +8,8 @@
 ![Category: Collaboration](https://img.shields.io/badge/Category-Collaboration-blue)
 > Generate a request to pull changes into a repository.
 
+`git request-pull` generates a summary message describing the changes between two commits, which you can send to a project maintainer to request that they pull your changes. This is especially useful for email-based workflows or when collaborating outside of platforms like GitHub. The command outputs a message that includes a comparison summary, a list of commits, and their messages, making it easy for maintainers to review and apply your changes.
+
 
 #### Command
 ```sh
