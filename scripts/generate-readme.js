@@ -131,6 +131,15 @@ function renderWarnings(warnings) {
   return renderSection('Warnings', out);
 }
 
+function renderProTips(protips) {
+  if (!protips || !protips.length) return '';
+  let out = '';
+  protips.forEach((tip) => {
+    out += `> [!TIP]\n> ${tip}\n\n`;
+  });
+  return renderSection('ProTips', out);
+}
+
 function renderTags(tags) {
   if (!tags || !tags.length) return '';
   return renderSection('Tags', tags.map((t) => `\`${t}\``).join(', '));
@@ -199,6 +208,7 @@ function renderSubtoc(subtoc) {
     if (sub.steps) out += renderSteps(sub.steps);
     if (sub.prerequisites) out += renderPrerequisites(sub.prerequisites);
     if (sub.warnings) out += renderWarnings(sub.warnings);
+    if (sub.protips) out += renderProTips(sub.protips);
     if (sub.links) out += renderLinks(sub.links);
     if (sub.tags) out += renderTags(sub.tags);
     if (sub.related_commands)
@@ -246,6 +256,7 @@ function generateContentFile(obj, idx, tocData) {
   if (obj.steps) md += renderSteps(obj.steps);
   if (obj.prerequisites) md += renderPrerequisites(obj.prerequisites);
   if (obj.warnings) md += renderWarnings(obj.warnings);
+  if (obj.protips) md += renderProTips(obj.protips);
   if (obj.links) md += renderLinks(obj.links);
   if (obj.related_commands) md += renderRelatedCommands(obj.related_commands);
   if (obj.output_example) md += renderOutputExample(obj.output_example);
@@ -307,6 +318,7 @@ function main() {
         if (sub.steps) subMd += renderSteps(sub.steps);
         if (sub.prerequisites) subMd += renderPrerequisites(sub.prerequisites);
         if (sub.warnings) subMd += renderWarnings(sub.warnings);
+        if (sub.protips) subMd += renderProTips(sub.protips);
         if (sub.links) subMd += renderLinks(sub.links);
         if (sub.related_commands)
           subMd += renderRelatedCommands(sub.related_commands);

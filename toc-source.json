@@ -7,6 +7,10 @@
     "tags": ["misc", "cleanup", "advanced"],
     "author": "mike-rambil",
     "last_updated": "2024-06-10",
+    "protips": [
+      "Try these commands in a test repo before using them on important projects.",
+      "Bookmark this section for quick reference to hidden gems."
+    ],
     "subtoc": [
       {
         "Name": "git maintenance start",
@@ -28,7 +32,11 @@
         ],
         "tags": ["maintenance", "automation"],
         "author": "mike-rambil",
-        "last_updated": "2024-06-10"
+        "last_updated": "2024-06-10",
+        "protips": [
+          "Set up maintenance on large repos to keep them fast.",
+          "Use with cron or scheduled tasks for automation."
+        ]
       },
       {
         "Name": "git request-pull",
@@ -52,7 +60,11 @@
         ],
         "tags": ["collaboration", "pull-request"],
         "author": "mike-rambil",
-        "last_updated": "2024-06-10"
+        "last_updated": "2024-06-10",
+        "protips": [
+          "Use request-pull to generate a summary for code reviews.",
+          "Include a clear start and end point for clarity."
+        ]
       }
     ]
   },
@@ -63,6 +75,10 @@
     "tags": ["branches", "cleanup", "fast", "bash", "powershell"],
     "author": "mike-rambil",
     "last_updated": "2024-06-10",
+    "protips": [
+      "Run 'git fetch -p' before cleaning up branches to update remote info.",
+      "Always double-check which branches will be deleted."
+    ],
     "subtoc": [
       {
         "Name": "Delete Local Branches Whose Remote is Gone (Bash)",
@@ -87,7 +103,11 @@
         ],
         "tags": ["branches", "cleanup", "gone", "bash"],
         "author": "mike-rambil",
-        "last_updated": "2024-06-10"
+        "last_updated": "2024-06-10",
+        "protips": [
+          "Use this after deleting branches on the remote to keep your local repo tidy.",
+          "Add 'echo' before 'git branch -d' to preview what will be deleted."
+        ]
       },
       {
         "Name": "Delete Local Branches Whose Remote is Gone (PowerShell)",
@@ -112,7 +132,11 @@
         ],
         "tags": ["branches", "cleanup", "gone", "powershell"],
         "author": "mike-rambil",
-        "last_updated": "2024-06-10"
+        "last_updated": "2024-06-10",
+        "protips": [
+          "Great for Windows users to automate branch cleanup.",
+          "Review the list before confirming deletion."
+        ]
       },
       {
         "Name": "View and Clean Up Local Git Branches (Bash)",
@@ -139,7 +163,11 @@
         ],
         "tags": ["branches", "cleanup", "bash"],
         "author": "mike-rambil",
-        "last_updated": "2024-06-10"
+        "last_updated": "2024-06-10",
+        "protips": [
+          "Use 'git branch -vv' to see tracking info for all branches.",
+          "Pipe to 'awk' and 'xargs' for batch deletion."
+        ]
       },
       {
         "Name": "View and Clean Up Local Git Branches (PowerShell)",
@@ -166,7 +194,11 @@
         ],
         "tags": ["branches", "cleanup", "powershell"],
         "author": "mike-rambil",
-        "last_updated": "2024-06-10"
+        "last_updated": "2024-06-10",
+        "protips": [
+          "Use PowerShell's 'Select-String' for flexible filtering.",
+          "Automate cleanup with a script for regular maintenance."
+        ]
       }
     ]
   },

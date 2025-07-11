@@ -76,6 +76,11 @@ This project uses a structured format for documenting Git commands, which is sto
 - **Type:** list of strings (optional)
 - **Description:** Important cautions or risks.
 
+## ProTips
+
+- **Type:** list of strings (optional)
+- **Description:** Short, actionable tips to help users be more successful with this command. Use 1–2 lines per tip. Example: "Use `-n` for a dry run before deleting files."
+
 ## Tags
 
 - **Type:** list of strings
@@ -142,6 +147,11 @@ This project uses a structured format for documenting Git commands, which is sto
 
 - This will permanently delete files! Always use `-n` before `-f`.
 - Be cautious with `-x` and `-X` as they remove ignored files, which might include config files.
+
+**ProTips:**
+
+- Use `git clean -n` to preview what will be deleted before running with `-f`.
+- Combine with `-d` to also remove untracked directories.
 
 **Tags:** clean, untracked, workspace  
 **Author:** mike-rambil  
