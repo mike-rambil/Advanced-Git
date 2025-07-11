@@ -13,13 +13,13 @@ git init --bare my-repo.git
 ```
 
 #### Examples
-- **Create a bare repository for collaboration.**
+- **Create a bare repository for collaboration.** 
 
-```sh
+ ```sh
 git init --bare my-repo.git```
-- **Initialize a bare repo in a custom directory for server hosting.**
+- **Initialize a bare repo in a custom directory for server hosting.** 
 
-```sh
+ ```sh
 git init --bare /srv/git/project.git```
 
 

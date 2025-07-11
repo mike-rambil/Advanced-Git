@@ -13,13 +13,13 @@ git blame filename.txt
 ```
 
 #### Examples
-- **Show the last commit that changed each line of the file.**
+- **Show the last commit that changed each line of the file.** 
 
-```sh
+ ```sh
 git blame filename.txt```
-- **Blame only lines 10 to 20 of a file.**
+- **Blame only lines 10 to 20 of a file.** 
 
-```sh
+ ```sh
 git blame -L 10,20 filename.txt```
 
 

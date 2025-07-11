@@ -15,13 +15,13 @@ git push --force-with-lease
 ```
 
 #### Examples
-- **Safely force-push your changes.**
+- **Safely force-push your changes.** 
 
-```sh
+ ```sh
 git push --force-with-lease```
-- **Force-push a specific branch with lease protection.**
+- **Force-push a specific branch with lease protection.** 
 
-```sh
+ ```sh
 git push --force-with-lease origin feature-branch```
 
 

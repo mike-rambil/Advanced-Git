@@ -13,13 +13,13 @@ git worktree add <path> <branch>
 ```
 
 #### Examples
-- **Create a new worktree for the feature branch.**
+- **Create a new worktree for the feature branch.** 
 
-```sh
+ ```sh
 git worktree add ../feature-branch feature```
-- **Create a worktree for a hotfix branch.**
+- **Create a worktree for a hotfix branch.** 
 
-```sh
+ ```sh
 git worktree add ../hotfix hotfix-branch```
 
 
