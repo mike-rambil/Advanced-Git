@@ -1,4 +1,4 @@
-[⬅️ Back to Miscellaneous & Orphaned Git Commands](./miscellaneous-orphaned-git-commands.md)
+[⬅️ Back to Git Essentials & Hidden Gems](./git-essentials-hidden-gems.md)
 
 # git maintenance start
 

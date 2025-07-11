@@ -1,6 +1,6 @@
-[⬅️ Back to Miscellaneous & Orphaned Git Commands](./miscellaneous-orphaned-git-commands.md)
+[⬅️ Back to Cleanup Branches Fast ⚡](./cleanup-branches-fast.md)
 
-[⬆️ Previous Step: git request-pull](./git-request-pull.md)
+[⬆️ Previous Step: Delete Local Branches Whose Remote is Gone (PowerShell)](./delete-local-branches-whose-remote-is-gone-powershell.md)
 
 # View and Clean Up Local Git Branches (Bash)
 

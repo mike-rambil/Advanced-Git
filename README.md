@@ -7,9 +7,12 @@
 
 # Table of Contents
 
-- [Miscellaneous & Orphaned Git Commands](./contents/miscellaneous-orphaned-git-commands.md): Useful Git commands and scripts not referenced elsewhere.
+- [Git Essentials & Hidden Gems](./contents/git-essentials-hidden-gems.md): Start here to discover commands that can improve your workflow and understanding of Git.
   - [git maintenance start](./contents/git-maintenance-start.md): Runs a cronJob in background for the specified repo for periodic maintenance.
   - [git request-pull](./contents/git-request-pull.md): Generate a request to pull changes into a repository.
+- [Cleanup Branches Fast ⚡](./contents/cleanup-branches-fast.md): Quickly view and clean up local branches using Bash or PowerShell, including removing branches whose remote is gone.
+  - [Delete Local Branches Whose Remote is Gone (Bash)](./contents/delete-local-branches-whose-remote-is-gone-bash.md): Delete all local branches whose remote counterpart has been deleted, using Bash.
+  - [Delete Local Branches Whose Remote is Gone (PowerShell)](./contents/delete-local-branches-whose-remote-is-gone-powershell.md): Delete all local branches whose remote counterpart has been deleted, using PowerShell.
   - [View and Clean Up Local Git Branches (Bash)](./contents/view-and-clean-up-local-git-branches-bash.md): Scripts to view and clean up local branches using Bash.
   - [View and Clean Up Local Git Branches (PowerShell)](./contents/view-and-clean-up-local-git-branches-powershell.md): Scripts to view and clean up local branches using PowerShell.
 - [Git Command Reference (Full List)](./contents/git-command-reference-full-list.md): A comprehensive list of Git commands used in this project.

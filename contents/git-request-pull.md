@@ -1,4 +1,4 @@
-[⬅️ Back to Miscellaneous & Orphaned Git Commands](./miscellaneous-orphaned-git-commands.md)
+[⬅️ Back to Git Essentials & Hidden Gems](./git-essentials-hidden-gems.md)
 
 [⬆️ Previous Step: git maintenance start](./git-maintenance-start.md)
 
@@ -30,8 +30,6 @@ git request-pull v1.0 https://github.com/example/repo.git v1.1
 #### Links
 - [Official Docs](https://git-scm.com/docs/git-request-pull)
 
-
-[➡️ See the Next Step: View and Clean Up Local Git Branches (Bash)](./view-and-clean-up-local-git-branches-bash.md)
 
 ---
 
