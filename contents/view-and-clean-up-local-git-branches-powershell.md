@@ -22,6 +22,12 @@ git branch -vv | Select-String -NotMatch "origin/"
 ```sh
 git branch -vv | Select-String -NotMatch "origin/" | ForEach-Object { $branch = ($_ -split "\s+")[1]; git branch -D $branch }
 ```
+- **List branches whose remote is gone.**
+
+
+```sh
+git branch -vv | Select-String 'gone'
+```
 
 
 #### Steps
@@ -33,6 +39,15 @@ git branch -vv | Select-String -NotMatch "origin/" | ForEach-Object { $branch = 
 
 #### Warnings
 - ⚠️ Deleting branches is irreversible. Double-check before running destructive commands.
+
+
+#### ProTips
+> [!TIP]
+> Use PowerShell's 'Select-String' for flexible filtering.
+
+> [!TIP]
+> Automate cleanup with a script for regular maintenance.
+
 
 
 ---

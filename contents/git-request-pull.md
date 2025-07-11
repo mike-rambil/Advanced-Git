@@ -21,10 +21,25 @@ git request-pull <start> <url> <end>
 ```sh
 git request-pull v1.0 https://github.com/example/repo.git v1.1
 ```
+- **Request a pull for a feature branch based on main.**
+
+
+```sh
+git request-pull main https://github.com/example/repo.git feature-branch
+```
 
 
 #### Steps
 1. Run `git request-pull <start> <url> <end>` to generate a pull request message.
+
+
+#### ProTips
+> [!TIP]
+> Use request-pull to generate a summary for code reviews.
+
+> [!TIP]
+> Include a clear start and end point for clarity.
+
 
 
 #### Links

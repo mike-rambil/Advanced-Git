@@ -21,6 +21,12 @@ git clone --mirror https://github.com/example/repo.git
 ```sh
 git clone --mirror https://github.com/example/repo.git
 ```
+- **Mirror-clone a private repo using SSH.**
+
+
+```sh
+git clone --mirror git@github.com:org/repo.git
+```
 
 
 #### Steps

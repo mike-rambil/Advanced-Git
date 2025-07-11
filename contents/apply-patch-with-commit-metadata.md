@@ -19,6 +19,12 @@ git am my-changes.patch
 ```sh
 git am my-changes.patch
 ```
+- **Apply a patch and add a Signed-off-by line.**
+
+
+```sh
+git am --signoff my-changes.patch
+```
 
 
 #### Steps

@@ -19,10 +19,25 @@ git maintenance start
 ```sh
 git maintenance start
 ```
+- **Run maintenance tasks every hour for more active repos.**
+
+
+```sh
+git maintenance start --schedule=hourly
+```
 
 
 #### Steps
 1. Run `git maintenance start` in your repository.
+
+
+#### ProTips
+> [!TIP]
+> Set up maintenance on large repos to keep them fast.
+
+> [!TIP]
+> Use with cron or scheduled tasks for automation.
+
 
 
 #### Links

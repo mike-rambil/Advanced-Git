@@ -23,6 +23,13 @@ git branch -vv | ForEach-Object { if ($_ -match '\[.*: gone\]') { $parts = $_.Tr
 git fetch -p
 git branch -vv | ForEach-Object { if ($_ -match '[.*: gone]') { $parts = $_.Trim() -split '\s+'; $branch = $parts[0]; if ($branch -ne '') { git branch -d $branch } } }
 ```
+- **Delete only feature branches whose remote is gone.**
+
+
+```sh
+git fetch -p
+git branch -vv | ForEach-Object { if ($_ -match '[origin/feature: gone]') { $parts = $_.Trim() -split 's+'; $branch = $parts[0]; if ($branch -ne '') { git branch -d $branch } } }
+```
 
 
 #### Steps
@@ -34,6 +41,15 @@ git branch -vv | ForEach-Object { if ($_ -match '[.*: gone]') { $parts = $_.Trim
 #### Warnings
 - ⚠️ This will permanently delete local branches. Double-check before running.
 - ⚠️ Make sure you have no unmerged work on these branches.
+
+
+#### ProTips
+> [!TIP]
+> Great for Windows users to automate branch cleanup.
+
+> [!TIP]
+> Review the list before confirming deletion.
+
 
 
 [➡️ See the Next Step: View and Clean Up Local Git Branches (Bash)](./view-and-clean-up-local-git-branches-bash.md)

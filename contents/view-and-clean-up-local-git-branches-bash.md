@@ -22,6 +22,12 @@ git branch -vv | grep -E '^\s*\S+\s+[^\[]+$'
 ```sh
 git branch -vv | grep -E '^\s*\S+\s+[^\[]+$' | awk '{print $1}' | xargs git branch -D
 ```
+- **List branches whose remote is gone.**
+
+
+```sh
+git branch -vv | grep 'gone'
+```
 
 
 #### Steps
@@ -33,6 +39,15 @@ git branch -vv | grep -E '^\s*\S+\s+[^\[]+$' | awk '{print $1}' | xargs git bran
 
 #### Warnings
 - ⚠️ Deleting branches is irreversible. Double-check before running destructive commands.
+
+
+#### ProTips
+> [!TIP]
+> Use 'git branch -vv' to see tracking info for all branches.
+
+> [!TIP]
+> Pipe to 'awk' and 'xargs' for batch deletion.
+
 
 
 [➡️ See the Next Step: View and Clean Up Local Git Branches (PowerShell)](./view-and-clean-up-local-git-branches-powershell.md)

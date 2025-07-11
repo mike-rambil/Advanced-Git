@@ -19,6 +19,12 @@ git blame filename.txt
 ```sh
 git blame filename.txt
 ```
+- **Blame only lines 10 to 20 of a file.**
+
+
+```sh
+git blame -L 10,20 filename.txt
+```
 
 
 #### Steps

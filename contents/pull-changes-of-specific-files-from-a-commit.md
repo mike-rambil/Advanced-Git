@@ -29,6 +29,12 @@ git add path/to/file1.txt path/to/file2.txt
 git commit -m "Pulled changes for file1.txt and file2.txt from commit e8ab7f64"
 git push origin revert/productionOrder
 ```
+- **Restore files using the newer 'git restore' command.**
+
+
+```sh
+git restore --source e8ab7f64fdfcc7bdaaed8d96c0ac26dce035663f path/to/file1.txt path/to/file2.txt
+```
 
 
 #### Steps

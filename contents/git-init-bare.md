@@ -19,6 +19,12 @@ git init --bare my-repo.git
 ```sh
 git init --bare my-repo.git
 ```
+- **Initialize a bare repo in a custom directory for server hosting.**
+
+
+```sh
+git init --bare /srv/git/project.git
+```
 
 
 #### Steps

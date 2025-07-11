@@ -19,6 +19,12 @@ git fetch -p && git branch -vv | grep '\[origin/.*: gone\]' | awk '{print $1}' |
 ```sh
 git fetch -p && git branch -vv | grep '\[origin/.*: gone\]' | awk '{print $1}' | xargs -r git branch -d
 ```
+- **Delete only feature branches whose remote is gone.**
+
+
+```sh
+git fetch -p && git branch -vv | grep '\[origin/feature: gone\]' | awk '{print $1}' | xargs -r git branch -d
+```
 
 
 #### Steps
@@ -30,6 +36,15 @@ git fetch -p && git branch -vv | grep '\[origin/.*: gone\]' | awk '{print $1}' |
 #### Warnings
 - ⚠️ This will permanently delete local branches. Double-check before running.
 - ⚠️ Make sure you have no unmerged work on these branches.
+
+
+#### ProTips
+> [!TIP]
+> Use this after deleting branches on the remote to keep your local repo tidy.
+
+> [!TIP]
+> Add 'echo' before 'git branch -d' to preview what will be deleted.
+
 
 
 [➡️ See the Next Step: Delete Local Branches Whose Remote is Gone (PowerShell)](./delete-local-branches-whose-remote-is-gone-powershell.md)

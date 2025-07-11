@@ -19,6 +19,12 @@ git worktree add ../hotfix hotfix-branch
 ```sh
 git worktree add ../hotfix hotfix-branch
 ```
+- **Create a worktree for a bugfix branch.**
+
+
+```sh
+git worktree add ../bugfix bugfix-branch
+```
 
 
 #### Steps

@@ -17,6 +17,12 @@ git log --oneline -- filename.txt
 ```sh
 git log --oneline -- filename.txt
 ```
+- **Show commit history for a different file.**
+
+
+```sh
+git log --oneline -- path/to/anotherfile.js
+```
 
 
 #### Steps
