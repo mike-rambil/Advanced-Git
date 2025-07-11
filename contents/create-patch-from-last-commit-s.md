@@ -13,28 +13,16 @@ git format-patch HEAD~1
 #### Examples
 - **Create a .patch file for the last commit.**
 
-
-```sh
 git format-patch HEAD~1
-```
 - **Create a single patch file for all commits on top of main.**
 
-
-```sh
 git format-patch origin/main..HEAD --stdout > my-changes.patch
-```
 - **Create patch files for the last two commits.**
 
-
-```sh
 git format-patch -2
-```
 - **Create patch files for all commits since main.**
 
-
-```sh
 git format-patch -2 origin/main..HEAD
-```
 
 
 #### Steps

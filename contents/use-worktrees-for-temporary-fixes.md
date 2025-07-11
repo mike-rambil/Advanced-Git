@@ -15,16 +15,10 @@ git worktree add ../hotfix hotfix-branch
 #### Examples
 - **Quickly apply a fix on another branch without leaving your main branch.**
 
-
-```sh
 git worktree add ../hotfix hotfix-branch
-```
 - **Create a worktree for a bugfix branch.**
 
-
-```sh
 git worktree add ../bugfix bugfix-branch
-```
 
 
 #### Steps
