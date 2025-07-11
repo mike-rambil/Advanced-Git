@@ -6,6 +6,11 @@
 
 
 ![Category: Patch & Diff](https://img.shields.io/badge/Category-Patch%20%26%20Diff-blue)
+| Command | Use Case | Preserves Commit Info? | Can Apply With |
+|---|---|---|---|
+| git diff > file.diff | Share uncommitted changes | ❌ | git apply |
+| git format-patch > file.patch | Share committed changes | ✅ | git am |
+
 
 ---
 
