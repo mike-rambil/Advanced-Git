@@ -17,10 +17,12 @@ git clone --mirror https://github.com/example/repo.git
 #### Examples
 - **Create a full backup or migration of a repository.**
 
-git clone --mirror https://github.com/example/repo.git
+```sh
+git clone --mirror https://github.com/example/repo.git```
 - **Mirror-clone a private repo using SSH.**
 
-git clone --mirror git@github.com:org/repo.git
+```sh
+git clone --mirror git@github.com:org/repo.git```
 
 
 #### Steps

@@ -13,10 +13,12 @@ git worktree list
 #### Examples
 - **List all active worktrees.**
 
-git worktree list
+```sh
+git worktree list```
 - **List worktrees in a machine-readable format.**
 
-git worktree list --porcelain
+```sh
+git worktree list --porcelain```
 
 
 #### Steps

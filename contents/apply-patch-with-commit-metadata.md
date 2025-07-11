@@ -15,10 +15,12 @@ git am my-changes.patch
 #### Examples
 - **Apply a patch file and preserve commit info.**
 
-git am my-changes.patch
+```sh
+git am my-changes.patch```
 - **Apply a patch and add a Signed-off-by line.**
 
-git am --signoff my-changes.patch
+```sh
+git am --signoff my-changes.patch```
 
 
 #### Steps

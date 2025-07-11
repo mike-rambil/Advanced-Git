@@ -13,10 +13,12 @@ git log --oneline -- filename.txt
 #### Examples
 - **List all commits that modified `filename.txt`.**
 
-git log --oneline -- filename.txt
+```sh
+git log --oneline -- filename.txt```
 - **Show commit history for a different file.**
 
-git log --oneline -- path/to/anotherfile.js
+```sh
+git log --oneline -- path/to/anotherfile.js```
 
 
 #### Steps

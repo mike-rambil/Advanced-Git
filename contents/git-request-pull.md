@@ -19,9 +19,10 @@ git request-pull <start> <url> <end>
 #### Examples
 - **Generates a summary like:**
 
+```sh
 
 
-```The following changes since commit 1234567... (main):
+The following changes since commit 1234567... (main):
 
   Some previous commit message
 
@@ -41,10 +42,12 @@ for you to fetch changes up to 89abcde... (feature-branch):
 ```
 - **Generate a pull request message from v1.0 to v1.1.**
 
-git request-pull v1.0 https://github.com/example/repo.git v1.1
+```sh
+git request-pull v1.0 https://github.com/example/repo.git v1.1```
 - **Request a pull for a feature branch based on main.**
 
-git request-pull main https://github.com/example/repo.git feature-branch
+```sh
+git request-pull main https://github.com/example/repo.git feature-branch```
 
 
 #### Steps

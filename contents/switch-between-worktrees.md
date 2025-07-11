@@ -13,10 +13,12 @@
 #### Examples
 - **Switch to the worktree directory.**
 
-cd ../feature-branch
+```sh
+cd ../feature-branch```
 - **Switch to a hotfix worktree.**
 
-cd ../hotfix
+```sh
+cd ../hotfix```
 
 
 #### Steps

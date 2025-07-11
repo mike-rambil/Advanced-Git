@@ -15,10 +15,12 @@ git apply changes.diff
 #### Examples
 - **Apply a diff file of uncommitted changes.**
 
-git apply changes.diff
+```sh
+git apply changes.diff```
 - **Show what would change if the diff were applied.**
 
-git apply --stat changes.diff
+```sh
+git apply --stat changes.diff```
 
 
 #### Steps

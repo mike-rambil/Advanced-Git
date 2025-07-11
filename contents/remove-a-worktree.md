@@ -15,10 +15,12 @@ git worktree remove <worktree-path>
 #### Examples
 - **Detach a worktree without deleting the files.**
 
-git worktree remove ../feature-branch
+```sh
+git worktree remove ../feature-branch```
 - **Remove a hotfix worktree.**
 
-git worktree remove ../hotfix
+```sh
+git worktree remove ../hotfix```
 
 
 #### Steps

@@ -15,10 +15,12 @@ git diff > changes.diff
 #### Examples
 - **Create a diff file of uncommitted changes.**
 
-git diff > changes.diff
+```sh
+git diff > changes.diff```
 - **Create a diff file for the last commit.**
 
-git diff HEAD~1 > last-commit.diff
+```sh
+git diff HEAD~1 > last-commit.diff```
 
 
 #### Steps

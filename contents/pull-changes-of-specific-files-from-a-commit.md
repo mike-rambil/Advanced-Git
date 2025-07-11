@@ -17,15 +17,18 @@ git checkout <commit-hash> -- <file1> <file2>
 #### Examples
 - **Restore file1.txt and file2.txt from the specified commit.**
 
-git checkout e8ab7f64fdfcc7bdaaed8d96c0ac26dce035663f -- path/to/file1.txt path/to/file2.txt
+```sh
+git checkout e8ab7f64fdfcc7bdaaed8d96c0ac26dce035663f -- path/to/file1.txt path/to/file2.txt```
 - **Stage, commit, and push the restored files to a new branch.**
 
+```sh
 git add path/to/file1.txt path/to/file2.txt
 git commit -m "Pulled changes for file1.txt and file2.txt from commit e8ab7f64"
-git push origin revert/productionOrder
+git push origin revert/productionOrder```
 - **Restore files using the newer 'git restore' command.**
 
-git restore --source e8ab7f64fdfcc7bdaaed8d96c0ac26dce035663f path/to/file1.txt path/to/file2.txt
+```sh
+git restore --source e8ab7f64fdfcc7bdaaed8d96c0ac26dce035663f path/to/file1.txt path/to/file2.txt```
 
 
 #### Steps

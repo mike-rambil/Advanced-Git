@@ -12,13 +12,16 @@
 #### Examples
 - **List local branches without a remote connection.**
 
-git branch -vv | Select-String -NotMatch "origin/"
+```sh
+git branch -vv | Select-String -NotMatch "origin/"```
 - **Delete local branches without remote tracking.**
 
-git branch -vv | Select-String -NotMatch "origin/" | ForEach-Object { $branch = ($_ -split "\s+")[1]; git branch -D $branch }
+```sh
+git branch -vv | Select-String -NotMatch "origin/" | ForEach-Object { $branch = ($_ -split "\s+")[1]; git branch -D $branch }```
 - **List branches whose remote is gone.**
 
-git branch -vv | Select-String 'gone'
+```sh
+git branch -vv | Select-String 'gone'```
 
 
 #### Steps

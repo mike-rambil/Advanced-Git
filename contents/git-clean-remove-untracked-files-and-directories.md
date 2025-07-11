@@ -26,19 +26,24 @@ git clean
 #### Examples
 - **Preview what will be deleted (dry run).**
 
-git clean -n -d
+```sh
+git clean -n -d```
 - **Delete all untracked files.**
 
-git clean -f
+```sh
+git clean -f```
 - **Delete all untracked files and directories.**
 
-git clean -f -d
+```sh
+git clean -f -d```
 - **Interactive mode for selective deletion.**
 
-git clean -i
+```sh
+git clean -i```
 - **Delete untracked and ignored files.**
 
-git clean -f -x
+```sh
+git clean -f -x```
 
 
 #### Steps
