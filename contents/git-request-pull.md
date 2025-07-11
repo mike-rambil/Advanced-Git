@@ -17,7 +17,11 @@ git request-pull <start> <url> <end>
 ```
 
 #### Examples
-- **Generates a summary like:
+
+- **Generates a summary like:**
+
+```sh
+
 
 The following changes since commit 1234567... (main):
 
@@ -35,24 +39,17 @@ for you to fetch changes up to 89abcde... (feature-branch):
 ----------------------------------------------------------------
  file1.txt | 10 ++++++++++
  file2.js  |  5 +++++
- 2 files changed, 15 insertions(+)**
-
-
-```sh
-git request-pull main https://github.com/example/repo.git feature-branch
+ 2 files changed, 15 insertions(+)
 ```
+
 - **Generate a pull request message from v1.0 to v1.1.**
 
-
 ```sh
-git request-pull v1.0 https://github.com/example/repo.git v1.1
-```
+git request-pull v1.0 https://github.com/example/repo.git v1.1```
 - **Request a pull for a feature branch based on main.**
 
-
 ```sh
-git request-pull main https://github.com/example/repo.git feature-branch
-```
+git request-pull main https://github.com/example/repo.git feature-branch```
 
 
 #### Steps

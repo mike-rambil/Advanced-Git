@@ -20,18 +20,14 @@ git branch -vv | ForEach-Object { if ($_ -match '\[.*: gone\]') { $parts = $_.Tr
 #### Examples
 - **Delete all local branches whose remote is gone.**
 
-
 ```sh
 git fetch -p
-git branch -vv | ForEach-Object { if ($_ -match '[.*: gone]') { $parts = $_.Trim() -split '\s+'; $branch = $parts[0]; if ($branch -ne '') { git branch -d $branch } } }
-```
+git branch -vv | ForEach-Object { if ($_ -match '[.*: gone]') { $parts = $_.Trim() -split '\s+'; $branch = $parts[0]; if ($branch -ne '') { git branch -d $branch } } }```
 - **Delete only feature branches whose remote is gone.**
 
-
 ```sh
 git fetch -p
-git branch -vv | ForEach-Object { if ($_ -match '[origin/feature: gone]') { $parts = $_.Trim() -split 's+'; $branch = $parts[0]; if ($branch -ne '') { git branch -d $branch } } }
-```
+git branch -vv | ForEach-Object { if ($_ -match '[origin/feature: gone]') { $parts = $_.Trim() -split 's+'; $branch = $parts[0]; if ($branch -ne '') { git branch -d $branch } } }```
 
 
 #### Steps

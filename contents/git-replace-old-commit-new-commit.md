@@ -15,16 +15,12 @@ git replace abc123 def456
 #### Examples
 - **Temporarily replace commit abc123 with def456.**
 
-
 ```sh
-git replace abc123 def456
-```
+git replace abc123 def456```
 - **Graft a new parent onto a commit for testing history changes.**
 
-
 ```sh
-git replace --graft HEAD~2 HEAD
-```
+git replace --graft HEAD~2 HEAD```
 
 
 #### Steps

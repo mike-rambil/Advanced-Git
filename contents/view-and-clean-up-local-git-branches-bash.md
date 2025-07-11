@@ -12,22 +12,16 @@
 #### Examples
 - **List local branches without a remote connection.**
 
-
 ```sh
-git branch -vv | grep -E '^\s*\S+\s+[^\[]+$'
-```
+git branch -vv | grep -E '^\s*\S+\s+[^\[]+$'```
 - **Delete local branches without remote tracking.**
 
-
 ```sh
-git branch -vv | grep -E '^\s*\S+\s+[^\[]+$' | awk '{print $1}' | xargs git branch -D
-```
+git branch -vv | grep -E '^\s*\S+\s+[^\[]+$' | awk '{print $1}' | xargs git branch -D```
 - **List branches whose remote is gone.**
 
-
 ```sh
-git branch -vv | grep 'gone'
-```
+git branch -vv | grep 'gone'```
 
 
 #### Steps

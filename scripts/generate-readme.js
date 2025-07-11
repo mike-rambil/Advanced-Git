@@ -97,9 +97,7 @@ function renderExamples(examples) {
   if (!examples || !examples.length) return '';
   let out = '';
   examples.forEach((ex) => {
-    out += `- **${ex.description || ''}**\n\n
-\`\`\`sh\n${ex.code}\n\`\`\`
-`;
+    out += `- **${ex.description || ''}**\n\n\`\`\`sh\n${ex.code}\`\`\`\n`;
   });
   return renderSection('Examples', out);
 }
