@@ -19,6 +19,12 @@ git apply changes.diff
 ```sh
 git apply changes.diff
 ```
+- **Show what would change if the diff were applied.**
+
+
+```sh
+git apply --stat changes.diff
+```
 
 
 #### Steps

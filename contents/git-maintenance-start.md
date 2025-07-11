@@ -19,6 +19,12 @@ git maintenance start
 ```sh
 git maintenance start
 ```
+- **Run maintenance tasks every hour for more active repos.**
+
+
+```sh
+git maintenance start --schedule=hourly
+```
 
 
 #### Steps

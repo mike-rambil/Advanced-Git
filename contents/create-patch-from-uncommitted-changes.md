@@ -19,6 +19,12 @@ git diff > changes.diff
 ```sh
 git diff > changes.diff
 ```
+- **Create a diff file for the last commit.**
+
+
+```sh
+git diff HEAD~1 > last-commit.diff
+```
 
 
 #### Steps

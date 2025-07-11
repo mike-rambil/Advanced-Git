@@ -19,6 +19,12 @@ git worktree add <path> <branch>
 ```sh
 git worktree add ../feature-branch feature
 ```
+- **Create a worktree for a hotfix branch.**
+
+
+```sh
+git worktree add ../hotfix hotfix-branch
+```
 
 
 #### Steps

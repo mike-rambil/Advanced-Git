@@ -19,6 +19,12 @@ git worktree remove <worktree-path>
 ```sh
 git worktree remove ../feature-branch
 ```
+- **Remove a hotfix worktree.**
+
+
+```sh
+git worktree remove ../hotfix
+```
 
 
 #### Steps

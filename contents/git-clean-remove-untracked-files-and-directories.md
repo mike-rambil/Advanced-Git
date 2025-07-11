@@ -48,6 +48,12 @@ git clean -f -d
 ```sh
 git clean -i
 ```
+- **Delete untracked and ignored files.**
+
+
+```sh
+git clean -f -x
+```
 
 
 #### Steps

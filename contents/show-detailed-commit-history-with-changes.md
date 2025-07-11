@@ -19,6 +19,12 @@ git log -p -- filename.txt
 ```sh
 git log -p -- filename.txt
 ```
+- **Show the last two commits and their changes for a file.**
+
+
+```sh
+git log -p -2 -- filename.txt
+```
 
 
 #### Steps

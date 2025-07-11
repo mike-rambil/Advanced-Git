@@ -22,6 +22,12 @@ git branch -vv | grep -E '^\s*\S+\s+[^\[]+$'
 ```sh
 git branch -vv | grep -E '^\s*\S+\s+[^\[]+$' | awk '{print $1}' | xargs git branch -D
 ```
+- **List branches whose remote is gone.**
+
+
+```sh
+git branch -vv | grep 'gone'
+```
 
 
 #### Steps

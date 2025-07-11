@@ -21,6 +21,12 @@ git push --force-with-lease
 ```sh
 git push --force-with-lease
 ```
+- **Force-push a specific branch with lease protection.**
+
+
+```sh
+git push --force-with-lease origin feature-branch
+```
 
 
 #### Steps
