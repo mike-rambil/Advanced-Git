@@ -3,7 +3,8 @@
 </div>
 
 > [!IMPORTANT]
-> If you find a useful GIT command - be sure to sent a PR here as well :)
+> If you find a useful GIT command - be sure to send a PR here as well :)
+> Refer to [contribution format guide](./dev-docs/FORMAT.md) to send a PR.
 
 # Table of Contents
 
