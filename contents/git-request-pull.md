@@ -17,6 +17,30 @@ git request-pull <start> <url> <end>
 ```
 
 #### Examples
+- **Generates a summary like:
+
+The following changes since commit 1234567... (main):
+
+  Some previous commit message
+
+are available in the Git repository at:
+
+  https://github.com/example/repo.git feature-branch
+
+for you to fetch changes up to 89abcde... (feature-branch):
+
+  New feature commit message
+  Another commit message
+
+----------------------------------------------------------------
+ file1.txt | 10 ++++++++++
+ file2.js  |  5 +++++
+ 2 files changed, 15 insertions(+)**
+
+
+```sh
+git request-pull main https://github.com/example/repo.git feature-branch
+```
 - **Generate a pull request message from v1.0 to v1.1.**
 
 
