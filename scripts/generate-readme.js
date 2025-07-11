@@ -196,31 +196,6 @@ function renderCommand(command) {
   }
 }
 
-function renderSubtoc(subtoc) {
-  if (!subtoc || !subtoc.length) return '';
-  let out = '\n---\n\n### Subcommands\n';
-  subtoc.forEach((sub) => {
-    out += `#### ${sub.Name}\n`;
-    if (sub.short_description) out += `${sub.short_description}\n`;
-    if (sub.command) out += renderCommand(sub.command);
-    if (sub.flags) out += renderFlags(sub.flags);
-    if (sub.examples) out += renderExamples(sub.examples);
-    if (sub.steps) out += renderSteps(sub.steps);
-    if (sub.prerequisites) out += renderPrerequisites(sub.prerequisites);
-    if (sub.warnings) out += renderWarnings(sub.warnings);
-    if (sub.protips) out += renderProTips(sub.protips);
-    if (sub.links) out += renderLinks(sub.links);
-    if (sub.tags) out += renderTags(sub.tags);
-    if (sub.related_commands)
-      out += renderRelatedCommands(sub.related_commands);
-    if (sub.output_example) out += renderOutputExample(sub.output_example);
-    if (sub.author) out += renderAuthor(sub.author);
-    if (sub.last_updated) out += renderLastUpdated(sub.last_updated);
-    out += '\n';
-  });
-  return out;
-}
-
 function conciseMetaLine(author, lastUpdated, tags) {
   let meta = [];
   if (author) meta.push(`Author: ${author}`);
@@ -278,6 +253,44 @@ function writeIfChanged(filePath, content) {
   fs.writeFileSync(filePath, content, 'utf8');
 }
 
+function generateSubtocFile(obj, idx, tocData) {
+  obj.subtoc.forEach((sub, subIdx) => {
+    const subPath = path.join(CONTENTS_DIR, `${slugify(sub.Name)}.md`);
+    let subMd = '';
+    // Always add Back to parent
+    subMd += `[⬅️ Back to ${obj.Name}](./${slugify(obj.Name)}.md)\n\n`;
+    if (subIdx > 0) {
+      const prev = obj.subtoc[subIdx - 1];
+      subMd += `[⬆️ Previous Step: ${prev.Name}](./${slugify(
+        prev.Name
+      )}.md)\n\n`;
+    }
+    subMd += `# ${sub.Name}\n\n`;
+    if (sub.category) subMd += renderCategory(sub.category);
+    if (sub.short_description) subMd += `> ${sub.short_description}\n\n`;
+    if (sub.long_description) subMd += `${sub.long_description}\n\n`;
+    if (sub.command) subMd += renderCommand(sub.command);
+    if (sub.flags) subMd += renderFlags(sub.flags);
+    if (sub.examples) subMd += renderExamples(sub.examples);
+    if (sub.steps) subMd += renderSteps(sub.steps);
+    if (sub.prerequisites) subMd += renderPrerequisites(sub.prerequisites);
+    if (sub.warnings) subMd += renderWarnings(sub.warnings);
+    if (sub.protips) subMd += renderProTips(sub.protips);
+    if (sub.links) subMd += renderLinks(sub.links);
+    if (sub.related_commands)
+      subMd += renderRelatedCommands(sub.related_commands);
+    if (sub.output_example) subMd += renderOutputExample(sub.output_example);
+    if (subIdx < obj.subtoc.length - 1) {
+      const next = obj.subtoc[subIdx + 1];
+      subMd += `\n[➡️ See the Next Step: ${next.Name}](./${slugify(
+        next.Name
+      )}.md)\n`;
+    }
+    subMd += conciseMetaLine(sub.author, sub.last_updated, sub.tags);
+    writeIfChanged(subPath, subMd);
+  });
+}
+
 function main() {
   const tocData = JSON.parse(fs.readFileSync(TOC_JSON, 'utf8'));
 
@@ -298,42 +311,7 @@ function main() {
     writeIfChanged(filePath, content);
     // Also create subtoc files if needed
     if (obj.subtoc && obj.subtoc.length) {
-      obj.subtoc.forEach((sub, subIdx) => {
-        const subPath = path.join(CONTENTS_DIR, `${slugify(sub.Name)}.md`);
-        let subMd = '';
-        // Always add Back to parent
-        subMd += `[⬅️ Back to ${obj.Name}](./${slugify(obj.Name)}.md)\n\n`;
-        if (subIdx > 0) {
-          const prev = obj.subtoc[subIdx - 1];
-          subMd += `[⬆️ Previous Step: ${prev.Name}](./${slugify(
-            prev.Name
-          )}.md)\n\n`;
-        }
-        subMd += `# ${sub.Name}\n\n`;
-        if (sub.category) subMd += renderCategory(sub.category);
-        if (sub.short_description) subMd += `> ${sub.short_description}\n\n`;
-        if (sub.long_description) subMd += `${sub.long_description}\n\n`;
-        if (sub.command) subMd += renderCommand(sub.command);
-        if (sub.flags) subMd += renderFlags(sub.flags);
-        if (sub.examples) subMd += renderExamples(sub.examples);
-        if (sub.steps) subMd += renderSteps(sub.steps);
-        if (sub.prerequisites) subMd += renderPrerequisites(sub.prerequisites);
-        if (sub.warnings) subMd += renderWarnings(sub.warnings);
-        if (sub.protips) subMd += renderProTips(sub.protips);
-        if (sub.links) subMd += renderLinks(sub.links);
-        if (sub.related_commands)
-          subMd += renderRelatedCommands(sub.related_commands);
-        if (sub.output_example)
-          subMd += renderOutputExample(sub.output_example);
-        if (subIdx < obj.subtoc.length - 1) {
-          const next = obj.subtoc[subIdx + 1];
-          subMd += `\n[➡️ See the Next Step: ${next.Name}](./${slugify(
-            next.Name
-          )}.md)\n`;
-        }
-        subMd += conciseMetaLine(sub.author, sub.last_updated, sub.tags);
-        writeIfChanged(subPath, subMd);
-      });
+      generateSubtocFile(obj, idx, tocData);
     }
   });
   console.log('Markdown files updated with improved formatting.');
