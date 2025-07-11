@@ -9,15 +9,6 @@
 `git worktree` allows you to manage multiple working directories linked to a single Git repository. It helps developers work on multiple branches simultaneously without switching branches in the same directory.
 
 
-#### Tags
-`worktree`, `branches`, `advanced`
-
-#### Author
-mike-rambil
-
-#### Last Updated
-2024-06-10
-
 ---
 
 ### Subcommands
@@ -192,3 +183,7 @@ mike-rambil
 #### Last Updated
 2024-06-10
 
+
+---
+
+_Author: mike-rambil • Updated: 2024-06-10 • Tags: worktree, branches, advanced_

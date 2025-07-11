@@ -31,13 +31,8 @@ git request-pull v1.0 https://github.com/example/repo.git v1.1
 - [Official Docs](https://git-scm.com/docs/git-request-pull)
 
 
-#### Tags
-`collaboration`, `pull-request`
-
-#### Author
-mike-rambil
-
-#### Last Updated
-2024-06-10
-
 [➡️ See the Next Step: View and Clean Up Local Git Branches (Bash)](./view-and-clean-up-local-git-branches-bash.md)
+
+---
+
+_Author: mike-rambil • Updated: 2024-06-10 • Tags: collaboration, pull-request_

@@ -9,15 +9,6 @@
 You can see all commits related to a specific file using Git commands. Here are a few ways to do it:
 
 
-#### Tags
-`history`, `inspection`, `file`
-
-#### Author
-mike-rambil
-
-#### Last Updated
-2024-06-10
-
 ---
 
 ### Subcommands
@@ -150,3 +141,7 @@ mike-rambil
 #### Last Updated
 2024-06-10
 
+
+---
+
+_Author: mike-rambil • Updated: 2024-06-10 • Tags: history, inspection, file_

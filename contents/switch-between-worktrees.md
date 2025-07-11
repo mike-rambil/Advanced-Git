@@ -23,13 +23,8 @@ cd ../feature-branch
 1. Simply cd into the worktree directory to switch.
 
 
-#### Tags
-`worktree`, `switch`
-
-#### Author
-mike-rambil
-
-#### Last Updated
-2024-06-10
-
 [➡️ See the Next Step: Use Worktrees for Temporary Fixes](./use-worktrees-for-temporary-fixes.md)
+
+---
+
+_Author: mike-rambil • Updated: 2024-06-10 • Tags: worktree, switch_

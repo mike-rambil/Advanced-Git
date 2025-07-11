@@ -29,13 +29,8 @@ git maintenance start
 - [Official Docs](https://git-scm.com/docs/git-maintenance)
 
 
-#### Tags
-`maintenance`, `automation`
-
-#### Author
-mike-rambil
-
-#### Last Updated
-2024-06-10
-
 [➡️ See the Next Step: git request-pull](./git-request-pull.md)
+
+---
+
+_Author: mike-rambil • Updated: 2024-06-10 • Tags: maintenance, automation_

@@ -42,11 +42,6 @@ git push --force-with-lease
 - [Medium Article](https://medium.com/@sahilsahilbhatia/git-push-force-with-lease-vs-force-ecae72601e80)
 
 
-#### Tags
-`push`, `force`, `safe`
+---
 
-#### Author
-mike-rambil
-
-#### Last Updated
-2024-06-10
+_Author: mike-rambil • Updated: 2024-06-10 • Tags: push, force, safe_

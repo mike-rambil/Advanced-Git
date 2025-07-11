@@ -14,11 +14,6 @@
 - `move`: Moves a worktree to a different location.
 
 
-#### Tags
-`worktree`, `flags`
+---
 
-#### Author
-mike-rambil
-
-#### Last Updated
-2024-06-10
+_Author: mike-rambil • Updated: 2024-06-10 • Tags: worktree, flags_

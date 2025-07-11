@@ -39,13 +39,8 @@ git format-patch origin/main..HEAD --stdout > my-changes.patch
 - [Official Docs](https://git-scm.com/docs/git-format-patch)
 
 
-#### Tags
-`patch`, `format-patch`, `committed`
-
-#### Author
-mike-rambil
-
-#### Last Updated
-2024-06-10
-
 [➡️ See the Next Step: Apply Patch with Commit Metadata](./apply-patch-with-commit-metadata.md)
+
+---
+
+_Author: mike-rambil • Updated: 2024-06-10 • Tags: patch, format-patch, committed_

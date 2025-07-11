@@ -25,13 +25,8 @@ git log --pretty=format:"%h - %an, %ar : %s" -- filename.txt
 1. Displays commit hash, author, relative date, and commit message.
 
 
-#### Tags
-`log`, `author`, `date`
-
-#### Author
-mike-rambil
-
-#### Last Updated
-2024-06-10
-
 [➡️ See the Next Step: See Who Last Modified Each Line (Blame)](./see-who-last-modified-each-line-blame.md)
+
+---
+
+_Author: mike-rambil • Updated: 2024-06-10 • Tags: log, author, date_

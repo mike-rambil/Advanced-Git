@@ -9,15 +9,6 @@
 A collection of lesser-known but powerful Git commands. Use these to level up your Git workflow!
 
 
-#### Tags
-`rare`, `advanced`, `tips`
-
-#### Author
-mike-rambil
-
-#### Last Updated
-2024-06-10
-
 ---
 
 ### Subcommands
@@ -51,3 +42,7 @@ mike-rambil
 #### Last Updated
 2024-06-10
 
+
+---
+
+_Author: mike-rambil • Updated: 2024-06-10 • Tags: rare, advanced, tips_

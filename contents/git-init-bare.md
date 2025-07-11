@@ -25,13 +25,8 @@ git init --bare my-repo.git
 1. Run `git init --bare my-repo.git` to create a bare repository.
 
 
-#### Tags
-`init`, `bare`, `repository`
-
-#### Author
-mike-rambil
-
-#### Last Updated
-2024-06-10
-
 [➡️ See the Next Step: git clone --mirror <repository>](./git-clone-mirror-repository.md)
+
+---
+
+_Author: mike-rambil • Updated: 2024-06-10 • Tags: init, bare, repository_

@@ -29,13 +29,8 @@ git worktree add ../feature-branch feature
 - The target path must not already be a git repository.
 
 
-#### Tags
-`worktree`, `add`
-
-#### Author
-mike-rambil
-
-#### Last Updated
-2024-06-10
-
 [➡️ See the Next Step: Remove a Worktree](./remove-a-worktree.md)
+
+---
+
+_Author: mike-rambil • Updated: 2024-06-10 • Tags: worktree, add_

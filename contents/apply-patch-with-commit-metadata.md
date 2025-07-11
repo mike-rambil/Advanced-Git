@@ -25,13 +25,8 @@ git am my-changes.patch
 1. Run '`git am my-changes.patch' to apply the patch and preserve commit messages, authorship, and timestamps`.
 
 
-#### Tags
-`patch`, `am`, `apply`
-
-#### Author
-mike-rambil
-
-#### Last Updated
-2024-06-10
-
 [➡️ See the Next Step: Create Patch from Uncommitted Changes](./create-patch-from-uncommitted-changes.md)
+
+---
+
+_Author: mike-rambil • Updated: 2024-06-10 • Tags: patch, am, apply_

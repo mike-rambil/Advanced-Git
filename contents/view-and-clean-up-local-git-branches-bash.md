@@ -35,13 +35,8 @@ git branch -vv | grep -E '^\s*\S+\s+[^\[]+$' | awk '{print $1}' | xargs git bran
 - ⚠️ Deleting branches is irreversible. Double-check before running destructive commands.
 
 
-#### Tags
-`branches`, `cleanup`, `bash`
-
-#### Author
-mike-rambil
-
-#### Last Updated
-2024-06-10
-
 [➡️ See the Next Step: View and Clean Up Local Git Branches (PowerShell)](./view-and-clean-up-local-git-branches-powershell.md)
+
+---
+
+_Author: mike-rambil • Updated: 2024-06-10 • Tags: branches, cleanup, bash_
