@@ -23,13 +23,8 @@ git worktree list
 1. List all active worktrees.
 
 
-#### Tags
-`worktree`, `list`
-
-#### Author
-mike-rambil
-
-#### Last Updated
-2024-06-10
-
 [➡️ See the Next Step: Create a New Worktree](./create-a-new-worktree.md)
+
+---
+
+_Author: mike-rambil • Updated: 2024-06-10 • Tags: worktree, list_

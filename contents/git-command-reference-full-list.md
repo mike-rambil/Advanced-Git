@@ -9,15 +9,6 @@
 A comprehensive list of Git commands used in this project, formatted according to our standard.
 
 
-#### Tags
-`reference`, `all-commands`
-
-#### Author
-mike-rambil
-
-#### Last Updated
-2024-06-10
-
 ---
 
 ### Subcommands
@@ -81,3 +72,7 @@ mike-rambil
 #### Last Updated
 2024-06-10
 
+
+---
+
+_Author: mike-rambil • Updated: 2024-06-10 • Tags: reference, all-commands_

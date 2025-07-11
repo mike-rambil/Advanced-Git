@@ -47,11 +47,6 @@ git push origin revert/productionOrder
 - [Git Docs: git checkout](https://git-scm.com/docs/git-checkout)
 
 
-#### Tags
-`checkout`, `restore`, `file`, `commit`, `cherry-pick`
+---
 
-#### Author
-mike-rambil
-
-#### Last Updated
-2024-06-10
+_Author: mike-rambil • Updated: 2024-06-10 • Tags: checkout, restore, file, commit, cherry-pick_

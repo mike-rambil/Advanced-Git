@@ -9,15 +9,6 @@
 How to create patch files from your changes for sharing via email, SCP, Slack, or other means. Covers both committed (with full commit metadata) and uncommitted changes.
 
 
-#### Tags
-`patch`, `diff`, `sharing`, `email`, `collaboration`
-
-#### Author
-mike-rambil
-
-#### Last Updated
-2024-06-10
-
 ---
 
 ### Subcommands
@@ -172,3 +163,7 @@ mike-rambil
 #### Last Updated
 2024-06-10
 
+
+---
+
+_Author: mike-rambil • Updated: 2024-06-10 • Tags: patch, diff, sharing, email, collaboration_

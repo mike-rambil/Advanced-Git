@@ -9,15 +9,6 @@
 This file collects useful Git commands and scripts that were previously only in the README and not referenced elsewhere in this repository.
 
 
-#### Tags
-`misc`, `cleanup`, `advanced`
-
-#### Author
-mike-rambil
-
-#### Last Updated
-2024-06-10
-
 ---
 
 ### Subcommands
@@ -165,3 +156,7 @@ mike-rambil
 #### Last Updated
 2024-06-10
 
+
+---
+
+_Author: mike-rambil • Updated: 2024-06-10 • Tags: misc, cleanup, advanced_

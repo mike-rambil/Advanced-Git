@@ -29,13 +29,8 @@ git worktree remove ../feature-branch
 - ⚠️ Make sure you have committed all changes before removing a worktree.
 
 
-#### Tags
-`worktree`, `remove`
-
-#### Author
-mike-rambil
-
-#### Last Updated
-2024-06-10
-
 [➡️ See the Next Step: Switch Between Worktrees](./switch-between-worktrees.md)
+
+---
+
+_Author: mike-rambil • Updated: 2024-06-10 • Tags: worktree, remove_

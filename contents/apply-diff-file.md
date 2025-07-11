@@ -25,13 +25,8 @@ git apply changes.diff
 1. Run '`git apply changes.diff' to apply the changes from a diff file`.
 
 
-#### Tags
-`diff`, `apply`, `uncommitted`
-
-#### Author
-mike-rambil
-
-#### Last Updated
-2024-06-10
-
 [➡️ See the Next Step: Patch vs Diff: Quick Reference](./patch-vs-diff-quick-reference.md)
+
+---
+
+_Author: mike-rambil • Updated: 2024-06-10 • Tags: diff, apply, uncommitted_

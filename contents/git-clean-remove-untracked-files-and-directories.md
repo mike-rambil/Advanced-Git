@@ -72,11 +72,6 @@ git clean -i
 - [Official Docs](https://git-scm.com/docs/git-clean)
 
 
-#### Tags
-`clean`, `untracked`, `workspace`
+---
 
-#### Author
-mike-rambil
-
-#### Last Updated
-2024-06-10
+_Author: mike-rambil • Updated: 2024-06-10 • Tags: clean, untracked, workspace_

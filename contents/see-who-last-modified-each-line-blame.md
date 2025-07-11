@@ -29,11 +29,6 @@ git blame filename.txt
 - ⚠️ Blame can be misleading if the file has been heavily refactored.
 
 
-#### Tags
-`blame`, `file`, `history`
+---
 
-#### Author
-mike-rambil
-
-#### Last Updated
-2024-06-10
+_Author: mike-rambil • Updated: 2024-06-10 • Tags: blame, file, history_

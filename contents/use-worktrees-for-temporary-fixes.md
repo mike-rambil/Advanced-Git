@@ -25,13 +25,8 @@ git worktree add ../hotfix hotfix-branch
 1. Quickly apply a fix on another branch without leaving your main branch.
 
 
-#### Tags
-`worktree`, `hotfix`
-
-#### Author
-mike-rambil
-
-#### Last Updated
-2024-06-10
-
 [➡️ See the Next Step: Flags and Their Uses](./flags-and-their-uses.md)
+
+---
+
+_Author: mike-rambil • Updated: 2024-06-10 • Tags: worktree, hotfix_

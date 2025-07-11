@@ -33,13 +33,8 @@ git diff > changes.diff
 - [Official Docs](https://git-scm.com/docs/git-diff)
 
 
-#### Tags
-`diff`, `uncommitted`, `snapshot`
-
-#### Author
-mike-rambil
-
-#### Last Updated
-2024-06-10
-
 [➡️ See the Next Step: Apply Diff File](./apply-diff-file.md)
+
+---
+
+_Author: mike-rambil • Updated: 2024-06-10 • Tags: diff, uncommitted, snapshot_

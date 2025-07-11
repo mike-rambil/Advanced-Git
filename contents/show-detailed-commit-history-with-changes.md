@@ -25,17 +25,12 @@ git log -p -- filename.txt
 1. Shows each commit and the actual changes made to `filename.txt`.
 
 
-#### Tags
-`log`, `diff`, `file`
-
 #### Related Commands
 - git log --oneline -- filename.txt
 
 
-#### Author
-mike-rambil
-
-#### Last Updated
-2024-06-10
-
 [➡️ See the Next Step: Show Commit History With Author and Date](./show-commit-history-with-author-and-date.md)
+
+---
+
+_Author: mike-rambil • Updated: 2024-06-10 • Tags: log, diff, file_

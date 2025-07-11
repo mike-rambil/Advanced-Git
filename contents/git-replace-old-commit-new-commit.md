@@ -25,11 +25,6 @@ git replace abc123 def456
 1. Run `git replace <old-commit> <new-commit>` to test or patch history.
 
 
-#### Tags
-`replace`, `history`
+---
 
-#### Author
-mike-rambil
-
-#### Last Updated
-2024-06-10
+_Author: mike-rambil • Updated: 2024-06-10 • Tags: replace, history_
