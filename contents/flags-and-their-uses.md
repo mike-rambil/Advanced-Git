@@ -14,6 +14,8 @@
 - `move`: Moves a worktree to a different location.
 
 
+[➡️ Continue to Next Topic: Sharing Changes as Patch Files](./sharing-changes-as-patch-files.md)
+
 ---
 
 _Author: mike-rambil • Updated: 2024-06-10 • Tags: worktree, flags_

@@ -47,6 +47,8 @@ git branch -vv | Select-String 'gone'
 
 
 
+[➡️ Continue to Next Topic: Git Command Reference (Full List)](./git-command-reference-full-list.md)
+
 ---
 
 _Author: mike-rambil • Updated: 2024-06-10 • Tags: branches, cleanup, powershell_
