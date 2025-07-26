@@ -33,6 +33,8 @@ git blame -L 10,20 filename.txt
 - ⚠️ Blame can be misleading if the file has been heavily refactored.
 
 
+[➡️ Continue to Next Topic: Git Clean: Remove Untracked Files and Directories](./git-clean-remove-untracked-files-and-directories.md)
+
 ---
 
 _Author: mike-rambil • Updated: 2024-06-10 • Tags: blame, file, history_
