@@ -22,8 +22,9 @@
 - [View and Clean Up Local Git Branches (PowerShell)](./view-and-clean-up-local-git-branches-powershell.md): Scripts to view and clean up local branches using PowerShell.
 
 
+
 [➡️ Continue to Next Topic: Git Command Reference (Full List)](./git-command-reference-full-list.md)
 
----
+
 
 _Author: mike-rambil • Updated: 2024-06-10 • Tags: branches, cleanup, fast, bash, powershell_
