@@ -280,12 +280,28 @@ function generateSubtocFile(obj, idx, tocData) {
     if (sub.related_commands)
       subMd += renderRelatedCommands(sub.related_commands);
     if (sub.output_example) subMd += renderOutputExample(sub.output_example);
+
+    // Navigation logic
     if (subIdx < obj.subtoc.length - 1) {
+      // Not the last subtoc, link to next subtoc
       const next = obj.subtoc[subIdx + 1];
       subMd += `\n[➡️ See the Next Step: ${next.Name}](./${slugify(
         next.Name
       )}.md)\n`;
+    } else {
+      // This is the last subtoc, check if there's a next main TOC item
+      if (idx < tocData.length - 1) {
+        // There's a next main TOC item
+        const nextMainToc = tocData[idx + 1];
+        subMd += `\n[➡️ Continue to Next Topic: ${
+          nextMainToc.Name
+        }](./${slugify(nextMainToc.Name)}.md)\n`;
+      } else {
+        // This is the very last page - show congratulations
+        subMd += `\n---\n\n## 🎉 Congratulations!\n\nYou've reached the end of this comprehensive Git guide! You've learned some of the most advanced Git techniques and commands.\n\n**What's next?**\n- [📚 Explore more Git topics in the main guide](../README.md)\n- 🚀 **Great Git contributors put everything into practice** - if you discovered something useful or have your own Git tips, consider contributing to this repository!\n- 💡 Found a bug or have suggestions? [Open an issue or submit a PR](../README.md#contributors--credits)\n\n[🏠 Back to Main README](../README.md)\n`;
+      }
     }
+
     subMd += conciseMetaLine(sub.author, sub.last_updated, sub.tags);
     writeIfChanged(subPath, subMd);
   });
