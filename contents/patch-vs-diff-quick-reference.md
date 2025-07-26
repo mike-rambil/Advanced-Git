@@ -1,6 +1,6 @@
-[⬅️ Back to Sharing Changes as Patch Files](./sharing-changes-as-patch-files.md)
+[⬅️ Back to Sharing Changes as Patch Files](https://github.com/mike-rambil/Advanced-Git/blob/main/contents/sharing-changes-as-patch-files.md)
 
-[⬆️ Previous Step: Apply Diff File](./apply-diff-file.md)
+[⬆️ Previous Step: Apply Diff File](https://github.com/mike-rambil/Advanced-Git/blob/main/contents/apply-diff-file.md)
 
 # Patch vs Diff: Quick Reference
 
@@ -12,7 +12,7 @@
 | git format-patch > file.patch | Share committed changes | ✅ | git am |
 
 
-[➡️ Continue to Next Topic: Pull Changes of Specific Files from a Commit](./pull-changes-of-specific-files-from-a-commit.md)
+[➡️ Continue to Next Topic: Pull Changes of Specific Files from a Commit](https://github.com/mike-rambil/Advanced-Git/blob/main/contents/pull-changes-of-specific-files-from-a-commit.md)
 
 ---
 

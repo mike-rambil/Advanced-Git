@@ -1,4 +1,4 @@
-[⬅️ Back to Table of Contents](../README.md#past-commits-of-a-specific-file)
+[⬅️ Back to Table of Contents](https://github.com/mike-rambil/Advanced-Git/blob/main/README.md#past-commits-of-a-specific-file)
 
 # Past commits of a specific file
 
@@ -15,7 +15,7 @@ You can see all commits related to a specific file using Git commands. Here are 
 - [See Who Last Modified Each Line (Blame)](./see-who-last-modified-each-line-blame.md)
 
 
-[➡️ Continue to Next Topic: Git Clean: Remove Untracked Files and Directories](./git-clean-remove-untracked-files-and-directories.md)
+[➡️ Continue to Next Topic: Git Clean: Remove Untracked Files and Directories](https://github.com/mike-rambil/Advanced-Git/blob/main/contents/git-clean-remove-untracked-files-and-directories.md)
 
 ---
 

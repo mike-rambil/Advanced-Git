@@ -1,4 +1,4 @@
-[⬅️ Back to Table of Contents](../README.md#git-command-reference-full-list)
+[⬅️ Back to Table of Contents](https://github.com/mike-rambil/Advanced-Git/blob/main/README.md#git-command-reference-full-list)
 
 # Git Command Reference (Full List)
 
@@ -13,7 +13,7 @@ A comprehensive list of Git commands used in this project, formatted according t
 - [git clone --mirror <repository>](./git-clone-mirror-repository.md): Clone a repository in mirror mode, including all refs and branches.
 
 
-[➡️ Continue to Next Topic: Useful Rare Git Commands You Never Heard Of](./useful-rare-git-commands-you-never-heard-of.md)
+[➡️ Continue to Next Topic: Useful Rare Git Commands You Never Heard Of](https://github.com/mike-rambil/Advanced-Git/blob/main/contents/useful-rare-git-commands-you-never-heard-of.md)
 
 ---
 

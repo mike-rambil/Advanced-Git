@@ -1,6 +1,6 @@
-[⬅️ Back to How to Use git worktree Safely](./how-to-use-git-worktree-safely.md)
+[⬅️ Back to How to Use git worktree Safely](https://github.com/mike-rambil/Advanced-Git/blob/main/contents/how-to-use-git-worktree-safely.md)
 
-[⬆️ Previous Step: Check Existing Worktrees](./check-existing-worktrees.md)
+[⬆️ Previous Step: Check Existing Worktrees](https://github.com/mike-rambil/Advanced-Git/blob/main/contents/check-existing-worktrees.md)
 
 # Create a New Worktree
 
@@ -33,7 +33,7 @@ git worktree add ../hotfix hotfix-branch
 - The target path must not already be a git repository.
 
 
-[➡️ See the Next Step: Remove a Worktree](./remove-a-worktree.md)
+[➡️ See the Next Step: Remove a Worktree](https://github.com/mike-rambil/Advanced-Git/blob/main/contents/remove-a-worktree.md)
 
 ---
 

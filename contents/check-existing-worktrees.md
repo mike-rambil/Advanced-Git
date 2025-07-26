@@ -1,4 +1,4 @@
-[⬅️ Back to How to Use git worktree Safely](./how-to-use-git-worktree-safely.md)
+[⬅️ Back to How to Use git worktree Safely](https://github.com/mike-rambil/Advanced-Git/blob/main/contents/how-to-use-git-worktree-safely.md)
 
 # Check Existing Worktrees
 
@@ -27,7 +27,7 @@ git worktree list --porcelain
 1. List all active worktrees.
 
 
-[➡️ See the Next Step: Create a New Worktree](./create-a-new-worktree.md)
+[➡️ See the Next Step: Create a New Worktree](https://github.com/mike-rambil/Advanced-Git/blob/main/contents/create-a-new-worktree.md)
 
 ---
 

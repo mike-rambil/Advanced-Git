@@ -1,4 +1,4 @@
-[⬅️ Back to Git Essentials & Hidden Gems](./git-essentials-hidden-gems.md)
+[⬅️ Back to Git Essentials & Hidden Gems](https://github.com/mike-rambil/Advanced-Git/blob/main/contents/git-essentials-hidden-gems.md)
 
 # git maintenance start
 
@@ -50,7 +50,7 @@ git maintenance start --schedule=hourly
 - [Official Docs](https://git-scm.com/docs/git-maintenance)
 
 
-[➡️ See the Next Step: git request-pull](./git-request-pull.md)
+[➡️ See the Next Step: git request-pull](https://github.com/mike-rambil/Advanced-Git/blob/main/contents/git-request-pull.md)
 
 ---
 

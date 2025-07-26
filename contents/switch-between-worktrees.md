@@ -1,6 +1,6 @@
-[⬅️ Back to How to Use git worktree Safely](./how-to-use-git-worktree-safely.md)
+[⬅️ Back to How to Use git worktree Safely](https://github.com/mike-rambil/Advanced-Git/blob/main/contents/how-to-use-git-worktree-safely.md)
 
-[⬆️ Previous Step: Remove a Worktree](./remove-a-worktree.md)
+[⬆️ Previous Step: Remove a Worktree](https://github.com/mike-rambil/Advanced-Git/blob/main/contents/remove-a-worktree.md)
 
 # Switch Between Worktrees
 
@@ -27,7 +27,7 @@ cd ../hotfix
 1. Simply cd into the worktree directory to switch.
 
 
-[➡️ See the Next Step: Use Worktrees for Temporary Fixes](./use-worktrees-for-temporary-fixes.md)
+[➡️ See the Next Step: Use Worktrees for Temporary Fixes](https://github.com/mike-rambil/Advanced-Git/blob/main/contents/use-worktrees-for-temporary-fixes.md)
 
 ---
 

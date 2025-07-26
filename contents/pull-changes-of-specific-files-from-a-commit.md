@@ -1,4 +1,4 @@
-[⬅️ Back to Table of Contents](../README.md#pull-changes-of-specific-files-from-a-commit)
+[⬅️ Back to Table of Contents](https://github.com/mike-rambil/Advanced-Git/blob/main/README.md#pull-changes-of-specific-files-from-a-commit)
 
 # Pull Changes of Specific Files from a Commit
 
@@ -57,11 +57,11 @@ git restore --source e8ab7f64fdfcc7bdaaed8d96c0ac26dce035663f path/to/file1.txt 
 You've reached the end of this comprehensive Git guide! You've learned some of the most advanced Git techniques and commands.
 
 **What's next?**
-- [📚 Explore more Git topics in the main guide](../README.md)
+- [📚 Explore more Git topics in the main guide](https://github.com/mike-rambil/Advanced-Git/blob/main/README.md)
 - 🚀 **Great Git contributors put everything into practice** - if you discovered something useful or have your own Git tips, consider contributing to this repository!
-- 💡 Found a bug or have suggestions? [Open an issue or submit a PR](../README.md#contributors--credits)
+- 💡 Found a bug or have suggestions? [Open an issue or submit a PR](https://github.com/mike-rambil/Advanced-Git/blob/main/README.md#contributors--credits)
 
-[🏠 Back to Main README](../README.md)
+[🏠 Back to Main README](https://github.com/mike-rambil/Advanced-Git/blob/main/README.md)
 
 ---
 

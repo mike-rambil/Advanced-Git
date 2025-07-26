@@ -1,4 +1,4 @@
-[⬅️ Back to Table of Contents](../README.md#useful-rare-git-commands-you-never-heard-of)
+[⬅️ Back to Table of Contents](https://github.com/mike-rambil/Advanced-Git/blob/main/README.md#useful-rare-git-commands-you-never-heard-of)
 
 # Useful Rare Git Commands You Never Heard Of
 
@@ -12,7 +12,7 @@ A collection of lesser-known but powerful Git commands. Use these to level up yo
 - [git replace <old-commit> <new-commit>](./git-replace-old-commit-new-commit.md): Temporarily substitute one commit for another.
 
 
-[➡️ Continue to Next Topic: How to Use git push --force-with-lease Safely](./how-to-use-git-push-force-with-lease-safely.md)
+[➡️ Continue to Next Topic: How to Use git push --force-with-lease Safely](https://github.com/mike-rambil/Advanced-Git/blob/main/contents/how-to-use-git-push-force-with-lease-safely.md)
 
 ---
 

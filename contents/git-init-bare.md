@@ -1,4 +1,4 @@
-[⬅️ Back to Git Command Reference (Full List)](./git-command-reference-full-list.md)
+[⬅️ Back to Git Command Reference (Full List)](https://github.com/mike-rambil/Advanced-Git/blob/main/contents/git-command-reference-full-list.md)
 
 # git init --bare
 
@@ -29,7 +29,7 @@ git init --bare /srv/git/project.git
 1. Run `git init --bare my-repo.git` to create a bare repository.
 
 
-[➡️ See the Next Step: git clone --mirror <repository>](./git-clone-mirror-repository.md)
+[➡️ See the Next Step: git clone --mirror <repository>](https://github.com/mike-rambil/Advanced-Git/blob/main/contents/git-clone-mirror-repository.md)
 
 ---
 

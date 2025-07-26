@@ -1,6 +1,6 @@
-[⬅️ Back to Past commits of a specific file](./past-commits-of-a-specific-file.md)
+[⬅️ Back to Past commits of a specific file](https://github.com/mike-rambil/Advanced-Git/blob/main/contents/past-commits-of-a-specific-file.md)
 
-[⬆️ Previous Step: Show Commit History With Author and Date](./show-commit-history-with-author-and-date.md)
+[⬆️ Previous Step: Show Commit History With Author and Date](https://github.com/mike-rambil/Advanced-Git/blob/main/contents/show-commit-history-with-author-and-date.md)
 
 # See Who Last Modified Each Line (Blame)
 
@@ -33,7 +33,7 @@ git blame -L 10,20 filename.txt
 - ⚠️ Blame can be misleading if the file has been heavily refactored.
 
 
-[➡️ Continue to Next Topic: Git Clean: Remove Untracked Files and Directories](./git-clean-remove-untracked-files-and-directories.md)
+[➡️ Continue to Next Topic: Git Clean: Remove Untracked Files and Directories](https://github.com/mike-rambil/Advanced-Git/blob/main/contents/git-clean-remove-untracked-files-and-directories.md)
 
 ---
 

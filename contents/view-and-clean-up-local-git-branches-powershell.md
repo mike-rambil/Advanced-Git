@@ -1,6 +1,6 @@
-[⬅️ Back to Cleanup Branches Fast ⚡](./cleanup-branches-fast.md)
+[⬅️ Back to Cleanup Branches Fast ⚡](https://github.com/mike-rambil/Advanced-Git/blob/main/contents/cleanup-branches-fast.md)
 
-[⬆️ Previous Step: View and Clean Up Local Git Branches (Bash)](./view-and-clean-up-local-git-branches-bash.md)
+[⬆️ Previous Step: View and Clean Up Local Git Branches (Bash)](https://github.com/mike-rambil/Advanced-Git/blob/main/contents/view-and-clean-up-local-git-branches-bash.md)
 
 # View and Clean Up Local Git Branches (PowerShell)
 
@@ -47,7 +47,7 @@ git branch -vv | Select-String 'gone'
 
 
 
-[➡️ Continue to Next Topic: Git Command Reference (Full List)](./git-command-reference-full-list.md)
+[➡️ Continue to Next Topic: Git Command Reference (Full List)](https://github.com/mike-rambil/Advanced-Git/blob/main/contents/git-command-reference-full-list.md)
 
 ---
 

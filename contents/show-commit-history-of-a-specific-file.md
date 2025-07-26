@@ -1,4 +1,4 @@
-[⬅️ Back to Past commits of a specific file](./past-commits-of-a-specific-file.md)
+[⬅️ Back to Past commits of a specific file](https://github.com/mike-rambil/Advanced-Git/blob/main/contents/past-commits-of-a-specific-file.md)
 
 # Show Commit History of a Specific File
 
@@ -32,7 +32,7 @@ git log --oneline -- path/to/anotherfile.js
 - git blame filename.txt
 
 
-[➡️ See the Next Step: Show Detailed Commit History (With Changes)](./show-detailed-commit-history-with-changes.md)
+[➡️ See the Next Step: Show Detailed Commit History (With Changes)](https://github.com/mike-rambil/Advanced-Git/blob/main/contents/show-detailed-commit-history-with-changes.md)
 
 ---
 

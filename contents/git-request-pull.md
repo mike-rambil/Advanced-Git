@@ -1,6 +1,6 @@
-[⬅️ Back to Git Essentials & Hidden Gems](./git-essentials-hidden-gems.md)
+[⬅️ Back to Git Essentials & Hidden Gems](https://github.com/mike-rambil/Advanced-Git/blob/main/contents/git-essentials-hidden-gems.md)
 
-[⬆️ Previous Step: git maintenance start](./git-maintenance-start.md)
+[⬆️ Previous Step: git maintenance start](https://github.com/mike-rambil/Advanced-Git/blob/main/contents/git-maintenance-start.md)
 
 # git request-pull
 
@@ -75,7 +75,7 @@ git request-pull main https://github.com/example/repo.git feature-branch
 - [Official Docs](https://git-scm.com/docs/git-request-pull)
 
 
-[➡️ Continue to Next Topic: Cleanup Branches Fast ⚡](./cleanup-branches-fast.md)
+[➡️ Continue to Next Topic: Cleanup Branches Fast ⚡](https://github.com/mike-rambil/Advanced-Git/blob/main/contents/cleanup-branches-fast.md)
 
 ---
 
