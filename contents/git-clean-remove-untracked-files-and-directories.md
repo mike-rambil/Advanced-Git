@@ -73,6 +73,9 @@ git clean -f -x
 - [Official Docs](https://git-scm.com/docs/git-clean)
 
 
----
+
+[➡️ Continue to Next Topic: How to Use git worktree Safely](./how-to-use-git-worktree-safely.md)
+
+
 
 _Author: mike-rambil • Updated: 2024-06-10 • Tags: clean, untracked, workspace_

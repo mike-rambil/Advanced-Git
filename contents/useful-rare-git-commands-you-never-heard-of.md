@@ -12,6 +12,10 @@ A collection of lesser-known but powerful Git commands. Use these to level up yo
 - [git replace <old-commit> <new-commit>](./git-replace-old-commit-new-commit.md): Temporarily substitute one commit for another.
 
 
+
+[➡️ Continue to Next Topic: How to Use git push --force-with-lease Safely](./how-to-use-git-push-force-with-lease-safely.md)
+
+
 ---
 
 _Author: mike-rambil • Updated: 2024-06-10 • Tags: rare, advanced, tips_

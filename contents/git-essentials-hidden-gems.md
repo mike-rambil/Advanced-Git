@@ -22,6 +22,9 @@ A collection of practical, lesser-known, and foundational Git commands that are 
 - [git request-pull](./git-request-pull.md): Generate a request to pull changes into a repository.
 
 
----
+
+[➡️ Continue to Next Topic: Cleanup Branches Fast ⚡](./cleanup-branches-fast.md)
+
+
 
 _Author: mike-rambil • Updated: 2024-06-10 • Tags: misc, cleanup, advanced_

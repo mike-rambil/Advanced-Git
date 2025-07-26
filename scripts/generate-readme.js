@@ -241,6 +241,18 @@ function generateContentFile(obj, idx, tocData) {
     md += generateMiniSubtocTOC(obj);
   }
 
+  // Navigation logic for main TOC items
+  if (idx < tocData.length - 1) {
+    // There's a next main TOC item
+    const nextMainToc = tocData[idx + 1];
+    md += `\n[➡️ Continue to Next Topic: ${nextMainToc.Name}](./${slugify(
+      nextMainToc.Name
+    )}.md)\n`;
+  } else {
+    // This is the very last page - show congratulations
+    md += `\n---\n\n## 🎉 Congratulations!\n\nYou've reached the end of this comprehensive Git guide! You've learned some of the most advanced Git techniques and commands.\n\n**What's next?**\n- [📚 Explore more Git topics in the main guide](../README.md)\n- 🚀 **Great Git contributors put everything into practice** - if you discovered something useful or have your own Git tips, consider contributing to this repository!\n- 💡 Found a bug or have suggestions? [Open an issue or submit a PR](../README.md#contributors--credits)\n\n[🏠 Back to Main README](../README.md)\n`;
+  }
+
   md += conciseMetaLine(obj.author, obj.last_updated, obj.tags);
   return md;
 }

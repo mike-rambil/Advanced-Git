@@ -17,6 +17,10 @@
 - [Flags and Their Uses](./flags-and-their-uses.md)
 
 
+
+[➡️ Continue to Next Topic: Sharing Changes as Patch Files](./sharing-changes-as-patch-files.md)
+
+
 ---
 
 _Author: mike-rambil • Updated: 2024-06-10 • Tags: worktree, branches, advanced_

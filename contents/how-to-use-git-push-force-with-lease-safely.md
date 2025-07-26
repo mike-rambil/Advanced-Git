@@ -46,6 +46,9 @@ git push --force-with-lease origin feature-branch
 - [Medium Article](https://medium.com/@sahilsahilbhatia/git-push-force-with-lease-vs-force-ecae72601e80)
 
 
+[➡️ Continue to Next Topic: Past commits of a specific file](./past-commits-of-a-specific-file.md)
+
+
 ---
 
 _Author: mike-rambil • Updated: 2024-06-10 • Tags: push, force, safe_
