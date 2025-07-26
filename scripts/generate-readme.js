@@ -17,19 +17,11 @@ const CONCLUSION = `
 ## Contributors & Credits
 
 > [!NOTE]
-> Want to contribute? Add yourself as a contributor or author by following the [Contribution Format Guide](./dev-docs/FORMAT.md) and submitting a Pull Request.
+> Want to contribute? Be a contributor or author by following the [Contribution Format Guide](./dev-docs/FORMAT.md) , also add your favorite resources in [References & Resources](./CONTRIBUTING.md#references-resources) and submit a Pull Request.
 
-#### [👨‍👩‍👧‍👦 Contributors](./Contributors&Credits.md)
+#### [👨‍👩‍👧‍👦 Contributors](./CONTRIBUTING.md)
 
-A list of individuals who have contributed to this project. Add your name and link in [Contributors&Credits.md](./Contributors&Credits.md#contributors).
-
-#### [🧑‍💻 Credits & Authors](./Contributors&Credits.md#credits-authors)
-
-Acknowledgment of the original authors. Add your name or blog if you authored a command or section.
-
-#### [📖 References & Resources](./Contributors&Credits.md#references-resources)
-
-A collection of blogs, articles, and materials used to learn more about Git. Add your favorite resources!
+A list of individuals who have contributed to this project. Add your name and link in [CONTRIBUTING.md](./CONTRIBUTING.md#contributors). Please follow the instructions from [FORMAT.md](./dev-docs/FORMAT.md) when contributing.
 `;
 
 const TOC_JSON = path.join(__dirname, '..', 'toc-source.json');
