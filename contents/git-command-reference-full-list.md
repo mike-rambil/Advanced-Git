@@ -13,9 +13,8 @@ A comprehensive list of Git commands used in this project, formatted according t
 - [git clone --mirror <repository>](./git-clone-mirror-repository.md): Clone a repository in mirror mode, including all refs and branches.
 
 
-
 [➡️ Continue to Next Topic: Useful Rare Git Commands You Never Heard Of](./useful-rare-git-commands-you-never-heard-of.md)
 
-
+---
 
 _Author: mike-rambil • Updated: 2024-06-10 • Tags: reference, all-commands_

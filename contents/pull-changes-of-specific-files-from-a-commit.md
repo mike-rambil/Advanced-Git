@@ -52,7 +52,6 @@ git restore --source e8ab7f64fdfcc7bdaaed8d96c0ac26dce035663f path/to/file1.txt 
 
 ---
 
-
 ## 🎉 Congratulations!
 
 You've reached the end of this comprehensive Git guide! You've learned some of the most advanced Git techniques and commands.
@@ -65,6 +64,5 @@ You've reached the end of this comprehensive Git guide! You've learned some of t
 [🏠 Back to Main README](../README.md)
 
 ---
-
 
 _Author: mike-rambil • Updated: 2024-06-10 • Tags: checkout, restore, file, commit, cherry-pick_

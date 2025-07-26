@@ -18,7 +18,6 @@ How to create patch files from your changes for sharing via email, SCP, Slack, o
 
 [➡️ Continue to Next Topic: Pull Changes of Specific Files from a Commit](./pull-changes-of-specific-files-from-a-commit.md)
 
-
 ---
 
 _Author: mike-rambil • Updated: 2024-06-10 • Tags: patch, diff, sharing, email, collaboration_
