@@ -29,6 +29,8 @@ git replace --graft HEAD~2 HEAD
 1. Run `git replace <old-commit> <new-commit>` to test or patch history.
 
 
+[➡️ Continue to Next Topic: How to Use git push --force-with-lease Safely](./how-to-use-git-push-force-with-lease-safely.md)
+
 ---
 
 _Author: mike-rambil • Updated: 2024-06-10 • Tags: replace, history_
