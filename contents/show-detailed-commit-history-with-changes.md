@@ -1,6 +1,6 @@
-[⬅️ Back to Past commits of a specific file](./past-commits-of-a-specific-file.md)
+[⬅️ Back to Past commits of a specific file](https://github.com/mike-rambil/Advanced-Git/blob/main/contents/past-commits-of-a-specific-file.md)
 
-[⬆️ Previous Step: Show Commit History of a Specific File](./show-commit-history-of-a-specific-file.md)
+[⬆️ Previous Step: Show Commit History of a Specific File](https://github.com/mike-rambil/Advanced-Git/blob/main/contents/show-commit-history-of-a-specific-file.md)
 
 # Show Detailed Commit History (With Changes)
 
@@ -33,7 +33,7 @@ git log -p -2 -- filename.txt
 - git log --oneline -- filename.txt
 
 
-[➡️ See the Next Step: Show Commit History With Author and Date](./show-commit-history-with-author-and-date.md)
+[➡️ See the Next Step: Show Commit History With Author and Date](https://github.com/mike-rambil/Advanced-Git/blob/main/contents/show-commit-history-with-author-and-date.md)
 
 ---
 

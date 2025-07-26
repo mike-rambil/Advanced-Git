@@ -1,4 +1,4 @@
-[⬅️ Back to Table of Contents](../README.md#git-clean-remove-untracked-files-and-directories)
+[⬅️ Back to Table of Contents](https://github.com/mike-rambil/Advanced-Git/blob/main/README.md#git-clean-remove-untracked-files-and-directories)
 
 # Git Clean: Remove Untracked Files and Directories
 
@@ -73,7 +73,7 @@ git clean -f -x
 - [Official Docs](https://git-scm.com/docs/git-clean)
 
 
-[➡️ Continue to Next Topic: How to Use git worktree Safely](./how-to-use-git-worktree-safely.md)
+[➡️ Continue to Next Topic: How to Use git worktree Safely](https://github.com/mike-rambil/Advanced-Git/blob/main/contents/how-to-use-git-worktree-safely.md)
 
 ---
 

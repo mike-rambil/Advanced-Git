@@ -1,6 +1,6 @@
-[⬅️ Back to How to Use git worktree Safely](./how-to-use-git-worktree-safely.md)
+[⬅️ Back to How to Use git worktree Safely](https://github.com/mike-rambil/Advanced-Git/blob/main/contents/how-to-use-git-worktree-safely.md)
 
-[⬆️ Previous Step: Switch Between Worktrees](./switch-between-worktrees.md)
+[⬆️ Previous Step: Switch Between Worktrees](https://github.com/mike-rambil/Advanced-Git/blob/main/contents/switch-between-worktrees.md)
 
 # Use Worktrees for Temporary Fixes
 
@@ -29,7 +29,7 @@ git worktree add ../bugfix bugfix-branch
 1. Quickly apply a fix on another branch without leaving your main branch.
 
 
-[➡️ See the Next Step: Flags and Their Uses](./flags-and-their-uses.md)
+[➡️ See the Next Step: Flags and Their Uses](https://github.com/mike-rambil/Advanced-Git/blob/main/contents/flags-and-their-uses.md)
 
 ---
 

@@ -1,6 +1,6 @@
-[⬅️ Back to Sharing Changes as Patch Files](./sharing-changes-as-patch-files.md)
+[⬅️ Back to Sharing Changes as Patch Files](https://github.com/mike-rambil/Advanced-Git/blob/main/contents/sharing-changes-as-patch-files.md)
 
-[⬆️ Previous Step: Apply Patch with Commit Metadata](./apply-patch-with-commit-metadata.md)
+[⬆️ Previous Step: Apply Patch with Commit Metadata](https://github.com/mike-rambil/Advanced-Git/blob/main/contents/apply-patch-with-commit-metadata.md)
 
 # Create Patch from Uncommitted Changes
 
@@ -37,7 +37,7 @@ git diff HEAD~1 > last-commit.diff
 - [Official Docs](https://git-scm.com/docs/git-diff)
 
 
-[➡️ See the Next Step: Apply Diff File](./apply-diff-file.md)
+[➡️ See the Next Step: Apply Diff File](https://github.com/mike-rambil/Advanced-Git/blob/main/contents/apply-diff-file.md)
 
 ---
 

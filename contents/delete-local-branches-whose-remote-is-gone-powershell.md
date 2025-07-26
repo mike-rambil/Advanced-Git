@@ -1,6 +1,6 @@
-[⬅️ Back to Cleanup Branches Fast ⚡](./cleanup-branches-fast.md)
+[⬅️ Back to Cleanup Branches Fast ⚡](https://github.com/mike-rambil/Advanced-Git/blob/main/contents/cleanup-branches-fast.md)
 
-[⬆️ Previous Step: Delete Local Branches Whose Remote is Gone (Bash)](./delete-local-branches-whose-remote-is-gone-bash.md)
+[⬆️ Previous Step: Delete Local Branches Whose Remote is Gone (Bash)](https://github.com/mike-rambil/Advanced-Git/blob/main/contents/delete-local-branches-whose-remote-is-gone-bash.md)
 
 # Delete Local Branches Whose Remote is Gone (PowerShell)
 
@@ -52,7 +52,7 @@ git branch -vv | ForEach-Object { if ($_ -match '[origin/feature: gone]') { $par
 
 
 
-[➡️ See the Next Step: View and Clean Up Local Git Branches (Bash)](./view-and-clean-up-local-git-branches-bash.md)
+[➡️ See the Next Step: View and Clean Up Local Git Branches (Bash)](https://github.com/mike-rambil/Advanced-Git/blob/main/contents/view-and-clean-up-local-git-branches-bash.md)
 
 ---
 

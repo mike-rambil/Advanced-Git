@@ -1,4 +1,4 @@
-[⬅️ Back to Useful Rare Git Commands You Never Heard Of](./useful-rare-git-commands-you-never-heard-of.md)
+[⬅️ Back to Useful Rare Git Commands You Never Heard Of](https://github.com/mike-rambil/Advanced-Git/blob/main/contents/useful-rare-git-commands-you-never-heard-of.md)
 
 # git replace <old-commit> <new-commit>
 
@@ -29,7 +29,7 @@ git replace --graft HEAD~2 HEAD
 1. Run `git replace <old-commit> <new-commit>` to test or patch history.
 
 
-[➡️ Continue to Next Topic: How to Use git push --force-with-lease Safely](./how-to-use-git-push-force-with-lease-safely.md)
+[➡️ Continue to Next Topic: How to Use git push --force-with-lease Safely](https://github.com/mike-rambil/Advanced-Git/blob/main/contents/how-to-use-git-push-force-with-lease-safely.md)
 
 ---
 

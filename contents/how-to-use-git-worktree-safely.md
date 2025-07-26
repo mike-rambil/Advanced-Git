@@ -1,4 +1,4 @@
-[⬅️ Back to Table of Contents](../README.md#how-to-use-git-worktree-safely)
+[⬅️ Back to Table of Contents](https://github.com/mike-rambil/Advanced-Git/blob/main/README.md#how-to-use-git-worktree-safely)
 
 # How to Use git worktree Safely
 
@@ -17,7 +17,7 @@
 - [Flags and Their Uses](./flags-and-their-uses.md)
 
 
-[➡️ Continue to Next Topic: Sharing Changes as Patch Files](./sharing-changes-as-patch-files.md)
+[➡️ Continue to Next Topic: Sharing Changes as Patch Files](https://github.com/mike-rambil/Advanced-Git/blob/main/contents/sharing-changes-as-patch-files.md)
 
 ---
 

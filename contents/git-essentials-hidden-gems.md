@@ -1,4 +1,4 @@
-[⬅️ Back to Table of Contents](../README.md#git-essentials-hidden-gems)
+[⬅️ Back to Table of Contents](https://github.com/mike-rambil/Advanced-Git/blob/main/README.md#git-essentials-hidden-gems)
 
 # Git Essentials & Hidden Gems
 
@@ -22,7 +22,7 @@ A collection of practical, lesser-known, and foundational Git commands that are 
 - [git request-pull](./git-request-pull.md): Generate a request to pull changes into a repository.
 
 
-[➡️ Continue to Next Topic: Cleanup Branches Fast ⚡](./cleanup-branches-fast.md)
+[➡️ Continue to Next Topic: Cleanup Branches Fast ⚡](https://github.com/mike-rambil/Advanced-Git/blob/main/contents/cleanup-branches-fast.md)
 
 ---
 

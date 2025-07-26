@@ -1,4 +1,4 @@
-[⬅️ Back to Sharing Changes as Patch Files](./sharing-changes-as-patch-files.md)
+[⬅️ Back to Sharing Changes as Patch Files](https://github.com/mike-rambil/Advanced-Git/blob/main/contents/sharing-changes-as-patch-files.md)
 
 # Create Patch from Last Commit(s)
 
@@ -47,7 +47,7 @@ git format-patch -2 origin/main..HEAD
 - [Official Docs](https://git-scm.com/docs/git-format-patch)
 
 
-[➡️ See the Next Step: Apply Patch with Commit Metadata](./apply-patch-with-commit-metadata.md)
+[➡️ See the Next Step: Apply Patch with Commit Metadata](https://github.com/mike-rambil/Advanced-Git/blob/main/contents/apply-patch-with-commit-metadata.md)
 
 ---
 

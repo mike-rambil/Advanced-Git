@@ -1,6 +1,6 @@
-[⬅️ Back to Cleanup Branches Fast ⚡](./cleanup-branches-fast.md)
+[⬅️ Back to Cleanup Branches Fast ⚡](https://github.com/mike-rambil/Advanced-Git/blob/main/contents/cleanup-branches-fast.md)
 
-[⬆️ Previous Step: Delete Local Branches Whose Remote is Gone (PowerShell)](./delete-local-branches-whose-remote-is-gone-powershell.md)
+[⬆️ Previous Step: Delete Local Branches Whose Remote is Gone (PowerShell)](https://github.com/mike-rambil/Advanced-Git/blob/main/contents/delete-local-branches-whose-remote-is-gone-powershell.md)
 
 # View and Clean Up Local Git Branches (Bash)
 
@@ -47,7 +47,7 @@ git branch -vv | grep 'gone'
 
 
 
-[➡️ See the Next Step: View and Clean Up Local Git Branches (PowerShell)](./view-and-clean-up-local-git-branches-powershell.md)
+[➡️ See the Next Step: View and Clean Up Local Git Branches (PowerShell)](https://github.com/mike-rambil/Advanced-Git/blob/main/contents/view-and-clean-up-local-git-branches-powershell.md)
 
 ---
 

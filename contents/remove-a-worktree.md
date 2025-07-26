@@ -1,6 +1,6 @@
-[⬅️ Back to How to Use git worktree Safely](./how-to-use-git-worktree-safely.md)
+[⬅️ Back to How to Use git worktree Safely](https://github.com/mike-rambil/Advanced-Git/blob/main/contents/how-to-use-git-worktree-safely.md)
 
-[⬆️ Previous Step: Create a New Worktree](./create-a-new-worktree.md)
+[⬆️ Previous Step: Create a New Worktree](https://github.com/mike-rambil/Advanced-Git/blob/main/contents/create-a-new-worktree.md)
 
 # Remove a Worktree
 
@@ -33,7 +33,7 @@ git worktree remove ../hotfix
 - ⚠️ Make sure you have committed all changes before removing a worktree.
 
 
-[➡️ See the Next Step: Switch Between Worktrees](./switch-between-worktrees.md)
+[➡️ See the Next Step: Switch Between Worktrees](https://github.com/mike-rambil/Advanced-Git/blob/main/contents/switch-between-worktrees.md)
 
 ---
 

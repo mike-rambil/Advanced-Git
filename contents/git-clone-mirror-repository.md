@@ -1,6 +1,6 @@
-[⬅️ Back to Git Command Reference (Full List)](./git-command-reference-full-list.md)
+[⬅️ Back to Git Command Reference (Full List)](https://github.com/mike-rambil/Advanced-Git/blob/main/contents/git-command-reference-full-list.md)
 
-[⬆️ Previous Step: git init --bare](./git-init-bare.md)
+[⬆️ Previous Step: git init --bare](https://github.com/mike-rambil/Advanced-Git/blob/main/contents/git-init-bare.md)
 
 # git clone --mirror <repository>
 
@@ -31,7 +31,7 @@ git clone --mirror git@github.com:org/repo.git
 1. Run `git clone --mirror <repository>` to create a full backup or migration.
 
 
-[➡️ Continue to Next Topic: Useful Rare Git Commands You Never Heard Of](./useful-rare-git-commands-you-never-heard-of.md)
+[➡️ Continue to Next Topic: Useful Rare Git Commands You Never Heard Of](https://github.com/mike-rambil/Advanced-Git/blob/main/contents/useful-rare-git-commands-you-never-heard-of.md)
 
 ---
 

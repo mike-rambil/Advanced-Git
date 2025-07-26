@@ -1,6 +1,6 @@
-[⬅️ Back to Sharing Changes as Patch Files](./sharing-changes-as-patch-files.md)
+[⬅️ Back to Sharing Changes as Patch Files](https://github.com/mike-rambil/Advanced-Git/blob/main/contents/sharing-changes-as-patch-files.md)
 
-[⬆️ Previous Step: Create Patch from Uncommitted Changes](./create-patch-from-uncommitted-changes.md)
+[⬆️ Previous Step: Create Patch from Uncommitted Changes](https://github.com/mike-rambil/Advanced-Git/blob/main/contents/create-patch-from-uncommitted-changes.md)
 
 # Apply Diff File
 
@@ -29,7 +29,7 @@ git apply --stat changes.diff
 1. Run '`git apply changes.diff' to apply the changes from a diff file`.
 
 
-[➡️ See the Next Step: Patch vs Diff: Quick Reference](./patch-vs-diff-quick-reference.md)
+[➡️ See the Next Step: Patch vs Diff: Quick Reference](https://github.com/mike-rambil/Advanced-Git/blob/main/contents/patch-vs-diff-quick-reference.md)
 
 ---
 

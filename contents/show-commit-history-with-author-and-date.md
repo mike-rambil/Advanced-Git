@@ -1,6 +1,6 @@
-[⬅️ Back to Past commits of a specific file](./past-commits-of-a-specific-file.md)
+[⬅️ Back to Past commits of a specific file](https://github.com/mike-rambil/Advanced-Git/blob/main/contents/past-commits-of-a-specific-file.md)
 
-[⬆️ Previous Step: Show Detailed Commit History (With Changes)](./show-detailed-commit-history-with-changes.md)
+[⬆️ Previous Step: Show Detailed Commit History (With Changes)](https://github.com/mike-rambil/Advanced-Git/blob/main/contents/show-detailed-commit-history-with-changes.md)
 
 # Show Commit History With Author and Date
 
@@ -29,7 +29,7 @@ git log --pretty=format:'%h | %ad | %an | %s' --date=short -- filename.txt
 1. Displays commit hash, author, relative date, and commit message.
 
 
-[➡️ See the Next Step: See Who Last Modified Each Line (Blame)](./see-who-last-modified-each-line-blame.md)
+[➡️ See the Next Step: See Who Last Modified Each Line (Blame)](https://github.com/mike-rambil/Advanced-Git/blob/main/contents/see-who-last-modified-each-line-blame.md)
 
 ---
 

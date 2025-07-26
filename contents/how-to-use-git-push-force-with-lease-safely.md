@@ -1,4 +1,4 @@
-[⬅️ Back to Table of Contents](../README.md#how-to-use-git-push-force-with-lease-safely)
+[⬅️ Back to Table of Contents](https://github.com/mike-rambil/Advanced-Git/blob/main/README.md#how-to-use-git-push-force-with-lease-safely)
 
 # How to Use git push --force-with-lease Safely
 
@@ -46,7 +46,7 @@ git push --force-with-lease origin feature-branch
 - [Medium Article](https://medium.com/@sahilsahilbhatia/git-push-force-with-lease-vs-force-ecae72601e80)
 
 
-[➡️ Continue to Next Topic: Past commits of a specific file](./past-commits-of-a-specific-file.md)
+[➡️ Continue to Next Topic: Past commits of a specific file](https://github.com/mike-rambil/Advanced-Git/blob/main/contents/past-commits-of-a-specific-file.md)
 
 ---
 

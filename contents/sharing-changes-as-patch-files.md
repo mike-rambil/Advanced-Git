@@ -1,4 +1,4 @@
-[⬅️ Back to Table of Contents](../README.md#sharing-changes-as-patch-files)
+[⬅️ Back to Table of Contents](https://github.com/mike-rambil/Advanced-Git/blob/main/README.md#sharing-changes-as-patch-files)
 
 # Sharing Changes as Patch Files
 
@@ -16,7 +16,7 @@ How to create patch files from your changes for sharing via email, SCP, Slack, o
 - [Patch vs Diff: Quick Reference](./patch-vs-diff-quick-reference.md)
 
 
-[➡️ Continue to Next Topic: Pull Changes of Specific Files from a Commit](./pull-changes-of-specific-files-from-a-commit.md)
+[➡️ Continue to Next Topic: Pull Changes of Specific Files from a Commit](https://github.com/mike-rambil/Advanced-Git/blob/main/contents/pull-changes-of-specific-files-from-a-commit.md)
 
 ---
 

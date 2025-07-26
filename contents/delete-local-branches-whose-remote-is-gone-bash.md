@@ -1,4 +1,4 @@
-[⬅️ Back to Cleanup Branches Fast ⚡](./cleanup-branches-fast.md)
+[⬅️ Back to Cleanup Branches Fast ⚡](https://github.com/mike-rambil/Advanced-Git/blob/main/contents/cleanup-branches-fast.md)
 
 # Delete Local Branches Whose Remote is Gone (Bash)
 
@@ -47,7 +47,7 @@ git fetch -p && git branch -vv | grep '\[origin/feature: gone\]' | awk '{print $
 
 
 
-[➡️ See the Next Step: Delete Local Branches Whose Remote is Gone (PowerShell)](./delete-local-branches-whose-remote-is-gone-powershell.md)
+[➡️ See the Next Step: Delete Local Branches Whose Remote is Gone (PowerShell)](https://github.com/mike-rambil/Advanced-Git/blob/main/contents/delete-local-branches-whose-remote-is-gone-powershell.md)
 
 ---
 
