@@ -2,6 +2,11 @@ const fs = require('fs');
 const path = require('path');
 
 // --- CONFIG ---
+const GITHUB_REPO_URL = 'https://github.com/mike-rambil/Advanced-Git';
+const GITHUB_BRANCH = 'main';
+const GITHUB_CONTENTS_URL = `${GITHUB_REPO_URL}/blob/${GITHUB_BRANCH}/contents`;
+const GITHUB_README_URL = `${GITHUB_REPO_URL}/blob/${GITHUB_BRANCH}/README.md`;
+const GITHUB_PR_URL = `${GITHUB_REPO_URL}/pulls`;
 const INTRO = `<div style="width:100%; display:flex; justify-content:center; align-items:center; margin: 0 auto;">
   <img src="https://raw.githubusercontent.com/mike-rambil/Advanced-Git/refs/heads/main/brand/advanced-git-mike-rambil.png" style="max-width:100%; height:auto; display:block; margin:0 auto;" alt="banner" />
 </div>
@@ -209,7 +214,7 @@ function generateMiniSubtocTOC(obj) {
 
 function generateContentFile(obj, idx, tocData) {
   let slug = slugify(obj.Name);
-  let md = `[⬅️ Back to Table of Contents](../README.md#${slug})\n\n`;
+  let md = `[⬅️ Back to Table of Contents](${GITHUB_README_URL}#${slug})\n\n`;
   md += `# ${obj.Name}\n\n`;
   if (obj.category) md += renderCategory(obj.category);
   if (obj.short_description) md += `> ${obj.short_description}\n\n`;
@@ -237,12 +242,12 @@ function generateContentFile(obj, idx, tocData) {
   if (idx < tocData.length - 1) {
     // There's a next main TOC item
     const nextMainToc = tocData[idx + 1];
-    md += `\n[➡️ Continue to Next Topic: ${nextMainToc.Name}](./${slugify(
+    md += `\n[➡️ Continue to Next Topic: ${
       nextMainToc.Name
-    )}.md)\n`;
+    }](${GITHUB_CONTENTS_URL}/${slugify(nextMainToc.Name)}.md)\n`;
   } else {
     // This is the very last page - show congratulations
-    md += `\n---\n\n## 🎉 Congratulations!\n\nYou've reached the end of this comprehensive Git guide! You've learned some of the most advanced Git techniques and commands.\n\n**What's next?**\n- [📚 Explore more Git topics in the main guide](../README.md)\n- 🚀 **Great Git contributors put everything into practice** - if you discovered something useful or have your own Git tips, consider contributing to this repository!\n- 💡 Found a bug or have suggestions? [Open an issue or submit a PR](../README.md#contributors--credits)\n\n[🏠 Back to Main README](../README.md)\n`;
+    md += `\n---\n\n## 🎉 Congratulations!\n\nYou've reached the end of this comprehensive Git guide! You've learned some of the most advanced Git techniques and commands.\n\n**What's next?**\n- [📚 Explore more Git topics in the main guide](${GITHUB_README_URL})\n- 🚀 **Great Git contributors put everything into practice** - if you discovered something useful or have your own Git tips, consider contributing to this repository!\n- 💡 Found a bug or have suggestions? [Open an issue or submit a PR](${GITHUB_README_URL}#contributors--credits)\n\n[🏠 Back to Main README](${GITHUB_README_URL})\n`;
   }
 
   md += conciseMetaLine(obj.author, obj.last_updated, obj.tags);
@@ -262,12 +267,14 @@ function generateSubtocFile(obj, idx, tocData) {
     const subPath = path.join(CONTENTS_DIR, `${slugify(sub.Name)}.md`);
     let subMd = '';
     // Always add Back to parent
-    subMd += `[⬅️ Back to ${obj.Name}](./${slugify(obj.Name)}.md)\n\n`;
+    subMd += `[⬅️ Back to ${obj.Name}](${GITHUB_CONTENTS_URL}/${slugify(
+      obj.Name
+    )}.md)\n\n`;
     if (subIdx > 0) {
       const prev = obj.subtoc[subIdx - 1];
-      subMd += `[⬆️ Previous Step: ${prev.Name}](./${slugify(
+      subMd += `[⬆️ Previous Step: ${
         prev.Name
-      )}.md)\n\n`;
+      }](${GITHUB_CONTENTS_URL}/${slugify(prev.Name)}.md)\n\n`;
     }
     subMd += `# ${sub.Name}\n\n`;
     if (sub.category) subMd += renderCategory(sub.category);
@@ -289,9 +296,9 @@ function generateSubtocFile(obj, idx, tocData) {
     if (subIdx < obj.subtoc.length - 1) {
       // Not the last subtoc, link to next subtoc
       const next = obj.subtoc[subIdx + 1];
-      subMd += `\n[➡️ See the Next Step: ${next.Name}](./${slugify(
+      subMd += `\n[➡️ See the Next Step: ${
         next.Name
-      )}.md)\n`;
+      }](${GITHUB_CONTENTS_URL}/${slugify(next.Name)}.md)\n`;
     } else {
       // This is the last subtoc, check if there's a next main TOC item
       if (idx < tocData.length - 1) {
@@ -299,10 +306,10 @@ function generateSubtocFile(obj, idx, tocData) {
         const nextMainToc = tocData[idx + 1];
         subMd += `\n[➡️ Continue to Next Topic: ${
           nextMainToc.Name
-        }](./${slugify(nextMainToc.Name)}.md)\n`;
+        }](${GITHUB_CONTENTS_URL}/${slugify(nextMainToc.Name)}.md)\n`;
       } else {
         // This is the very last page - show congratulations
-        subMd += `\n---\n\n## 🎉 Congratulations!\n\nYou've reached the end of this comprehensive Git guide! You've learned some of the most advanced Git techniques and commands.\n\n**What's next?**\n- [📚 Explore more Git topics in the main guide](../README.md)\n- 🚀 **Great Git contributors put everything into practice** - if you discovered something useful or have your own Git tips, consider contributing to this repository!\n- 💡 Found a bug or have suggestions? [Open an issue or submit a PR](../README.md#contributors--credits)\n\n[🏠 Back to Main README](../README.md)\n`;
+        subMd += `\n---\n\n## 🎉 Congratulations!\n\nYou've reached the end of this comprehensive Git guide! You've learned some of the most advanced Git techniques and commands.\n\n**What's next?**\n- [📚 Explore more Git topics in the main guide](${GITHUB_README_URL})\n- 🚀 **Great Git contributors put everything into practice** - if you discovered something useful or have your own Git tips, consider contributing to this repository!\n- 💡 Found a bug or have suggestions? [Open an issue or submit a PR](${GITHUB_README_URL}#contributors--credits)\n\n[🏠 Back to Main README](${GITHUB_README_URL})\n`;
       }
     }
 
