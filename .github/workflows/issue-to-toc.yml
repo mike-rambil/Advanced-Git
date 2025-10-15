@@ -1,0 +1,38 @@
+name: "Convert Issue Submissions to TOC PR"
+
+on:
+  issues:
+    types:
+      - opened
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: read
+
+jobs:
+  build:
+    if: ${{ contains(join(github.event.issue.labels.*.name, ','), 'new command') }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Generate toc entry from issue
+        run: node scripts/issue-to-toc.js
+        env:
+          ISSUE_BODY: ${{ github.event.issue.body }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+
+      - name: Create pull request
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: issue/${{ github.event.issue.number }}-toc-entry
+          delete-branch: true
+          commit-message: Add command from issue #${{ github.event.issue.number }}
+          title: Add command from issue #${{ github.event.issue.number }}
+          body: |
+            ## Summary
+            - Generated from issue #${{ github.event.issue.number }} using the Git command submission template.
+            - Adds a new entry to `toc-source.json`.

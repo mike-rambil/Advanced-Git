@@ -1,0 +1,233 @@
+name: "Git Command Submission"
+description: "Submit a new Git command entry using the required format from dev-docs/FORMAT.md."
+title: "Add: <command name>"
+labels:
+  - "new command"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        # Contribution Format Guide
+
+        **Purpose:** This template captures the required format for documenting Git commands in this repository. All contributors should follow this structure when adding or updating entries in `toc-source.json`.
+
+        **How to Contribute:**
+
+        - When you want to add a new Git command or script, copy the template below and fill in each field as described.
+        - Place your new entry in `toc-source.json` using this format.
+        - Submit your changes via a Pull Request (PR).
+        - Well-formatted contributions make it easy to generate documentation and keep the project organized.
+
+        **Where to Find This:**
+
+        - This template reflects `dev-docs/FORMAT.md` (always up to date).
+        - Main documentation and contribution guidelines may also reference this file.
+  - type: input
+    id: name
+    attributes:
+      label: "Name"
+      placeholder: "git example-command"
+      description: |
+        Type: string
+        Description: The official name/title of the command or script.
+    validations:
+      required: true
+  - type: input
+    id: category
+    attributes:
+      label: "Category"
+      placeholder: "History"
+      description: |
+        Type: string
+        Description: The category this command belongs to (e.g., Collaboration, History, Worktree).
+    validations:
+      required: true
+  - type: input
+    id: short_description
+    attributes:
+      label: "Short Description"
+      placeholder: "Summarize what the command does."
+      description: |
+        Type: string
+        Description: A concise summary of what the command does.
+    validations:
+      required: true
+  - type: textarea
+    id: long_description
+    attributes:
+      label: "Long Description"
+      description: |
+        Type: string (optional)
+        Description: A more detailed explanation of the command, its context, and use cases.
+        Please provide plain text or Markdown.
+      placeholder: "Explain when and why to use this command..."
+    validations:
+      required: false
+  - type: input
+    id: command
+    attributes:
+      label: "Command"
+      description: |
+        Type: string (optional)
+        Description: The full command syntax, including placeholders for arguments.
+      placeholder: "git example-command <arguments>"
+    validations:
+      required: false
+  - type: textarea
+    id: examples
+    attributes:
+      label: "Examples"
+      description: |
+        Type: list of objects
+        Each object:
+          - `code`: string (the command as used)
+          - `description`: string (what the example does)
+        Provide as valid JSON. Example:
+        [
+          {
+            "code": "git clean -n -d",
+            "description": "Preview what will be deleted (dry run)."
+          }
+        ]
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: "Steps"
+      description: |
+        Type: list of strings
+        Description: Step-by-step instructions for using the command.
+        Provide as a JSON array of strings.
+      placeholder: |
+        [
+          "First step...",
+          "Second step..."
+        ]
+    validations:
+      required: true
+  - type: textarea
+    id: flags
+    attributes:
+      label: "Flags"
+      description: |
+        Type: object (optional)
+        Each key: flag (e.g., `-f`, `-d`)
+        Each value: string (description of the flag)
+        Provide as a JSON object.
+      placeholder: |
+        {
+          "-f": "Forces the action."
+        }
+    validations:
+      required: false
+  - type: textarea
+    id: prerequisites
+    attributes:
+      label: "Prerequisites"
+      description: |
+        Type: list of strings (optional)
+        Description: Requirements before using the command.
+        Provide as a JSON array of strings.
+      placeholder: |
+        [
+          "Have a clean working tree."
+        ]
+    validations:
+      required: false
+  - type: textarea
+    id: warnings
+    attributes:
+      label: "Warnings"
+      description: |
+        Type: list of strings (optional)
+        Description: Important cautions or risks.
+        Provide as a JSON array of strings.
+      placeholder: |
+        [
+          "This will permanently delete files."
+        ]
+    validations:
+      required: false
+  - type: textarea
+    id: protips
+    attributes:
+      label: "ProTips"
+      description: |
+        Type: list of strings (optional)
+        Description: Short, actionable tips to help users be more successful with this command. Use 1–2 lines per tip.
+        Provide as a JSON array of strings.
+      placeholder: |
+        [
+          "Use `-n` for a dry run before deleting files."
+        ]
+    validations:
+      required: false
+  - type: textarea
+    id: tags
+    attributes:
+      label: "Tags"
+      description: |
+        Type: list of strings
+        Description: Keywords for search and categorization.
+        Provide as a JSON array of strings.
+      placeholder: |
+        [
+          "clean",
+          "workspace"
+        ]
+    validations:
+      required: true
+  - type: input
+    id: author
+    attributes:
+      label: "Author"
+      description: |
+        Type: string
+        Description: Who contributed this entry.
+      placeholder: "your-github-handle"
+    validations:
+      required: true
+  - type: input
+    id: last_updated
+    attributes:
+      label: "Last Updated"
+      description: |
+        Type: string (date)
+        Description: Last update date (YYYY-MM-DD).
+      placeholder: "2025-10-14"
+    validations:
+      required: true
+  - type: textarea
+    id: links
+    attributes:
+      label: "Links"
+      description: |
+        Type: list of objects (optional)
+        Each object:
+          - `label`: string (e.g., \"Official Docs\")
+          - `url`: string (link to resource)
+        Provide as valid JSON.
+      placeholder: |
+        [
+          {
+            "label": "Official Docs",
+            "url": "https://git-scm.com/docs/git-clean"
+          }
+        ]
+    validations:
+      required: false
+  - type: textarea
+    id: related_commands
+    attributes:
+      label: "Related Commands"
+      description: |
+        Type: list of strings (optional)
+        Description: Other commands related to this one.
+        Provide as a JSON array of strings.
+      placeholder: |
+        [
+          "git status"
+        ]
+    validations:
+      required: false
