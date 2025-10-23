@@ -52,3 +52,10 @@
 #### [👨‍👩‍👧‍👦 Contributors](./CONTRIBUTING.md)
 
 A list of individuals who have contributed to this project. Add your name and link in [CONTRIBUTING.md](./CONTRIBUTING.md#contributors). Please follow the instructions from [FORMAT.md](./dev-docs/FORMAT.md) when contributing.
+
+## Growing thanks to you ❤️
+
+[![Stargazers over time](https://starchart.cc/mike-rambil/Advanced-Git.svg?variant=adaptive)](https://starchart.cc/mike-rambil/Advanced-Git)
+
+                    
+
