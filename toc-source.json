@@ -4,7 +4,11 @@
     "category": "Miscellaneous",
     "short_description": "Start here to discover commands that can improve your workflow and understanding of Git.",
     "long_description": "A collection of practical, lesser-known, and foundational Git commands that are useful for all users. Start here to discover commands that can improve your workflow and understanding of Git.",
-    "tags": ["misc", "cleanup", "advanced"],
+    "tags": [
+      "misc",
+      "cleanup",
+      "advanced"
+    ],
     "author": "mike-rambil",
     "last_updated": "2024-06-10",
     "protips": [
@@ -40,7 +44,10 @@
             "url": "https://git-scm.com/docs/git-maintenance"
           }
         ],
-        "tags": ["maintenance", "automation"],
+        "tags": [
+          "maintenance",
+          "automation"
+        ],
         "author": "mike-rambil",
         "last_updated": "2024-06-10",
         "protips": [
@@ -80,7 +87,10 @@
             "url": "https://git-scm.com/docs/git-request-pull"
           }
         ],
-        "tags": ["collaboration", "pull-request"],
+        "tags": [
+          "collaboration",
+          "pull-request"
+        ],
         "author": "mike-rambil",
         "last_updated": "2024-06-10",
         "protips": [
@@ -95,7 +105,13 @@
     "Name": "Cleanup Branches Fast ⚡",
     "category": "Branch Management",
     "short_description": "Quickly view and clean up local branches using Bash or PowerShell, including removing branches whose remote is gone.",
-    "tags": ["branches", "cleanup", "fast", "bash", "powershell"],
+    "tags": [
+      "branches",
+      "cleanup",
+      "fast",
+      "bash",
+      "powershell"
+    ],
     "author": "mike-rambil",
     "last_updated": "2024-06-10",
     "protips": [
@@ -128,7 +144,12 @@
           "This will permanently delete local branches. Double-check before running.",
           "Make sure you have no unmerged work on these branches."
         ],
-        "tags": ["branches", "cleanup", "gone", "bash"],
+        "tags": [
+          "branches",
+          "cleanup",
+          "gone",
+          "bash"
+        ],
         "author": "mike-rambil",
         "last_updated": "2024-06-10",
         "protips": [
@@ -161,7 +182,12 @@
           "This will permanently delete local branches. Double-check before running.",
           "Make sure you have no unmerged work on these branches."
         ],
-        "tags": ["branches", "cleanup", "gone", "powershell"],
+        "tags": [
+          "branches",
+          "cleanup",
+          "gone",
+          "powershell"
+        ],
         "author": "mike-rambil",
         "last_updated": "2024-06-10",
         "protips": [
@@ -196,7 +222,11 @@
         "warnings": [
           "Deleting branches is irreversible. Double-check before running destructive commands."
         ],
-        "tags": ["branches", "cleanup", "bash"],
+        "tags": [
+          "branches",
+          "cleanup",
+          "bash"
+        ],
         "author": "mike-rambil",
         "last_updated": "2024-06-10",
         "protips": [
@@ -231,7 +261,11 @@
         "warnings": [
           "Deleting branches is irreversible. Double-check before running destructive commands."
         ],
-        "tags": ["branches", "cleanup", "powershell"],
+        "tags": [
+          "branches",
+          "cleanup",
+          "powershell"
+        ],
         "author": "mike-rambil",
         "last_updated": "2024-06-10",
         "protips": [
@@ -246,7 +280,10 @@
     "category": "Reference",
     "short_description": "A comprehensive list of Git commands used in this project.",
     "long_description": "A comprehensive list of Git commands used in this project, formatted according to our standard.",
-    "tags": ["reference", "all-commands"],
+    "tags": [
+      "reference",
+      "all-commands"
+    ],
     "author": "mike-rambil",
     "last_updated": "2024-06-10",
     "subtoc": [
@@ -268,7 +305,11 @@
         "steps": [
           "Run `git init --bare my-repo.git` to create a bare repository."
         ],
-        "tags": ["init", "bare", "repository"],
+        "tags": [
+          "init",
+          "bare",
+          "repository"
+        ],
         "author": "mike-rambil",
         "last_updated": "2024-06-10"
       },
@@ -290,9 +331,73 @@
         "steps": [
           "Run `git clone --mirror <repository>` to create a full backup or migration."
         ],
-        "tags": ["clone", "mirror", "backup"],
+        "tags": [
+          "clone",
+          "mirror",
+          "backup"
+        ],
         "author": "mike-rambil",
         "last_updated": "2024-06-10"
+      },
+      {
+        "Name": "git merge-base",
+        "category": "Collaboration",
+        "short_description": "Find the common ancestor commit between two or more branches.",
+        "long_description": "git merge-base finds the best common ancestor(s) between two commits to use in a three-way merge. The common ancestor is the most recent commit that is reachable from both branches. This is useful for understanding where branches diverged, scripting merge operations, and debugging merge conflicts. Best commonly used to find common ancestor between a feature branch and main branch to squash commits locally.",
+        "command": "git merge-base <commit|branch> <commit|branch>",
+        "examples": [
+          {
+            "code": "git merge-base main feature-branch",
+            "description": "Find the common ancestor between main and feature-branch."
+          },
+          {
+            "code": "git merge-base --all main feature-branch",
+            "description": "Find all common ancestors (useful when there are multiple merge bases)."
+          },
+          {
+            "code": "git merge-base --is-ancestor HEAD~5 HEAD",
+            "description": "Check if HEAD~5 is an ancestor of HEAD (exits 0 if true, 1 if false)."
+          },
+          {
+            "code": "git merge-base --fork-point main",
+            "description": "Find the fork point where the current branch diverged from main."
+          }
+        ],
+        "steps": [
+          "Identify the two branches or commits you want to compare.",
+          "Run git merge-base <commit1> <commit2> to find their common ancestor.",
+          "Use the resulting commit hash for further operations like diffing or rebasing."
+        ],
+        "flags": {
+          "-a, --all": "Output all merge bases instead of just one.",
+          "--octopus": "Compute the best common ancestors of all supplied commits, for an n-way merge.",
+          "--independent": "Print a minimal subset of commits that cannot be reached from any other. Useful for filtering redundant commits.",
+          "--is-ancestor": "Check if the first commit is an ancestor of the second. Exits 0 if true, 1 if not.",
+          "--fork-point": "Find the point where a branch forked from a ref, using reflog history for accuracy."
+        },
+        "protips": [
+          " Use it to find common branch between main and your feature branch to squash commits"
+        ],
+        "tags": [
+          "rebase",
+          "PR",
+          "merge-base",
+          "merge"
+        ],
+        "author": "mike-rambil",
+        "last_updated": "2025-01-20",
+        "links": [
+          {
+            "label": "Official Docs",
+            "url": "https://git-scm.com/docs/git-merge-base"
+          }
+        ],
+        "related_commands": [
+          "git merge",
+          "git rebase",
+          "git log",
+          "git diff"
+        ]
       }
     ]
   },
@@ -301,7 +406,11 @@
     "category": "Advanced",
     "short_description": "A collection of lesser-known but powerful Git commands.",
     "long_description": "A collection of lesser-known but powerful Git commands. Use these to level up your Git workflow!",
-    "tags": ["rare", "advanced", "tips"],
+    "tags": [
+      "rare",
+      "advanced",
+      "tips"
+    ],
     "author": "mike-rambil",
     "last_updated": "2024-06-10",
     "subtoc": [
@@ -323,7 +432,10 @@
         "steps": [
           "Run `git replace <old-commit> <new-commit>` to test or patch history."
         ],
-        "tags": ["replace", "history"],
+        "tags": [
+          "replace",
+          "history"
+        ],
         "author": "mike-rambil",
         "last_updated": "2024-06-10"
       }
@@ -351,7 +463,9 @@
       "If rejected, pull and rebase: `git pull --rebase origin main`",
       "Resolve conflicts, commit, and retry push"
     ],
-    "prerequisites": ["You must have permission to push to the branch."],
+    "prerequisites": [
+      "You must have permission to push to the branch."
+    ],
     "warnings": [
       "Never use `--force` unless you are sure. Prefer `--force-with-lease`."
     ],
@@ -361,7 +475,11 @@
         "url": "https://medium.com/@sahilsahilbhatia/git-push-force-with-lease-vs-force-ecae72601e80"
       }
     ],
-    "tags": ["push", "force", "safe"],
+    "tags": [
+      "push",
+      "force",
+      "safe"
+    ],
     "author": "mike-rambil",
     "last_updated": "2024-06-10"
   },
@@ -370,7 +488,11 @@
     "category": "History and Inspection",
     "short_description": "See all commits and changes for a specific file.",
     "long_description": "You can see all commits related to a specific file using Git commands. Here are a few ways to do it:",
-    "tags": ["history", "inspection", "file"],
+    "tags": [
+      "history",
+      "inspection",
+      "file"
+    ],
     "author": "mike-rambil",
     "last_updated": "2024-06-10",
     "subtoc": [
@@ -388,8 +510,14 @@
             "description": "Show commit history for a different file."
           }
         ],
-        "steps": ["Lists all commits that modified `filename.txt`."],
-        "tags": ["log", "file", "history"],
+        "steps": [
+          "Lists all commits that modified `filename.txt`."
+        ],
+        "tags": [
+          "log",
+          "file",
+          "history"
+        ],
         "related_commands": [
           "git log -p -- filename.txt",
           "git blame filename.txt"
@@ -414,8 +542,14 @@
         "steps": [
           "Shows each commit and the actual changes made to `filename.txt`."
         ],
-        "tags": ["log", "diff", "file"],
-        "related_commands": ["git log --oneline -- filename.txt"],
+        "tags": [
+          "log",
+          "diff",
+          "file"
+        ],
+        "related_commands": [
+          "git log --oneline -- filename.txt"
+        ],
         "author": "mike-rambil",
         "last_updated": "2024-06-10"
       },
@@ -436,7 +570,11 @@
         "steps": [
           "Displays commit hash, author, relative date, and commit message."
         ],
-        "tags": ["log", "author", "date"],
+        "tags": [
+          "log",
+          "author",
+          "date"
+        ],
         "author": "mike-rambil",
         "last_updated": "2024-06-10"
       },
@@ -454,8 +592,14 @@
             "description": "Blame only lines 10 to 20 of a file."
           }
         ],
-        "steps": ["Shows the last commit that changed each line of the file."],
-        "tags": ["blame", "file", "history"],
+        "steps": [
+          "Shows the last commit that changed each line of the file."
+        ],
+        "tags": [
+          "blame",
+          "file",
+          "history"
+        ],
         "warnings": [
           "Blame can be misleading if the file has been heavily refactored."
         ],
@@ -508,15 +652,24 @@
       "Remove ignored and untracked files: `git clean -f -x`",
       "Remove only ignored files: `git clean -f -X`"
     ],
-    "prerequisites": ["Make sure you have committed all important changes."],
+    "prerequisites": [
+      "Make sure you have committed all important changes."
+    ],
     "warnings": [
       "This will permanently delete files! Always use `-n` before `-f`.",
       "Be cautious with `-x` and `-X` as they remove ignored files, which might include config files."
     ],
     "links": [
-      { "label": "Official Docs", "url": "https://git-scm.com/docs/git-clean" }
+      {
+        "label": "Official Docs",
+        "url": "https://git-scm.com/docs/git-clean"
+      }
     ],
-    "tags": ["clean", "untracked", "workspace"],
+    "tags": [
+      "clean",
+      "untracked",
+      "workspace"
+    ],
     "author": "mike-rambil",
     "last_updated": "2024-06-10"
   },
@@ -525,7 +678,11 @@
     "category": "Worktree",
     "short_description": "Work on multiple branches simultaneously without switching.",
     "long_description": "`git worktree` allows you to manage multiple working directories linked to a single Git repository. It helps developers work on multiple branches simultaneously without switching branches in the same directory.",
-    "tags": ["worktree", "branches", "advanced"],
+    "tags": [
+      "worktree",
+      "branches",
+      "advanced"
+    ],
     "author": "mike-rambil",
     "last_updated": "2024-06-10",
     "subtoc": [
@@ -543,8 +700,13 @@
             "description": "List worktrees in a machine-readable format."
           }
         ],
-        "steps": ["List all active worktrees."],
-        "tags": ["worktree", "list"],
+        "steps": [
+          "List all active worktrees."
+        ],
+        "tags": [
+          "worktree",
+          "list"
+        ],
         "author": "mike-rambil",
         "last_updated": "2024-06-10"
       },
@@ -562,11 +724,16 @@
             "description": "Create a worktree for a hotfix branch."
           }
         ],
-        "steps": ["Create a worktree linked to a specific branch."],
+        "steps": [
+          "Create a worktree linked to a specific branch."
+        ],
         "prerequisites": [
           "The target path must not already be a git repository."
         ],
-        "tags": ["worktree", "add"],
+        "tags": [
+          "worktree",
+          "add"
+        ],
         "author": "mike-rambil",
         "last_updated": "2024-06-10"
       },
@@ -584,11 +751,16 @@
             "description": "Remove a hotfix worktree."
           }
         ],
-        "steps": ["Detach a worktree without deleting the files."],
+        "steps": [
+          "Detach a worktree without deleting the files."
+        ],
         "warnings": [
           "Make sure you have committed all changes before removing a worktree."
         ],
-        "tags": ["worktree", "remove"],
+        "tags": [
+          "worktree",
+          "remove"
+        ],
         "author": "mike-rambil",
         "last_updated": "2024-06-10"
       },
@@ -606,8 +778,13 @@
             "description": "Switch to a hotfix worktree."
           }
         ],
-        "steps": ["Simply cd into the worktree directory to switch."],
-        "tags": ["worktree", "switch"],
+        "steps": [
+          "Simply cd into the worktree directory to switch."
+        ],
+        "tags": [
+          "worktree",
+          "switch"
+        ],
         "author": "mike-rambil",
         "last_updated": "2024-06-10"
       },
@@ -628,7 +805,10 @@
         "steps": [
           "Quickly apply a fix on another branch without leaving your main branch."
         ],
-        "tags": ["worktree", "hotfix"],
+        "tags": [
+          "worktree",
+          "hotfix"
+        ],
         "author": "mike-rambil",
         "last_updated": "2024-06-10"
       },
@@ -642,7 +822,10 @@
           "prune": "Cleans up stale worktree references after manual deletion.",
           "move": "Moves a worktree to a different location."
         },
-        "tags": ["worktree", "flags"],
+        "tags": [
+          "worktree",
+          "flags"
+        ],
         "author": "mike-rambil",
         "last_updated": "2024-06-10"
       }
@@ -653,7 +836,13 @@
     "category": "Patch & Diff",
     "short_description": "Generate and share patch files for committed or uncommitted changes.",
     "long_description": "How to create patch files from your changes for sharing via email, SCP, Slack, or other means. Covers both committed (with full commit metadata) and uncommitted changes.",
-    "tags": ["patch", "diff", "sharing", "email", "collaboration"],
+    "tags": [
+      "patch",
+      "diff",
+      "sharing",
+      "email",
+      "collaboration"
+    ],
     "author": "mike-rambil",
     "last_updated": "2024-06-10",
     "subtoc": [
@@ -687,7 +876,11 @@
           "Patch files created this way include commit messages, authorship, and timestamps.",
           "Use 'git am' to apply these patches on another system."
         ],
-        "tags": ["patch", "format-patch", "committed"],
+        "tags": [
+          "patch",
+          "format-patch",
+          "committed"
+        ],
         "links": [
           {
             "label": "Official Docs",
@@ -714,7 +907,11 @@
         "steps": [
           "Run 'git am my-changes.patch' to apply the patch and preserve commit messages, authorship, and timestamps."
         ],
-        "tags": ["patch", "am", "apply"],
+        "tags": [
+          "patch",
+          "am",
+          "apply"
+        ],
         "author": "mike-rambil",
         "last_updated": "2024-06-10"
       },
@@ -738,7 +935,11 @@
         "warnings": [
           "This does NOT preserve commit metadata or history—just raw changes."
         ],
-        "tags": ["diff", "uncommitted", "snapshot"],
+        "tags": [
+          "diff",
+          "uncommitted",
+          "snapshot"
+        ],
         "links": [
           {
             "label": "Official Docs",
@@ -765,7 +966,11 @@
         "steps": [
           "Run 'git apply changes.diff' to apply the changes from a diff file."
         ],
-        "tags": ["diff", "apply", "uncommitted"],
+        "tags": [
+          "diff",
+          "apply",
+          "uncommitted"
+        ],
         "author": "mike-rambil",
         "last_updated": "2024-06-10"
       },
@@ -773,7 +978,11 @@
         "Name": "Patch vs Diff: Quick Reference",
         "category": "Patch & Diff",
         "long_description": "| Command | Use Case | Preserves Commit Info? | Can Apply With |\n|---|---|---|---|\n| git diff > file.diff | Share uncommitted changes | ❌ | git apply |\n| git format-patch > file.patch | Share committed changes | ✅ | git am |",
-        "tags": ["patch", "diff", "reference"],
+        "tags": [
+          "patch",
+          "diff",
+          "reference"
+        ],
         "author": "mike-rambil",
         "last_updated": "2024-06-10"
       }
@@ -809,7 +1018,13 @@
       "This will overwrite the current working directory versions of the specified files.",
       "Make sure to commit or stash any local changes to those files before running the command."
     ],
-    "tags": ["checkout", "restore", "file", "commit", "cherry-pick"],
+    "tags": [
+      "checkout",
+      "restore",
+      "file",
+      "commit",
+      "cherry-pick"
+    ],
     "author": "mike-rambil",
     "last_updated": "2024-06-10",
     "links": [
