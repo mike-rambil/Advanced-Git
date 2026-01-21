@@ -231,3 +231,13 @@ body:
         ]
     validations:
       required: false
+  - type: input
+    id: parent
+    attributes:
+      label: "Parent"
+      description: |
+        Type: string (optional)
+        Description: The exact Name of a top-level toc entry under which this command should be added as a subtoc item. Leave empty or enter "_No response_" to place it at the top level. The name must match exactly (case-sensitive).
+      placeholder: "git example-parent"
+    validations:
+      required: false

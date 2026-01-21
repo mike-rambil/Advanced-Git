@@ -27,7 +27,12 @@ const FIELD_CONFIG = [
     required: false,
     parser: asOptionalString,
   },
-  { heading: "Command", key: "command", required: false, parser: asOptionalString },
+  {
+    heading: "Command",
+    key: "command",
+    required: false,
+    parser: asOptionalString,
+  },
   {
     heading: "Examples",
     key: "examples",
@@ -79,6 +84,12 @@ const FIELD_CONFIG = [
     required: false,
     parser: asOptionalStringArray,
   },
+  {
+    heading: "Parent",
+    key: "parent",
+    required: false,
+    parser: asOptionalString,
+  },
 ];
 
 const sections = parseSections(ISSUE_BODY);
@@ -97,11 +108,39 @@ for (const field of FIELD_CONFIG) {
 
 const tocPath = path.join(WORKSPACE, "toc-source.json");
 const toc = readJson(tocPath);
-ensureUniqueName(entry.Name, toc);
-toc.push(entry);
-writeJson(tocPath, toc);
 
-console.log(`Entry for "${entry.Name}" added to toc-source.json from issue #${ISSUE_NUMBER}.`);
+// Capture and remove parent if provided so entry does not include parent as a data field
+const parentName = entry.parent;
+if (parentName !== undefined) {
+  delete entry.parent;
+}
+
+// Ensure the new name is unique globally (top-level and subtoc)
+ensureUniqueName(entry.Name, toc);
+
+// Insert either as top-level or as a subtoc item under the named parent
+if (parentName) {
+  const parentEntry = toc.find((e) => e && e.Name === parentName);
+  if (!parentEntry) {
+    fail(
+      `Parent entry with Name "${parentName}" was not found in toc-source.json.`,
+    );
+  }
+  if (!Array.isArray(parentEntry.subtoc)) {
+    parentEntry.subtoc = [];
+  }
+  parentEntry.subtoc.push(entry);
+  writeJson(tocPath, toc);
+  console.log(
+    `Entry for "${entry.Name}" added to subtoc of "${parentName}" in toc-source.json from issue #${ISSUE_NUMBER}.`,
+  );
+} else {
+  toc.push(entry);
+  writeJson(tocPath, toc);
+  console.log(
+    `Entry for "${entry.Name}" added to toc-source.json from issue #${ISSUE_NUMBER}.`,
+  );
+}
 
 function parseSections(body) {
   const normalized = body.replace(/\r\n/g, "\n").trim();
@@ -181,7 +220,9 @@ function asStringArray(raw, field) {
   }
   parsed.forEach((item, index) => {
     if (typeof item !== "string" || !item.trim()) {
-      fail(`Field "${field}" must contain only non-empty strings (problem at index ${index}).`);
+      fail(
+        `Field "${field}" must contain only non-empty strings (problem at index ${index}).`,
+      );
     }
   });
   return parsed;
@@ -198,7 +239,9 @@ function asOptionalStringArray(raw, field) {
   }
   parsed.forEach((item, index) => {
     if (typeof item !== "string" || !item.trim()) {
-      fail(`Field "${field}" must contain only non-empty strings (problem at index ${index}).`);
+      fail(
+        `Field "${field}" must contain only non-empty strings (problem at index ${index}).`,
+      );
     }
   });
   return parsed;
@@ -207,17 +250,25 @@ function asOptionalStringArray(raw, field) {
 function asExamples(raw, field) {
   const parsed = parseJson(raw, field);
   if (!Array.isArray(parsed) || parsed.length === 0) {
-    fail(`Field "${field}" must be a non-empty JSON array of objects with "code" and "description" strings.`);
+    fail(
+      `Field "${field}" must be a non-empty JSON array of objects with "code" and "description" strings.`,
+    );
   }
   parsed.forEach((item, index) => {
     if (!item || typeof item !== "object") {
-      fail(`Field "${field}" must contain objects (problem at index ${index}).`);
+      fail(
+        `Field "${field}" must contain objects (problem at index ${index}).`,
+      );
     }
     if (typeof item.code !== "string" || !item.code.trim()) {
-      fail(`Field "${field}" example ${index} is missing a non-empty "code" string.`);
+      fail(
+        `Field "${field}" example ${index} is missing a non-empty "code" string.`,
+      );
     }
     if (typeof item.description !== "string" || !item.description.trim()) {
-      fail(`Field "${field}" example ${index} is missing a non-empty "description" string.`);
+      fail(
+        `Field "${field}" example ${index} is missing a non-empty "description" string.`,
+      );
     }
   });
   return parsed;
@@ -237,7 +288,9 @@ function asFlags(raw, field) {
       fail(`Field "${field}" contains a flag with an invalid name.`);
     }
     if (typeof description !== "string" || !description.trim()) {
-      fail(`Field "${field}" flag "${flag}" must have a non-empty description string.`);
+      fail(
+        `Field "${field}" flag "${flag}" must have a non-empty description string.`,
+      );
     }
   });
   return parsed;
@@ -254,13 +307,19 @@ function asLinks(raw, field) {
   }
   parsed.forEach((item, index) => {
     if (!item || typeof item !== "object") {
-      fail(`Field "${field}" must contain objects (problem at index ${index}).`);
+      fail(
+        `Field "${field}" must contain objects (problem at index ${index}).`,
+      );
     }
     if (typeof item.label !== "string" || !item.label.trim()) {
-      fail(`Field "${field}" link ${index} is missing a non-empty "label" string.`);
+      fail(
+        `Field "${field}" link ${index} is missing a non-empty "label" string.`,
+      );
     }
     if (typeof item.url !== "string" || !item.url.trim()) {
-      fail(`Field "${field}" link ${index} is missing a non-empty "url" string.`);
+      fail(
+        `Field "${field}" link ${index} is missing a non-empty "url" string.`,
+      );
     }
   });
   return parsed;
