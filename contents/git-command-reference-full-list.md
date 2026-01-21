@@ -11,6 +11,7 @@ A comprehensive list of Git commands used in this project, formatted according t
 ## Key Topics & Subcommands
 - [git init --bare](./git-init-bare.md): Initialize a bare repository, typically used for remote repositories.
 - [git clone --mirror <repository>](./git-clone-mirror-repository.md): Clone a repository in mirror mode, including all refs and branches.
+- [git merge-base](./git-merge-base.md): Find the common ancestor commit between two or more branches.
 
 
 [➡️ Continue to Next Topic: Useful Rare Git Commands You Never Heard Of](https://github.com/mike-rambil/Advanced-Git/blob/main/contents/useful-rare-git-commands-you-never-heard-of.md)

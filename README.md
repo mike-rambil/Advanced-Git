@@ -19,6 +19,7 @@
 - [Git Command Reference (Full List)](./contents/git-command-reference-full-list.md): A comprehensive list of Git commands used in this project.
   - [git init --bare](./contents/git-init-bare.md): Initialize a bare repository, typically used for remote repositories.
   - [git clone --mirror <repository>](./contents/git-clone-mirror-repository.md): Clone a repository in mirror mode, including all refs and branches.
+  - [git merge-base](./contents/git-merge-base.md): Find the common ancestor commit between two or more branches.
 - [Useful Rare Git Commands You Never Heard Of](./contents/useful-rare-git-commands-you-never-heard-of.md): A collection of lesser-known but powerful Git commands.
   - [git replace <old-commit> <new-commit>](./contents/git-replace-old-commit-new-commit.md): Temporarily substitute one commit for another.
 - [How to Use git push --force-with-lease Safely](./contents/how-to-use-git-push-force-with-lease-safely.md): Safely force-push to a branch without overwriting others' work.
@@ -44,11 +45,6 @@
 - [Pull Changes of Specific Files from a Commit](./contents/pull-changes-of-specific-files-from-a-commit.md): Restore or pull changes for specific files from a past commit without reverting the entire commit.
 
 
-
-## Growing thanks to you ❤️
-
-[![Stargazers over time](https://starchart.cc/mike-rambil/Advanced-Git.svg?variant=adaptive)](https://starchart.cc/mike-rambil/Advanced-Git)
-
 ## Contributors & Credits
 
 > [!NOTE]
@@ -57,6 +53,3 @@
 #### [👨‍👩‍👧‍👦 Contributors](./CONTRIBUTING.md)
 
 A list of individuals who have contributed to this project. Add your name and link in [CONTRIBUTING.md](./CONTRIBUTING.md#contributors). Please follow the instructions from [FORMAT.md](./dev-docs/FORMAT.md) when contributing.
-
-                    
-

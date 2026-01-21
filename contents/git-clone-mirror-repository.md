@@ -31,7 +31,7 @@ git clone --mirror git@github.com:org/repo.git
 1. Run `git clone --mirror <repository>` to create a full backup or migration.
 
 
-[➡️ Continue to Next Topic: Useful Rare Git Commands You Never Heard Of](https://github.com/mike-rambil/Advanced-Git/blob/main/contents/useful-rare-git-commands-you-never-heard-of.md)
+[➡️ See the Next Step: git merge-base](https://github.com/mike-rambil/Advanced-Git/blob/main/contents/git-merge-base.md)
 
 ---
 
