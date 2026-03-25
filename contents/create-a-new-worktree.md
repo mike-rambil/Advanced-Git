@@ -33,6 +33,12 @@ git worktree add ../hotfix hotfix-branch
 - The target path must not already be a git repository.
 
 
+#### ProTips
+> [!TIP]
+> Use `-b` to create a new worktree with a new branch.
+
+
+
 [➡️ See the Next Step: Remove a Worktree](https://github.com/mike-rambil/Advanced-Git/blob/main/contents/remove-a-worktree.md)
 
 ---
