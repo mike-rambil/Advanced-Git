@@ -730,6 +730,9 @@
         "prerequisites": [
           "The target path must not already be a git repository."
         ],
+        "protips": [
+          "Use `-b` to create a new worktree with a new branch."
+        ],
         "tags": [
           "worktree",
           "add"
