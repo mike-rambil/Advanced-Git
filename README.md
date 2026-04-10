@@ -50,6 +50,3 @@
 > [!NOTE]
 > Want to contribute? Be a contributor or author by following the [Contribution Format Guide](./dev-docs/FORMAT.md) , also add your favorite resources in [References & Resources](./CONTRIBUTING.md#references-resources) and submit a Pull Request.
 
-#### [👨‍👩‍👧‍👦 Contributors](./CONTRIBUTING.md)
-
-A list of individuals who have contributed to this project. Add your name and link in [CONTRIBUTING.md](./CONTRIBUTING.md#contributors). Please follow the instructions from [FORMAT.md](./dev-docs/FORMAT.md) when contributing.
