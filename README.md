@@ -1,5 +1,5 @@
 <div style="width:100%; display:flex; justify-content:center; align-items:center; margin: 0 auto;">
-  <img src="https://raw.githubusercontent.com/mike-rambil/Advanced-Git/refs/heads/main/brand/advanced-git-mike-rambil.png" style="max-width:100%; height:auto; display:block; margin:0 auto;" alt="banner" />
+  <img src="https://raw.githubusercontent.com/mike-rambil/Advanced-Git/refs/heads/main/brand/micheal-pb-advanced-git.png" style="max-width:100%; height:auto; display:block; margin:0 auto;" alt="banner" />
 </div>
 
 > [!IMPORTANT]
