@@ -1,5 +1,5 @@
 <div style="width:100%; display:flex; justify-content:center; align-items:center; margin: 0 auto;">
-  <img src="https://raw.githubusercontent.com/mike-rambil/Advanced-Git/refs/heads/main/brand/micheal-pb-advanced-git.png" style="max-width:100%; height:auto; display:block; margin:0 auto;" alt="banner" />
+  <img src="https://raw.githubusercontent.com/mike-rambil/Advanced-Git/refs/heads/main/brand/advanced-git-mike-rambil.png" style="max-width:100%; height:auto; display:block; margin:0 auto;" alt="banner" />
 </div>
 
 > [!IMPORTANT]
@@ -57,3 +57,6 @@
 > [!NOTE]
 > Want to contribute? Be a contributor or author by following the [Contribution Format Guide](./dev-docs/FORMAT.md) , also add your favorite resources in [References & Resources](./CONTRIBUTING.md#references-resources) and submit a Pull Request.
 
+#### [👨‍👩‍👧‍👦 Contributors](./CONTRIBUTING.md)
+
+A list of individuals who have contributed to this project. Add your name and link in [CONTRIBUTING.md](./CONTRIBUTING.md#contributors). Please follow the instructions from [FORMAT.md](./dev-docs/FORMAT.md) when contributing.
