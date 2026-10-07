@@ -46,7 +46,7 @@ git push --force-with-lease origin feature-branch
 - [Medium Article](https://medium.com/@sahilsahilbhatia/git-push-force-with-lease-vs-force-ecae72601e80)
 
 
-[➡️ Continue to Next Topic: Past commits of a specific file](https://github.com/mike-rambil/Advanced-Git/blob/main/contents/past-commits-of-a-specific-file.md)
+[➡️ Continue to Next Topic: Commit Ranges & Push-Safety Checks](https://github.com/mike-rambil/Advanced-Git/blob/main/contents/commit-ranges-push-safety-checks.md)
 
 ---
 

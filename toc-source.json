@@ -484,6 +484,209 @@
     "last_updated": "2024-06-10"
   },
   {
+    "Name": "Commit Ranges & Push-Safety Checks",
+    "category": "Collaboration",
+    "short_description": "Know exactly what you're about to push (or pull) using `git status -sb` and the `..` / `...` range operators.",
+    "long_description": "When other people (or other terminals, CI bots, or AI agents) push to the same branch, \"just push\" is how surprises happen. Git's range syntax answers the questions you should ask first:\n\n- **Am I ahead, behind, or both?** → `git status -sb`\n- **Which commits will `git push` send?** → `git log origin/main..main`\n- **Which commits would `git pull` bring in?** → `git log main..origin/main`\n- **How far apart are we, and on which side?** → `git log --left-right origin/main...main`\n- **What did *my* branch change since it diverged?** → `git diff origin/main...main`\n\nThe one rule to remember: **`A..B` means \"what B has that A doesn't\"**, and `A...B` means \"what either side has that the other doesn't\" (for `log`) or \"B's changes since it split from A\" (for `diff`). `log` and `diff` interpret the dots differently, which is why this topic trips people up.\n\nThe examples below use a real diverged repo: you made 3 local commits (`L1`–`L3`) on `main` while a teammate pushed 2 commits (`O1`, `O2`) to `origin/main`.",
+    "tags": [
+      "range",
+      "log",
+      "diff",
+      "status",
+      "push",
+      "ahead-behind",
+      "merge-base"
+    ],
+    "author": "mike-rambil",
+    "last_updated": "2026-10-07",
+    "protips": [
+      "Always `git fetch` first. `origin/main` is only as fresh as your last fetch, so every range check against it can be stale.",
+      "Read `A..B` out loud as \"from A up to B\": the commits you'd have to add to A to reach B."
+    ],
+    "subtoc": [
+      {
+        "Name": "git status -sb: Ahead/Behind at a Glance",
+        "category": "Collaboration",
+        "short_description": "One line that tells you whether a push will succeed and how many commits it carries.",
+        "long_description": "`git status -sb` combines two flags: `-s` (short format, one line per changed file) and `-b` (show a branch header). The header compares your branch to its upstream:\n\n```\n## main...origin/main [ahead 3]            # you have 3 commits to push\n## main...origin/main [behind 2]           # remote has 2 commits you don't\n## main...origin/main [ahead 3, behind 2]  # diverged: both sides have new commits\n## main...origin/main                      # in sync (as of your last fetch)\n```\n\n**Why check before pushing?** If someone else pushed to the same branch, you're *behind*, and a plain `git push` is rejected as non-fast-forward. You have to pull (merge or rebase) first. If you're only *ahead N*, the push is a fast-forward and will send exactly those N commits.\n\nReal output from the demo repo: the header says `[ahead 3]` until you fetch, then the truth appears:\n\n```\n$ git status -sb\n## main...origin/main [ahead 3]\n$ git fetch origin\n$ git status -sb\n## main...origin/main [ahead 3, behind 2]\n$ git push\nhint: Updates were rejected because the tip of your current branch is behind\nhint: its remote counterpart. If you want to integrate the remote changes,\nhint: use 'git pull' before pushing again.\n```",
+        "command": "git status -sb",
+        "flags": {
+          "-s": "Short format: one line per changed file (`--short`).",
+          "-b": "Show the branch and its ahead/behind counts vs. upstream (`--branch`)."
+        },
+        "examples": [
+          {
+            "code": "git fetch origin && git status -sb",
+            "description": "Refresh remote-tracking refs, then show ahead/behind."
+          },
+          {
+            "code": "git rev-list --left-right --count origin/main...main",
+            "description": "Script-friendly counts: prints `<behind> <ahead>` (e.g. `2` and `3`)."
+          }
+        ],
+        "warnings": [
+          "The counts compare against your *local copy* of `origin/main`. Without a fetch, `behind` can read 0 even when the remote has moved."
+        ],
+        "tags": [
+          "status",
+          "ahead-behind",
+          "push"
+        ],
+        "links": [
+          {
+            "label": "Official Docs",
+            "url": "https://git-scm.com/docs/git-status"
+          }
+        ],
+        "author": "mike-rambil",
+        "last_updated": "2026-10-07"
+      },
+      {
+        "Name": "git log A..B: What B Has That A Doesn't",
+        "category": "Collaboration",
+        "short_description": "Two-dot log lists commits reachable from B but not from A.",
+        "long_description": "`git log A..B` shows commits reachable from `B` that are **not** reachable from `A`. In other words, \"what B has that A doesn't\", or \"what A needs to catch up to B\". It is shorthand for `git log ^A B`.\n\nFlip the sides to flip the question:\n\n```\n$ git log --oneline origin/main..main     # what `git push` will send\ndd4a108 L3: tweak feature.txt\n79c2ff7 L2: edit app.txt\n74bf8a1 L1: add feature.txt\n\n$ git log --oneline main..origin/main     # what `git pull` would bring in\nbf35bd9 O2: teammate updates teammate.txt\ne990b1a O1: teammate adds teammate.txt\n```\n\nOmitting one side defaults it to `HEAD`: `git log origin/main..` is the same as `git log origin/main..HEAD`.",
+        "command": "git log A..B",
+        "examples": [
+          {
+            "code": "git log --oneline origin/main..main",
+            "description": "Commits your push will send."
+          },
+          {
+            "code": "git log --oneline main..origin/main",
+            "description": "Commits a pull would bring in."
+          },
+          {
+            "code": "git log --oneline @{u}..",
+            "description": "Same as the first, using your branch's upstream (`@{u}`) and HEAD."
+          }
+        ],
+        "tags": [
+          "log",
+          "range",
+          "two-dot"
+        ],
+        "links": [
+          {
+            "label": "Specifying Ranges (gitrevisions)",
+            "url": "https://git-scm.com/docs/gitrevisions#_specifying_ranges"
+          }
+        ],
+        "author": "mike-rambil",
+        "last_updated": "2026-10-07"
+      },
+      {
+        "Name": "git log A...B: Symmetric Difference with --left-right",
+        "category": "Collaboration",
+        "short_description": "Three-dot log lists commits on either side but not both. Add --left-right to see which side.",
+        "long_description": "`git log A...B` shows the **symmetric difference**: commits reachable from `A` or `B`, but not from both (i.e. everything after their merge base, on both sides). On its own the output doesn't say which side a commit came from, so pair it with `--left-right`:\n\n- `<` marks a commit only in `A` (the left side)\n- `>` marks a commit only in `B` (the right side)\n\n```\n$ git log --oneline --left-right origin/main...main\n< bf35bd9 O2: teammate updates teammate.txt\n> dd4a108 L3: tweak feature.txt\n< e990b1a O1: teammate adds teammate.txt\n> 79c2ff7 L2: edit app.txt\n> 74bf8a1 L1: add feature.txt\n```\n\nUse it to answer \"how far apart are we, and on which side?\" in one command. Two `<` lines = behind 2, three `>` lines = ahead 3, which matches `git status -sb`.",
+        "command": "git log --left-right A...B",
+        "examples": [
+          {
+            "code": "git log --oneline --left-right origin/main...main",
+            "description": "Show both sides of a divergence, marked < (remote only) and > (local only)."
+          },
+          {
+            "code": "git log --oneline --left-right --graph origin/main...main",
+            "description": "Same, drawn as a graph."
+          }
+        ],
+        "tags": [
+          "log",
+          "range",
+          "three-dot",
+          "symmetric-difference"
+        ],
+        "links": [
+          {
+            "label": "Official Docs (--left-right)",
+            "url": "https://git-scm.com/docs/git-log#Documentation/git-log.txt---left-right"
+          }
+        ],
+        "author": "mike-rambil",
+        "last_updated": "2026-10-07"
+      },
+      {
+        "Name": "git diff: Two-Dot vs Three-Dot",
+        "category": "Collaboration",
+        "short_description": "Two-dot diff compares two snapshots. Three-dot diff shows only B's changes since it diverged from A.",
+        "long_description": "`git diff` compares **snapshots**, not commit lists, so the dots mean something different here than in `git log`.\n\n**`git diff A..B`** is identical to `git diff A B`: a straight comparison of the two tips. Red `-` lines exist in A but not in B, and green `+` lines are new in B. **Caveat:** if A has its own newer commits, their content shows up as red \"deletions\", even though B never deleted anything. B just doesn't have it yet.\n\n**`git diff A...B`** diffs from the **merge base** of A and B to B. It shows only what B changed since the branches split, and ignores whatever happened on A. This is what a GitHub pull request's \"Files changed\" tab shows.\n\n```\n        A1──A2          ← A\n       /\n──M───\n       \\\n        B1──B2          ← B\n\ngit diff A..B   →  A2 vs B2\ngit diff A...B  →  M  vs B2\n```\n\nIn the demo repo, the teammate's `teammate.txt` appears as a deletion with two dots, and disappears with three:\n\n```\n$ git diff --stat origin/main..main\n app.txt      | 1 +\n feature.txt  | 2 ++\n teammate.txt | 2 --          ← not deleted by you, you just don't have it yet\n 3 files changed, 3 insertions(+), 2 deletions(-)\n\n$ git diff --stat origin/main...main\n app.txt     | 1 +\n feature.txt | 2 ++\n 2 files changed, 3 insertions(+)\n```",
+        "command": "git diff A...B",
+        "examples": [
+          {
+            "code": "git diff origin/main...main",
+            "description": "Only your changes since you branched off origin/main (PR-style)."
+          },
+          {
+            "code": "git diff origin/main..main",
+            "description": "Exact difference between the two tips (what main would look like vs. origin/main)."
+          },
+          {
+            "code": "git diff $(git merge-base origin/main main) main",
+            "description": "Long form of the three-dot diff."
+          }
+        ],
+        "warnings": [
+          "Don't read red lines in a two-dot diff as \"I deleted this\" when you're behind. Check `git status -sb` or use three dots."
+        ],
+        "tags": [
+          "diff",
+          "range",
+          "merge-base",
+          "pull-request"
+        ],
+        "links": [
+          {
+            "label": "Official Docs",
+            "url": "https://git-scm.com/docs/git-diff"
+          }
+        ],
+        "related_commands": [
+          "`git merge-base`"
+        ],
+        "author": "mike-rambil",
+        "last_updated": "2026-10-07"
+      },
+      {
+        "Name": "Two-Dot vs Three-Dot Cheat Sheet",
+        "category": "Collaboration",
+        "short_description": "One table for all four combinations, plus when the two forms give the same answer.",
+        "long_description": "| | `A..B` (two dots) | `A...B` (three dots) |\n|---|---|---|\n| **`git log`** | Commits in B, not in A | Commits in A or B, not both (add `--left-right` for `<` / `>`) |\n| **`git diff`** | Snapshot A vs snapshot B (same as `git diff A B`) | merge-base(A, B) vs B: only B's changes since divergence |\n\n**When do `..` and `...` agree?** When A is an ancestor of B, i.e. B is not behind A. Then the merge base *is* A, so `git diff A...B` equals `git diff A..B`, and A has no commits of its own, so `git log A...B` lists the same commits as `git log A..B`. In push terms: once you've pulled/rebased and `git status -sb` shows only `[ahead N]`, both forms give the same answer.",
+        "tags": [
+          "range",
+          "reference",
+          "cheat-sheet"
+        ],
+        "author": "mike-rambil",
+        "last_updated": "2026-10-07"
+      },
+      {
+        "Name": "Pre-Push Safety Check Recipe",
+        "category": "Collaboration",
+        "short_description": "Four commands to run before pushing to a branch other people also push to.",
+        "long_description": "Run these in order before `git push`, especially on a shared branch like `main`:\n\n```sh\ngit fetch origin && git status -sb               # 1. ahead/behind, against a fresh remote\ngit log --oneline origin/main..main             # 2. exactly which commits will be pushed\ngit diff --stat origin/main..main               # 3. which files those commits touch\ngit log --oneline --left-right origin/main...main  # 4. if diverged: who has what\n```\n\n- Only `[ahead N]`: step 2 lists the N commits you'll push. Review them and push.\n- Any `behind`: pull first (`git pull --rebase` or merge), then rerun the checks. Until you do, step 3 will show the remote's new work as red deletions.\n- Step 2 lists commits you didn't expect (another session, a stray WIP commit): stop and sort it out *before* they're public.",
+        "warnings": [
+          "Once pushed, rewriting shared history needs a force-push. Prefer catching surprises here. If you must, use `git push --force-with-lease`."
+        ],
+        "protips": [
+          "Swap `origin/main` for `@{u}` to make the recipe work on any branch with an upstream, e.g. `git log --oneline @{u}..`."
+        ],
+        "tags": [
+          "push",
+          "safety",
+          "checklist",
+          "fetch"
+        ],
+        "related_commands": [
+          "`git push --force-with-lease`",
+          "`git pull --rebase`"
+        ],
+        "author": "mike-rambil",
+        "last_updated": "2026-10-07"
+      }
+    ]
+  },
+  {
     "Name": "Past commits of a specific file",
     "category": "History and Inspection",
     "short_description": "See all commits and changes for a specific file.",

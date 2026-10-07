@@ -1,5 +1,5 @@
 <div style="width:100%; display:flex; justify-content:center; align-items:center; margin: 0 auto;">
-  <img src="https://raw.githubusercontent.com/mike-rambil/Advanced-Git/refs/heads/main/brand/micheal-pb-advanced-git.png" style="max-width:100%; height:auto; display:block; margin:0 auto;" alt="banner" />
+  <img src="https://raw.githubusercontent.com/mike-rambil/Advanced-Git/refs/heads/main/brand/advanced-git-mike-rambil.png" style="max-width:100%; height:auto; display:block; margin:0 auto;" alt="banner" />
 </div>
 
 > [!IMPORTANT]
@@ -23,6 +23,13 @@
 - [Useful Rare Git Commands You Never Heard Of](./contents/useful-rare-git-commands-you-never-heard-of.md): A collection of lesser-known but powerful Git commands.
   - [git replace <old-commit> <new-commit>](./contents/git-replace-old-commit-new-commit.md): Temporarily substitute one commit for another.
 - [How to Use git push --force-with-lease Safely](./contents/how-to-use-git-push-force-with-lease-safely.md): Safely force-push to a branch without overwriting others' work.
+- [Commit Ranges & Push-Safety Checks](./contents/commit-ranges-push-safety-checks.md): Know exactly what you're about to push (or pull) using `git status -sb` and the `..` / `...` range operators.
+  - [git status -sb: Ahead/Behind at a Glance](./contents/git-status-sb-ahead-behind-at-a-glance.md): One line that tells you whether a push will succeed and how many commits it carries.
+  - [git log A..B: What B Has That A Doesn't](./contents/git-log-a-b-what-b-has-that-a-doesn-t.md): Two-dot log lists commits reachable from B but not from A.
+  - [git log A...B: Symmetric Difference with --left-right](./contents/git-log-a-b-symmetric-difference-with-left-right.md): Three-dot log lists commits on either side but not both. Add --left-right to see which side.
+  - [git diff: Two-Dot vs Three-Dot](./contents/git-diff-two-dot-vs-three-dot.md): Two-dot diff compares two snapshots. Three-dot diff shows only B's changes since it diverged from A.
+  - [Two-Dot vs Three-Dot Cheat Sheet](./contents/two-dot-vs-three-dot-cheat-sheet.md): One table for all four combinations, plus when the two forms give the same answer.
+  - [Pre-Push Safety Check Recipe](./contents/pre-push-safety-check-recipe.md): Four commands to run before pushing to a branch other people also push to.
 - [Past commits of a specific file](./contents/past-commits-of-a-specific-file.md): See all commits and changes for a specific file.
   - [Show Commit History of a Specific File](./contents/show-commit-history-of-a-specific-file.md)
   - [Show Detailed Commit History (With Changes)](./contents/show-detailed-commit-history-with-changes.md)
@@ -50,3 +57,6 @@
 > [!NOTE]
 > Want to contribute? Be a contributor or author by following the [Contribution Format Guide](./dev-docs/FORMAT.md) , also add your favorite resources in [References & Resources](./CONTRIBUTING.md#references-resources) and submit a Pull Request.
 
+#### [👨‍👩‍👧‍👦 Contributors](./CONTRIBUTING.md)
+
+A list of individuals who have contributed to this project. Add your name and link in [CONTRIBUTING.md](./CONTRIBUTING.md#contributors). Please follow the instructions from [FORMAT.md](./dev-docs/FORMAT.md) when contributing.
